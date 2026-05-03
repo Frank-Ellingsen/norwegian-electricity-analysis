@@ -7,7 +7,7 @@
 A comprehensive time-series analysis and forecasting project investigating the volatile electricity market in Norway, focusing on regional price divergence (North vs. South) and seasonal patterns.
 
 ## 📊 Portfolio Showcase
-**[View the Web Portfolio Page](https://[YOUR-GITHUB-USERNAME].github.io/norwegian-electricity-analysis/)**
+**[View the Web Portfolio Page](https://Frank-Ellingsen.github.io/norwegian-electricity-analysis/)**
 
 ---
 
