@@ -1,0 +1,39 @@
+# Norwegian Electricity Price Time Series Analysis
+# Requirements for Frank Ellingsen Analytics Project
+
+# Core data processing
+pandas>=2.0.0
+numpy>=1.24.0
+sqlite3  # Built into Python
+
+# Data acquisition
+requests>=2.28.0
+urllib3>=1.26.0
+
+# Time series analysis
+statsmodels>=0.14.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+
+# Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0
+plotly>=5.15.0
+
+# Optional: Advanced time series
+# prophet>=1.1.4  # Uncomment if using Facebook Prophet
+# pmdarima>=2.0.0  # Uncomment for auto-ARIMA
+
+# Optional: ENTSO-E API client
+# entsoe-apy>=1.0.0  # Uncomment if using ENTSO-E directly
+
+# Development and testing
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Logging and utilities
+python-dateutil>=2.8.0
+pytz>=2023.3
+
+# AI and Generative Models
+google-genai

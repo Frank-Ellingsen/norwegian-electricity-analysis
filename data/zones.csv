@@ -1,0 +1,6 @@
+zone_code,zone_name,country,region,description,City,Latitude,Longitude,North_South
+NO1,Oslo (Eastern Norway),Norway,Eastern,Oslo and surrounding areas,Oslo,59.9127,10.7461,South
+NO2,Kristiansand (Southern Norway),Norway,Southern,Southern Norway including Kristiansand,Kristiansand,58.1467,7.9956,South
+NO3,Trondheim (Central Norway),Norway,Central,Central Norway including Trondheim,Trondheim,63.4305,10.3951,North
+NO4,Tromsø (Northern Norway),Norway,Northern,Northern Norway including Tromsø,Tromsø,69.6489,18.9551,North
+NO5,Bergen (Western Norway),Norway,Western,Western Norway including Bergen,Bergen,60.393,5.3242,South
