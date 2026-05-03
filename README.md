@@ -1,6 +1,7 @@
 # 🇳🇴 Norwegian Electricity Spot Price Analysis (2021-2026)
 
 [![Power BI](https://img.shields.io/badge/Dashboard-Power%20BI-yellow)](./Powerbi-Norwegian%20Electricity%20Spot%20Price%20Analysis.pdf)
+[![Video Walkthrough](https://img.shields.io/badge/Video-Walkthrough-red)](https://youtu.be/yg0O_XX53RE)
 [![Python](https://img.shields.io/badge/Analysis-Python-blue)](./requirements.txt)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
@@ -60,7 +61,7 @@ norwegian-electricity-analysis/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/[YOUR-USERNAME]/norwegian-electricity-analysis.git
+   git clone https://github.com/Frank-Ellingsen/norwegian-electricity-analysis.git
    ```
 2. **Install dependencies:**
    ```bash
