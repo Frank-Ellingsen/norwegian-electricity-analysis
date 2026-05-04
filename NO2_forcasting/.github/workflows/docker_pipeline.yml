@@ -1,0 +1,44 @@
+name: NO2 Forecasting Pipeline (Docker)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  docker-build-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          load: true
+          tags: no2_forecasting:latest
+
+      - name: Run pipeline inside Docker
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/app \
+            no2_forecasting:latest
+
+      - name: Upload model artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: catboost-model
+          path: models/catboost_no2.cbm
+
+      - name: Upload forecast outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: forecast-output
+          path: output/*.csv

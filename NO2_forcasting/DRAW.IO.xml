@@ -1,0 +1,83 @@
+<mxfile host="app.diagrams.net" modified="2026-05-04T18:07:00Z" agent="5.0" version="20.6.3">
+  <diagram id="NO2Pipeline" name="NO2 Forecasting Pipeline">
+    <mxGraphModel dx="1420" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- APIs Block -->
+        <mxCell id="apiBlock" value="External APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="180" height="260" as="geometry"/>
+        </mxCell>
+
+        <!-- API Sub-blocks -->
+        <mxCell id="np" value="Nord Pool&#xa;Spot Prices (NO2)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="60" y="230" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="met" value="MET Norway&#xa;Weather" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="60" y="290" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="entsoe" value="ENTSO-E&#xa;Flows & NTC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="60" y="350" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="nve" value="NVE Hydrology&#xa;(Reservoir, Inflow, SWE)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="60" y="410" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Ingestion -->
+        <mxCell id="ingest" value="Data Ingestion&#xa;(data_loader.py)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="260" y="260" width="200" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow APIs → Ingestion -->
+        <mxCell id="arrow1" edge="1" parent="1" source="apiBlock" target="ingest" style="endArrow=block;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Feature Engineering -->
+        <mxCell id="features" value="Feature Engineering&#xa;(lags, rolling, calendar, exogenous)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="520" y="260" width="260" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow Ingestion → Features -->
+        <mxCell id="arrow2" edge="1" parent="1" source="ingest" target="features" style="endArrow=block;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Model Training -->
+        <mxCell id="model" value="Model Training&#xa;(CatBoost)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="820" y="260" width="200" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow Features → Model -->
+        <mxCell id="arrow3" edge="1" parent="1" source="features" target="model" style="endArrow=block;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Forecasting -->
+        <mxCell id="forecast" value="Forecasting&#xa;(rolling multi-step)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1060" y="260" width="240" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow Model → Forecast -->
+        <mxCell id="arrow4" edge="1" parent="1" source="model" target="forecast" style="endArrow=block;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Outputs -->
+        <mxCell id="outputs" value="Outputs&#xa;predictions_no2.csv&#xa;feature_importance.csv" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#4d79ff;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1340" y="260" width="220" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow Forecast → Outputs -->
+        <mxCell id="arrow5" edge="1" parent="1" source="forecast" target="outputs" style="endArrow=block;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

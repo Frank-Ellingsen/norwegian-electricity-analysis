@@ -1,0 +1,104 @@
+{
+  "folders": [
+    {
+      "name": "NO2 Forecasting Pipeline",
+      "path": "."
+    },
+    {
+      "name": "API Modules",
+      "path": "api"
+    },
+    {
+      "name": "Pipeline",
+      "path": "pipeline"
+    },
+    {
+      "name": "Models",
+      "path": "models"
+    },
+    {
+      "name": "Output",
+      "path": "output"
+    }
+  ],
+
+  "settings": {
+    // Python environment
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+
+    // Linting & formatting
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+
+    // File associations
+    "files.associations": {
+      "*.py": "python",
+      "*.md": "markdown"
+    },
+
+    // Terminal
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.env.linux": {
+      "PYTHONPATH": "${workspaceFolder}"
+    },
+
+    // Explorer
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+
+    // Git
+    "git.autofetch": true,
+    "git.confirmSync": false
+  },
+
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-toolsai.jupyter",
+      "ms-azuretools.vscode-docker",
+      "github.copilot",
+      "github.copilot-chat",
+      "ms-vscode.makefile-tools",
+      "eamodio.gitlens"
+    ]
+  },
+
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run NO2 Pipeline",
+        "type": "shell",
+        "command": "python run_pipeline.py",
+        "group": "build",
+        "presentation": {
+          "reveal": "always",
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Create Virtual Environment",
+        "type": "shell",
+        "command": "python -m venv .venv",
+        "presentation": {
+          "reveal": "always"
+        }
+      },
+      {
+        "label": "Install Requirements",
+        "type": "shell",
+        "command": "${workspaceFolder}/.venv/bin/pip install -r requirements.txt",
+        "dependsOn": "Create Virtual Environment",
+        "presentation": {
+          "reveal": "always"
+        }
+      }
+    ]
+  }
+}
