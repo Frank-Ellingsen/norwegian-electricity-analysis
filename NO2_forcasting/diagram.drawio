@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="cSwg0_RF1uVXhF2rL05V" name="NO2 Forecasting Pipeline">
-        <mxGraphModel dx="1326" dy="1740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1168" dy="1534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -8,18 +8,18 @@
                     <mxGeometry x="20" y="-10" width="1720" height="260" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="External APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;fontSize=16;fontStyle=1" parent="2" vertex="1">
-                    <mxGeometry x="20" y="60" width="260" height="190" as="geometry"/>
+                    <mxGeometry x="20" y="70" width="260" height="190" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="Utilitarian Spot API&lt;br&gt;Spot Prices (Sqlite.db)" style="rounded=1;whiteSpace=wrap;html=1;" parent="3" vertex="1">
                     <mxGeometry x="10" y="10" width="240" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="MET Norway&#xa;Weather" style="rounded=1;whiteSpace=wrap;html=1;" parent="3" vertex="1">
+                <mxCell id="5" value="MET Norway&lt;br&gt;Weather (Sqlite.db)" style="rounded=1;whiteSpace=wrap;html=1;" parent="3" vertex="1">
                     <mxGeometry x="10" y="50" width="240" height="33.06" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="ENTSO-E&#xa;Flows &amp; NTC" style="rounded=1;whiteSpace=wrap;html=1;" parent="3" vertex="1">
                     <mxGeometry x="10" y="110" width="240" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="NVE Hydrology&#xa;(Reservoir, Inflow, SWE)" style="rounded=1;whiteSpace=wrap;html=1;" parent="3" vertex="1">
+                <mxCell id="7" value="NVE Hydrology&lt;br&gt;Reservoir, Inflow, SWE (Sqlite.db)" style="rounded=1;whiteSpace=wrap;html=1;" parent="3" vertex="1">
                     <mxGeometry x="10" y="146.95" width="240" height="33.05" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="Data Ingestion&#xa;(data_loader.py)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=16;fontStyle=1" parent="2" vertex="1">
