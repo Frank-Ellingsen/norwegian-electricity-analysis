@@ -33,6 +33,10 @@ def run_ingestion():
     hyd_df = fetch_hydapi_data(yesterday_str, yesterday_str)
     save_hydapi_data(hyd_df, os.path.join(data_path, "hydrology_no2.csv"))
 
+from pipeline.model_train import train_model
+from pipeline.evaluate import run_evaluation
+from pipeline.forecast import generate_forecast
+
 def main():
     logging.info("🚀 Starting full NO2 Forecasting Pipeline")
     
@@ -50,7 +54,25 @@ def main():
         base_path = os.path.dirname(os.path.abspath(__file__))
         features_path = os.path.join(base_path, "data", "features_no2.csv")
         df_features.to_csv(features_path)
-        logging.info(f"✅ Pipeline run complete. Features saved to {features_path}")
+        logging.info(f"✅ Features saved to {features_path}")
+
+        # Step 4: Training (Optional but recommended for the 'proceed' request)
+        logging.info("🧠 Training model...")
+        train_model(df_features)
+
+        # Step 5: Evaluation
+        logging.info("📊 Evaluating model performance...")
+        run_evaluation()
+
+        # Step 6: Final Forecast (Next 24h)
+        logging.info("🔮 Generating final 24h forecast...")
+        forecast = generate_forecast(df_features, horizon_hours=24)
+        if not forecast.empty:
+            forecast_path = os.path.join(base_path, "output", "predictions_no2.csv")
+            forecast.to_csv(forecast_path)
+            logging.info(f"✨ Forecast saved to {forecast_path}")
+
+        logging.info("🎯 Full pipeline run complete.")
     else:
         logging.error("❌ Pipeline failed: No data merged.")
 

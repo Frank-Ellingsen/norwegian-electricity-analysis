@@ -55,7 +55,22 @@ def train_model(train_df: pd.DataFrame, target_col: str = 'price'):
     return model
 
 if __name__ == "__main__":
-    df = pd.read_csv("data/features_no2.csv", index_col=0, parse_dates=True)
-    from dataset_split import split_dataset
-    train, _ = split_dataset(df)
-    train_model(train)
+    base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    data_path = os.path.join(base_path, "data", "features_no2.csv")
+    
+    logging.info(f"Loading data from {data_path}")
+    if not os.path.exists(data_path):
+        logging.error(f"Data file not found at {data_path}. Please run run_pipeline.py first.")
+    else:
+        try:
+            df = pd.read_csv(data_path, index_col=0, parse_dates=True)
+            from dataset_split import split_dataset
+            train, _ = split_dataset(df)
+            if not train.empty:
+                train_model(train)
+            else:
+                logging.warning("Training set is empty. Check your data split and historical availability.")
+        except Exception as e:
+            logging.error(f"An error occurred during training: {e}")
+            import traceback
+            traceback.print_exc()

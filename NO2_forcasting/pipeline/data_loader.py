@@ -22,8 +22,16 @@ def load_and_merge_data() -> pd.DataFrame:
         return pd.DataFrame()
     
     df = pd.read_csv(prices_file)
+    # Consolidate column names if necessary
+    if 'prices' in df.columns and 'price' not in df.columns:
+        df = df.rename(columns={'prices': 'price'})
+    elif 'prices' in df.columns and 'price' in df.columns:
+        df['price'] = df['price'].fillna(df['prices'])
+        df = df.drop(columns='prices')
+
     df['timestamp'] = pd.to_datetime(df['timestamp'], utc=True)
     df = df.sort_values('timestamp')
+    logging.info(f"Prices loaded. Timestamp dtype: {df['timestamp'].dtype}")
 
     # 2. Load and Pivot Weather (Daily)
     if os.path.exists(weather_file):
@@ -38,6 +46,9 @@ def load_and_merge_data() -> pd.DataFrame:
         weather_pivoted.columns = [f"weather_{s}_{v}" for s, v in weather_pivoted.columns]
         weather_pivoted = weather_pivoted.reset_index()
         
+        # Ensure pivoted timestamp is datetime
+        weather_pivoted['timestamp'] = pd.to_datetime(weather_pivoted['timestamp'], utc=True)
+        
         # Join on date part
         df['date'] = df['timestamp'].dt.date
         weather_pivoted['date'] = weather_pivoted['timestamp'].dt.date
@@ -45,7 +56,8 @@ def load_and_merge_data() -> pd.DataFrame:
         
         # Forward fill daily data across the 24 hours
         weather_cols = [c for c in df.columns if c.startswith('weather_')]
-        df[weather_cols] = df[weather_cols].ffill().bfill()
+        if weather_cols:
+            df.loc[:, weather_cols] = df[weather_cols].ffill().bfill()
         df = df.drop(columns='date')
 
     # 3. Load and Pivot Hydrology (Daily)
@@ -60,13 +72,17 @@ def load_and_merge_data() -> pd.DataFrame:
         hyd_pivoted.columns = [f"hyd_{t}_{r}" for t, r in hyd_pivoted.columns]
         hyd_pivoted = hyd_pivoted.reset_index()
         
+        # Ensure pivoted timestamp is datetime
+        hyd_pivoted['timestamp'] = pd.to_datetime(hyd_pivoted['timestamp'], utc=True)
+        
         df['date'] = df['timestamp'].dt.date
         hyd_pivoted['date'] = hyd_pivoted['timestamp'].dt.date
         df = df.merge(hyd_pivoted.drop(columns='timestamp'), on='date', how='left')
         
         # Forward fill hydrology across the 24 hours
         hyd_cols = [c for c in df.columns if c.startswith('hyd_')]
-        df[hyd_cols] = df[hyd_cols].ffill().bfill()
+        if hyd_cols:
+            df.loc[:, hyd_cols] = df[hyd_cols].ffill().bfill()
         df = df.drop(columns='date')
 
     logging.info(f"Merged data: {df.shape[0]} rows, {df.shape[1]} columns")

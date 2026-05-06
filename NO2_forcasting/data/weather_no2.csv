@@ -1,0 +1,9 @@
+station_id,timestamp,variable,value,unit
+SN39100:0,2026-05-05T00:00:00.000Z,mean(air_temperature P1D),6.6,degC
+SN44640:0,2026-05-05T00:00:00.000Z,mean(air_temperature P1D),4.8,degC
+SN44640:0,2026-05-05T00:00:00.000Z,sum(precipitation_amount P1D),0.3,mm
+SN46610:0,2026-05-05T00:00:00.000Z,mean(air_temperature P1D),4.7,degC
+SN46610:0,2026-05-05T00:00:00.000Z,sum(precipitation_amount P1D),4.0,mm
+SN47450:0,2026-05-05T00:00:00.000Z,sum(precipitation_amount P1D),1.2,mm
+SN47600:0,2026-05-05T00:00:00.000Z,mean(air_temperature P1D),3.3,degC
+SN47600:0,2026-05-05T00:00:00.000Z,sum(precipitation_amount P1D),2.7,mm

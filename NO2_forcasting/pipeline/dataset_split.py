@@ -18,5 +18,12 @@ def split_dataset(df: pd.DataFrame, test_hours: int = 168):
     return train_df, test_df
 
 if __name__ == "__main__":
-    df = pd.read_csv("data/features_no2.csv", index_col=0, parse_dates=True)
-    train, test = split_dataset(df)
+    import os
+    base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    data_path = os.path.join(base_path, "data", "features_no2.csv")
+    
+    if os.path.exists(data_path):
+        df = pd.read_csv(data_path, index_col=0, parse_dates=True)
+        train, test = split_dataset(df)
+    else:
+        logging.error(f"Data file not found at {data_path}")

@@ -36,8 +36,8 @@ def fetch_nordpool_prices(target_date: date, zone: str = "NO2") -> pd.DataFrame:
 
         df = pd.DataFrame(filtered_data)
         if not df.empty:
-            df['timestamp'] = pd.to_datetime(df['timestamp'])
-            df['zone'] = zone
+            df.loc[:, 'timestamp'] = pd.to_datetime(df['timestamp'])
+            df.loc[:, 'zone'] = zone
             
         return df
 
@@ -47,15 +47,23 @@ def fetch_nordpool_prices(target_date: date, zone: str = "NO2") -> pd.DataFrame:
 
 def save_nordpool_data(df: pd.DataFrame, output_path: str):
     """
-    Appends data to a CSV file, ensuring no duplicates.
+    Appends data to a CSV file, ensuring no duplicates and consistent column names.
     """
     if df.empty:
         return
 
     if os.path.exists(output_path):
         existing_df = pd.read_csv(output_path)
-        existing_df['timestamp'] = pd.to_datetime(existing_df['timestamp'])
+        existing_df.loc[:, 'timestamp'] = pd.to_datetime(existing_df['timestamp'])
         
+        # Consolidate 'prices' and 'price' if both exist
+        if 'prices' in existing_df.columns:
+            if 'price' not in existing_df.columns:
+                existing_df = existing_df.rename(columns={'prices': 'price'})
+            else:
+                existing_df.loc[:, 'price'] = existing_df['price'].fillna(existing_df['prices'])
+                existing_df = existing_df.drop(columns='prices')
+
         # Combine and drop duplicates
         combined_df = pd.concat([existing_df, df]).drop_duplicates(subset=['timestamp', 'zone'], keep='last')
         combined_df.to_csv(output_path, index=False)
