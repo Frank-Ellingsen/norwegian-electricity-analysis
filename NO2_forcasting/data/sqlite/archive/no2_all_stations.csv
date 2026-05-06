@@ -1,0 +1,2316 @@
+station_id,name,river,lat,lon,source
+100.1.0,Valldøla v/Alstad,Valldøla,62.32937,7.4842,HYDAPI
+100.8.0,Langvatn,Valldøla,62.37322,7.84637,HYDAPI
+101.3.0,Mauseidvatn,Mauseidelva,62.41692,6.26568,HYDAPI
+103.1.0,Ulvåa v/Storhølen,Ulvåa,62.28008,8.11848,HYDAPI
+103.10.0,Mongevatn,Mongebekken,62.44631,7.892,HYDAPI
+103.11.0,Søre Bøvri ndf. Bøvertjørnene,Bøvri,62.29334,8.23946,HYDAPI
+103.12.0,Verma kraftstasjon,Rauma,62.34783,8.05015,HYDAPI
+103.13.0,Vermavatn,Verma,62.35942,7.86043,HYDAPI
+103.16.0,Krossan,Grøna,62.22466,8.32524,HYDAPI
+103.17.0,Øvre kilde v/Alnes i Rauma,Rauma,62.44814,7.82291,HYDAPI
+103.18.0,Nedre kilde v/Alnes i Rauma,Rauma,62.45302,7.81781,HYDAPI
+103.2.0,Lesjaskogvatn,Rauma,62.22756,8.36846,HYDAPI
+103.21.0,Krossan,Grøna,62.22197,8.32626,HYDAPI
+103.23.0,Grøttavatn,Glutra,62.47758,7.99172,HYDAPI
+103.3.0,Rauma v/Stuguflåten,Rauma,62.2766,8.15311,HYDAPI
+103.4.0,Horgheim,Rauma,62.47412,7.78235,HYDAPI
+103.40.0,Rauma v/Horgheim,Rauma,62.47378,7.78184,HYDAPI
+103.42.0,Rauma ovf. Grytten kraftstasjon,Rauma,62.49776,7.76489,HYDAPI
+103.44.0,Rauma v/Remmem,Rauma,62.43488,7.86579,HYDAPI
+103.45.0,Grytten kraftstasjon,Rauma,62.49688,7.76687,HYDAPI
+103.46.0,Rauma ndf. Lesjaskogvatnet,Rauma,62.23429,8.32228,HYDAPI
+103.47.0,Rauma v/Stuguflåten,Rauma,62.28288,8.13844,HYDAPI
+103.48.0,Rauma v/Raudstøl bru,Rauma,62.31002,8.10102,HYDAPI
+103.49.0,Rauma v/Hersel bru,Rauma,62.36594,8.03992,HYDAPI
+103.5.0,Verma,Verma,62.3484,8.00378,HYDAPI
+103.50.0,Rauma v/Horgheim bru,Rauma,62.46928,7.7937,HYDAPI
+103.51.1,Flatmark rør 1,Rauma,62.43032,7.96567,HYDAPI
+103.51.2,Flatmark rør 2,Rauma,62.43102,7.96619,HYDAPI
+103.51.3,GBR FLATMARK NSB,Rauma,62.43015,7.96233,HYDAPI
+103.52.1,GBR BERSÅS,Rauma,62.4293,7.95713,HYDAPI
+103.53.1,GBR SKIRI,Rauma,62.4295,7.924,HYDAPI
+103.54.1,O. Monge rør 1,Rauma,62.43467,7.87628,HYDAPI
+103.54.2,GBR MONGE,Rauma,62.43449,7.8742,HYDAPI
+103.55.1,V. Skiri rør 1,Rauma,62.42917,7.93912,HYDAPI
+103.56.1,GBR G. LIEN,Rauma,62.4455,7.83001,HYDAPI
+103.61.1,Horgheimseidet rør,Rauma,62.48382,7.76256,HYDAPI
+103.62.1,Horgheim rør 1,Rauma,62.46903,7.79614,HYDAPI
+103.63.1,Alnes rør 1,Rauma,62.44346,7.83454,HYDAPI
+103.63.2,Alnes rør 2,Rauma,62.44324,7.83345,HYDAPI
+103.63.3,Alnes rør 3,Rauma,62.44306,7.83256,HYDAPI
+103.63.4,Alnes rør 4,Rauma,62.44278,7.83128,HYDAPI
+103.63.5,Alnes rør 5,Rauma,62.44306,7.83256,HYDAPI
+103.64.1,GBR R. STAVEM,Rauma,62.42958,7.97009,HYDAPI
+103.65.1,Almegjerdet rør 1,Rauma,62.42284,7.99308,HYDAPI
+103.66.1,Sæterbø rør 1,Rauma,62.37627,8.03437,HYDAPI
+103.68.0,Vm Rånå,Rauma,62.25587,8.19881,HYDAPI
+103.69.0,Vm Einbu,Rauma,62.23571,8.27556,HYDAPI
+103.70.0,Vm Kvisli bru,Rauma,62.23422,8.30694,HYDAPI
+103.8.0,Innfjordelva v/Vårsætra,Innfjordselva,62.4701,7.53011,HYDAPI
+103.83.0,Innfjorden,Innfjordselva,62.45532,7.50336,HYDAPI
+104.1.0,Lille Eikesdalsvatn,Eira,62.4581,8.22841,HYDAPI
+104.10.0,Aursjøtunellen,Eira,62.40597,8.54177,HYDAPI
+104.13.0,Gautsjø,Eira,62.28973,8.7093,HYDAPI
+104.15.0,Leipåna,Eira,62.4071,8.37146,HYDAPI
+104.16.0,Finset,Eira,62.42122,8.31888,HYDAPI
+104.17.0,Mardalstjern,Indre mardøla,62.46405,8.11433,HYDAPI
+104.18.0,Mardalsvatn,Mardøla,62.49518,8.06973,HYDAPI
+104.19.0,Store Sandgrovvatn,Indre mardøla,62.41817,8.09826,HYDAPI
+104.20.0,Bruå,Bruåa,62.45875,8.20172,HYDAPI
+104.26.0,Nedre Mardalsvatn,Mardøla,62.49106,8.07277,HYDAPI
+104.3.0,Aursjø,Eira,62.40507,8.53984,HYDAPI
+104.4.0,Store Kvervin,Eira,62.39974,8.55927,HYDAPI
+104.7.0,Mardøla,Mardøla,62.48936,8.14268,HYDAPI
+104.9.0,Stordalshølen,Eira,62.40175,8.48959,HYDAPI
+109.15.0,Torbuvatn,Litledalselva,62.42942,8.57626,HYDAPI
+109.16.0,Sandvatn,Litledalselva,62.45813,8.57198,HYDAPI
+109.35.0,Håkådalselv,Litledalselva,62.44451,8.60471,HYDAPI
+109.40.0,Sandvasslågen,Litledalselva,62.44867,8.56243,HYDAPI
+109.41.0,Langvatn,Litledalselva,62.47338,8.56788,HYDAPI
+12.100.0,Strandevatn,Åni,60.68135,7.90744,HYDAPI
+12.102.0,Høvsfjord,Åni,60.61288,8.26963,HYDAPI
+12.104.0,Bry bru,Urundi,60.62175,8.10316,HYDAPI
+12.110.0,Ølsjø,Åbjøra,60.87321,9.25447,HYDAPI
+12.111.0,Bløytjern dam,Åbjøra,60.8947,9.28597,HYDAPI
+12.116.0,Helin,Flya,61.00607,8.73775,HYDAPI
+12.117.0,Vavatn,Gjuva,60.94727,8.4429,HYDAPI
+12.118.0,Votna,Votna,60.6804,8.3029,HYDAPI
+12.119.0,Strandvatn ndf.,Åni,60.66862,7.94265,HYDAPI
+12.123.0,Øyangen-Steinbusjøen,Ylja,61.24059,8.29204,HYDAPI
+12.124.0,Yljeoset,Ylja,61.24058,8.2896,HYDAPI
+12.125.0,Varaldsetvatn,Varaldsetåni,60.66581,8.26113,HYDAPI
+12.126.0,Rødungen,Votna,60.69811,8.25673,HYDAPI
+12.127.0,Bergsjø,Tverråni,60.70898,8.2748,HYDAPI
+12.128.0,Djupv.-Stolsvatn,Urundi,60.73197,8.00841,HYDAPI
+12.129.0,Mjåvatn,Votna,60.71735,8.16831,HYDAPI
+12.13.0,Rysna mvf.,Rysna,61.16853,8.71596,HYDAPI
+12.130.0,Flævatn,Lauvdøla,60.83392,8.39153,HYDAPI
+12.131.0,Bløytjern ndf.,Åbjøra,60.89649,9.28783,HYDAPI
+12.133.0,Mønin bru,Åbjøra,60.90599,9.2885,HYDAPI
+12.135.0,Tisleifjord,Åbjøra,60.84023,9.01689,HYDAPI
+12.136.0,Tisleifjord ndf.,Åbjøra,60.83844,9.01873,HYDAPI
+12.138.0,Storevatn,Åbjøra,60.87244,8.82539,HYDAPI
+12.139.0,Fleinsendin,Neselvi,61.2512,8.72045,HYDAPI
+12.140.0,Olevatn,Neselvi,61.30221,8.67742,HYDAPI
+12.141.0,"Strandefjord, avløp.",Hallingdalsvassdrage,60.61953,8.53509,HYDAPI
+12.142.0,Bakko,Åni,60.68106,8.00375,HYDAPI
+12.144.0,Gryte bru,Åni,60.61999,8.10869,HYDAPI
+12.145.0,Flyvatn,Flya,60.90841,8.87683,HYDAPI
+12.146.0,Flyvatn ndf.,Flya,60.90751,8.87315,HYDAPI
+12.147.0,Brautemotjern,Rusteåni,60.75539,8.99116,HYDAPI
+12.148.0,Otrøvatn,Drammensvassdraget,61.18621,8.20027,HYDAPI
+12.150.0,Buvatn,Rukkedøla,60.48611,8.8188,HYDAPI
+12.153.0,Ustedøla ndf. Ustevatnet,Hallingdalsvassdrage,60.48598,8.06075,HYDAPI
+12.154.0,Lio,Hemsil,60.86945,8.40743,HYDAPI
+12.155.0,Rysna,Rysna,61.17032,8.71595,HYDAPI
+12.156.0,Rysntjern,Rysna,61.23196,8.59619,HYDAPI
+12.157.0,Aurdalsfjord,Drammensvassdraget,60.91689,9.38759,HYDAPI
+12.158.0,Sundvoll,Drammensvassdraget,60.91374,9.3894,HYDAPI
+12.159.0,Nygårdsvatn,Hallingdalsvassdrage,60.50752,7.8441,HYDAPI
+12.160.0,Ustevatn,Hallingdalsvassdrage,60.48631,8.05957,HYDAPI
+12.161.0,Ørteren,Ørteråni,60.47955,7.82872,HYDAPI
+12.162.0,Finsevatn,Hallingdalsvassdrage,60.59585,7.51409,HYDAPI
+12.164.0,Geilo bru,Hallingdalsvassdrage,60.52903,8.20774,HYDAPI
+12.166.0,Nysetervatn,Hallingdalsvassdrage,60.54713,7.75518,HYDAPI
+12.167.0,Svenkerud,Hallingdalsvassdrage,60.64809,9.05153,HYDAPI
+12.168.0,Sendebottentjern,Tverråni,61.28156,8.67765,HYDAPI
+12.171.0,Hølervatn,Hølera,60.70962,9.45899,HYDAPI
+12.172.0,Sandalen,Leineåni,61.18687,8.53167,HYDAPI
+12.174.0,Strøen ndf.,Urula,60.59846,9.4349,HYDAPI
+12.175.0,Strøen,Urula,60.59981,9.43491,HYDAPI
+12.178.0,Eggedal,Simoa,60.15247,9.43342,HYDAPI
+12.181.0,Eikredammen,Hemsil,60.78164,8.74692,HYDAPI
+12.182.0,Hugali,Drammensvassdraget,61.14788,8.71986,HYDAPI
+12.183.0,Ala,Ala,61.13258,8.70143,HYDAPI
+12.194.0,Faslefoss kr.v,Drammensvassdraget,60.9647,9.29583,HYDAPI
+12.197.0,Grunke,Grunka,60.95034,8.70314,HYDAPI
+12.199.0,Storåni v/Tveitamoen,Drammensvassdraget,61.15316,8.75326,HYDAPI
+12.205.0,Mugna,Mugna,61.24037,8.72835,HYDAPI
+12.207.0,Vinde-elv,Vinda,61.15174,9.07559,HYDAPI
+12.210.0,Strondafjorden total,Drammensvassdraget,60.96697,9.28662,HYDAPI
+12.212.0,Hangtjern,Heieelvi,60.47921,9.4488,HYDAPI
+12.215.0,Storeskar,Hemsil,60.8917,8.33272,HYDAPI
+12.26.0,Grytevatn,Grytelva,60.01613,9.44785,HYDAPI
+12.27.0,Øynevatn,Grytelva,60.02565,9.41928,HYDAPI
+12.288.0,Fjøshølen,Drammensvassdraget,60.96381,9.29952,HYDAPI
+12.289.0,Fasle elv,Drammensvassdraget,60.96334,9.30044,HYDAPI
+12.304.0,Nes kraftstasjon,Hallingdalsvassdrage,60.59809,9.08006,HYDAPI
+12.305.0,Hallingdalselva ndf. Dokkelvi,Hallingdalsvassdrage,60.62138,9.05913,HYDAPI
+12.306.0,Hallingdalselva v/Svenkerud,Hallingdalsvassdrage,60.64988,9.05336,HYDAPI
+12.307.0,Hallingdalselva ndf. Rukkedøla,Hallingdalsvassdrage,60.56094,9.12982,HYDAPI
+12.308.0,Hallingdalselva v/Bergheim,Hallingdalsvassdrage,60.47237,9.23086,HYDAPI
+12.31.0,Helin,Flya,61.07846,8.6,HYDAPI
+12.320.0,Eidsfoss kraftstasjon,Drammensvassdraget,61.17807,8.39073,HYDAPI
+12.323.0,Begna ovf. Strondafjorden,Drammensvassdraget,61.03,9.04832,HYDAPI
+12.325.0,Faslefoss kraftstasjon,Drammensvassdraget,60.96658,9.28726,HYDAPI
+12.326.0,Begna v/Slidrefjorden dam,Drammensvassdraget,61.03864,9.04663,HYDAPI
+12.327.0,Ylja kraftstasjon,Drammensvassdraget,61.19681,8.37989,HYDAPI
+12.328.0,Begna ovf. Eidsfoss kraftstasjon,Drammensvassdraget,61.18027,8.38966,HYDAPI
+12.329.0,Begna ndf. Eidsfoss kraftstasjon,Drammensvassdraget,61.17756,8.3907,HYDAPI
+12.331.0,Lomen kraftstasjon,Drammensvassdraget,61.13242,8.88803,HYDAPI
+12.334.0,Tisleia ndf. Tisleifjorden,Åbjøra,60.83788,9.01941,HYDAPI
+12.335.0,Østre Slidreelva ndf. Øyangen,Neselvi,61.19978,8.92314,HYDAPI
+12.336.0,Østre Slidreelva ndf. Heggefjorden,Neselvi,61.13169,9.0808,HYDAPI
+12.337.0,Vinda,Vinda,61.13181,9.0873,HYDAPI
+12.338.0,Østre Slidreelva ndf. Volbufjorden,Neselvi,61.07931,9.11016,HYDAPI
+12.339.0,Neselva v/Fagernes,Neselvi,60.9852,9.22933,HYDAPI
+12.341.0,Østre Slidreelva ovf. Heggefjorden,Neselvi,61.15331,9.00929,HYDAPI
+12.345.1,Tisleifjord g.brønn,Åbjøra,60.83604,9.00595,HYDAPI
+12.368.1,Hol rør 1,Hallingdalsvassdrage,60.57636,8.39913,HYDAPI
+12.368.2,Hol rør 2,Hallingdalsvassdrage,60.56778,8.29976,HYDAPI
+12.37.0,Øyangen,Ylja,61.22964,8.34665,HYDAPI
+12.389.10,Strondafjorden v/Ulnes bru (11),Drammensvassdraget,60.99865,9.10555,HYDAPI
+12.42.0,Hådemshølen,Drammensvassdraget,60.95975,9.30317,HYDAPI
+12.52.0,Vangsmjøsi,Drammensvassdraget,61.15404,8.66314,HYDAPI
+12.548.0,Usteåne v/Geilo,Hallingdalsvassdrage,60.53894,8.24709,HYDAPI
+12.549.0,Hol I kraftstasjon,Åni,60.62504,8.18542,HYDAPI
+12.55.0,Heggefjord,Neselvi,61.13289,9.07833,HYDAPI
+12.550.0,Hallingdalselva v/Vermefoss,Hallingdalsvassdrage,60.67994,8.82885,HYDAPI
+12.551.0,Hemsil v/Hemsedal sentrum,Hemsil,60.86531,8.52057,HYDAPI
+12.554.0,Hovsfjord,Åni,60.6129,8.25925,HYDAPI
+12.555.0,Holsfjorden,Åni,60.59809,8.34632,HYDAPI
+12.582.0,Steinbusjøen,Ylja,61.25904,8.32656,HYDAPI
+12.6.0,Strandevatn,Åni,60.66862,7.94265,HYDAPI
+12.606.0,Trøimsåni,Trøymsåni,60.86303,8.55334,HYDAPI
+12.607.0,Rukkedøla v/Nesbyen,Rukkedøla,60.56931,9.09692,HYDAPI
+12.608.0,Hallingdalselva v/Nesbyen,Hallingdalsvassdrage,60.57302,9.11407,HYDAPI
+12.613.0,Nyhaga,Neselvi,61.12148,9.03427,HYDAPI
+12.614.0,Kvinda,Kvinda,60.63219,8.4881,HYDAPI
+12.623.0,Golreppen,Hallingdalsvassdrage,60.701,8.90999,HYDAPI
+12.626.0,Rysna v/Dalsbru,Rysna,61.17717,8.69651,HYDAPI
+12.633.1,Nesbyen rør GV-01,Rukkedøla,60.56943,9.09689,HYDAPI
+12.633.10,Nesbyen rør GV-10,Hallingdalsvassdrage,60.57296,9.11304,HYDAPI
+12.633.11,Nesbyen rør GV-11,Hallingdalsvassdrage,60.57395,9.10812,HYDAPI
+12.633.2,Nesbyen rør GV-02,Rukkedøla,60.57081,9.10089,HYDAPI
+12.633.3,Nesbyen rør GV-03,Hallingdalsvassdrage,60.57382,9.10208,HYDAPI
+12.633.4,Nesbyen rør GV-04,Rukkedøla,60.57235,9.10509,HYDAPI
+12.633.5,Nesbyen rør GV-05,Hallingdalsvassdrage,60.56891,9.10681,HYDAPI
+12.633.6,Nesbyen rør GV-06,Rukkedøla,60.57484,9.10792,HYDAPI
+12.633.7,Nesbyen rør GV-07,Hallingdalsvassdrage,60.57043,9.10791,HYDAPI
+12.633.8,Nesbyen rør GV-08,Hallingdalsvassdrage,60.57254,9.10921,HYDAPI
+12.633.9,Nesbyen rør GV-09,Hallingdalsvassdrage,60.57093,9.11194,HYDAPI
+12.636.1,Hovdeenga rør 1,Hallingdalsvassdrage,60.49488,9.17892,HYDAPI
+12.64.0,Haugastøl,Hallingdalsvassdrage,60.51043,7.86949,HYDAPI
+12.7.0,Høvsfjord,Åni,60.61282,8.25867,HYDAPI
+12.75.0,Vangsmjøsa,Drammensvassdraget,61.15855,8.6696,HYDAPI
+12.76.0,Vangsmjøsa ndf.,Drammensvassdraget,61.14785,8.70314,HYDAPI
+12.77.0,Slidrefjord,Drammensvassdraget,61.03871,9.04478,HYDAPI
+12.80.0,Strandefjord,Drammensvassdraget,60.96384,9.28012,HYDAPI
+12.81.0,Strandefjord,Drammensvassdraget,60.97778,9.27009,HYDAPI
+12.82.0,Fløafjord,Drammensvassdraget,60.95122,9.30401,HYDAPI
+12.86.0,Ylja,Ylja,61.20912,8.28194,HYDAPI
+12.87.0,Øyangen,Neselvi,61.20023,8.92221,HYDAPI
+12.88.0,Øvre Øyanghølen,Neselvi,61.19978,8.92593,HYDAPI
+12.89.0,Volbufjord,Neselvi,61.0799,9.10971,HYDAPI
+12.9.0,Oppsjø bru,Hallingdalsvassdrage,60.6372,8.58829,HYDAPI
+12.90.0,Volbufjord ndf.,Neselvi,61.0781,9.11341,HYDAPI
+12.91.0,Rudi bru,Neselvi,61.07272,9.11339,HYDAPI
+12.92.0,Vindevatn,Vinda,61.17689,9.05613,HYDAPI
+12.93.0,Hovda,Åbjøra,60.86521,9.20838,HYDAPI
+12.94.0,Krossåfoss,Åbjøra,60.91264,9.28982,HYDAPI
+12.95.0,Ustedalsvatn,Hallingdalsvassdrage,60.52527,8.18051,HYDAPI
+12.96.0,Oppsjø,Hallingdalsvassdrage,60.63578,8.58354,HYDAPI
+12.97.0,Bergheim,Hallingdalsvassdrage,60.47223,9.23141,HYDAPI
+15.10.0,Brofoss,Numedalslågen,60.31767,8.94059,HYDAPI
+15.101.0,Dokkeberg,Uvdalselvi,60.2584,8.92624,HYDAPI
+15.105.0,Numedalslågen v/Skaget,Numedalslågen,60.08753,9.07487,HYDAPI
+15.107.0,Nore kraftstasjon I,Uvdalselvi,60.267,8.95997,HYDAPI
+15.108.0,Nore kraftstasjon II,Numedalslågen,60.23822,9.00168,HYDAPI
+15.109.0,Numedalslågen v/Mykstufoss kraftstasjon,Numedalslågen,60.04248,9.21868,HYDAPI
+15.118.0,Skurdevikåi Vm 1,Sleipa,60.38246,7.57728,HYDAPI
+15.118.1,Skurdevikåi rør,Sleipa,60.38529,7.55045,HYDAPI
+15.118.2,Hardangervidda v/Skiftesjøen,Sleipa,60.37774,7.56938,HYDAPI
+15.118.3,Skurdevikåi rør 3,Sleipa,60.38363,7.58322,HYDAPI
+15.118.4,Skurdevikåi rør 4,Sleipa,60.39111,7.60209,HYDAPI
+15.118.6,Skurdevikåi rør 6,Sleipa,60.4033,7.62642,HYDAPI
+15.118.7,"Skurdevikåi, vm 2",Sleipa,60.4002,7.605,HYDAPI
+15.120.4,Norefjorden v/Nore (33),Numedalslågen,60.17034,9.01462,HYDAPI
+15.13.0,Skaget,Numedalslågen,60.0878,9.07762,HYDAPI
+15.16.0,Hoppestadvatn,Vrengja,59.85207,9.35997,HYDAPI
+15.17.0,Mjåvatn,Vrengja,59.83687,9.33662,HYDAPI
+15.178.0,Djupdal ndf. inntak,Numedalslågen,59.93488,9.33074,HYDAPI
+15.2.0,Bergsjø,Numedalslågen,59.98154,9.29418,HYDAPI
+15.22.0,Båtstøhagen,Numedalslågen,59.95274,9.32257,HYDAPI
+15.23.0,Bruhaug,Numedalslågen,60.03031,9.2361,HYDAPI
+15.24.0,Våtvatn,Høymyrelva,59.83148,9.33745,HYDAPI
+15.25.0,Evje,Numedalslågen,59.88881,9.38807,HYDAPI
+15.26.0,Hanavatn,Gjuva,59.8644,9.27529,HYDAPI
+15.27.0,Sandvatn,Vrengja,59.8324,9.33033,HYDAPI
+15.28.0,Kjørkjevatn,Gjuva,59.86757,9.26282,HYDAPI
+15.29.0,Rødungen,Røungelvi,60.50038,8.64535,HYDAPI
+15.30.0,Fiskeløysvatn,Gjuva,59.89255,9.25512,HYDAPI
+15.33.0,Øyhølen,Numedalslågen,60.08696,9.10278,HYDAPI
+15.35.0,Halnefjord,Sleipa,60.35535,7.84766,HYDAPI
+15.36.0,Sleipa,Sleipa,60.35945,7.85477,HYDAPI
+15.44.0,Hallen,Numedalslågen,60.39949,8.42323,HYDAPI
+15.45.0,Ølmøs,Ølmøsåi,60.23264,8.58686,HYDAPI
+15.47.0,Rødbergdammen,Uvdalselvi,60.26554,8.96514,HYDAPI
+15.49.0,Halledalsvatn,Halldalsåi,60.49297,8.47906,HYDAPI
+15.5.0,Tunhovd,Numedalslågen,60.32215,8.92429,HYDAPI
+15.50.0,Rødungen,Røungelvi,60.49497,8.63631,HYDAPI
+15.51.0,Eggedal,Numedalslågen,60.38116,8.25668,HYDAPI
+15.52.0,Smådøla,Smådøla,60.32922,8.81019,HYDAPI
+15.53.0,Borgåi,Borgåi,60.30979,9.00972,HYDAPI
+15.54.0,Skrykken,Numedalslågen,60.28084,8.01846,HYDAPI
+15.55.0,Økta,Økta,60.3069,9.05009,HYDAPI
+15.56.0,Sønstevatn,Ølmøsåi,60.23264,8.58686,HYDAPI
+15.57.0,Numedalslågen v/Fossan,Numedalslågen,59.92354,9.34071,HYDAPI
+15.6.0,Tindhølen,Djupa,60.26583,7.64023,HYDAPI
+15.63.0,Smådøla ndf. overføring,Smådøla,60.32859,8.81032,HYDAPI
+15.64.0,Smådøla ovf. Uvdalselvi,Smådøla,60.26512,8.92818,HYDAPI
+15.68.0,"Vrenga kraftstasjon, avløp",Vrengja,59.86278,9.38598,HYDAPI
+15.69.0,Borgåi ndf. overføring,Borgåi,60.28993,9.01152,HYDAPI
+15.7.0,Dokkeberg,Uvdalselvi,60.2584,8.92624,HYDAPI
+15.71.0,Borgåi ovf. Numedalslågen,Borgåi,60.25851,9.00007,HYDAPI
+15.72.0,Sørkja,Sørkjeåi,59.95459,9.29932,HYDAPI
+15.79.0,Ossjøen,Numedalslågen,60.3821,8.26392,HYDAPI
+15.8.0,Pålsbufjord,Numedalslågen,60.43594,8.73508,HYDAPI
+15.81.0,Numedalslågen v/Djupdal kraftstasjon,Numedalslågen,59.92199,9.34968,HYDAPI
+15.83.0,Numedalslågen v/Flesberg,Numedalslågen,59.85922,9.42759,HYDAPI
+15.85.0,Økta ndf. overføring,Økta,60.27146,9.05826,HYDAPI
+15.86.0,Økta ovf. Gryta,Økta,60.24179,9.04864,HYDAPI
+15.87.0,Gryta,Gryta,60.23621,9.052,HYDAPI
+15.88.0,Økta ovf. Norefjorden,Økta,60.20692,9.0234,HYDAPI
+15.89.0,Bogstrandåi 420 m o.h.,Numedalslågen,60.08482,9.13962,HYDAPI
+15.9.0,Tunhovdfjord,Numedalslågen,60.32215,8.92429,HYDAPI
+15.90.0,Bogstrandåi ovf. Numedalslågen,Numedalslågen,60.07577,9.12117,HYDAPI
+16.1.0,Notodden (Heddalsvatnet),Skiensvassdraget,59.55605,9.26361,HYDAPI
+16.10.0,Omnesfoss,Heddøla-hjartdøla,59.61155,8.99355,HYDAPI
+16.100.0,Smørkleppåi ovf. Vinjevatn,Vinjeåi,59.62133,7.8222,HYDAPI
+16.101.0,Kjela,Vinjeåi,59.78852,7.24721,HYDAPI
+16.102.0,Nørstrud bru,Dalaåi,59.42574,8.4434,HYDAPI
+16.103.0,Sagafoss,Morgedalsåi,59.42491,8.45928,HYDAPI
+16.104.0,Kilen,Kileåi,59.34324,8.78991,HYDAPI
+16.105.0,Ståvatn,Vinjeåi,59.81381,7.20309,HYDAPI
+16.106.0,Langesæ,Førsvassåi,59.72136,7.30941,HYDAPI
+16.107.0,Førsvatn,Førsvassåi,59.72908,7.42464,HYDAPI
+16.108.0,Gjevarvatn,Valeåi,59.60221,8.34804,HYDAPI
+16.109.0,Veisvikvatn,Veisvikåi,59.72657,8.26027,HYDAPI
+16.110.0,Venemo,Bora,59.75583,7.564,HYDAPI
+16.112.0,Byrteåi,Rukkeåi,59.56593,7.74877,HYDAPI
+16.115.0,Sundbarmvatn,Manndalselvi,59.56344,8.41459,HYDAPI
+16.117.0,Elvarheim,Vest-vassdraget,59.44506,7.9974,HYDAPI
+16.118.0,Sundsbarmvatn,Manndalselvi,59.50598,8.52334,HYDAPI
+16.119.0,Sandsetvatn,Bøelva,59.73816,8.32971,HYDAPI
+16.12.0,Landverk bru,Heddøla-hjartdøla,59.61171,8.99256,HYDAPI
+16.120.0,Ljosdalsvann,elv fra Ljosdalsvatn,59.53111,8.22389,HYDAPI
+16.121.0,Nystølsvann,Hegneåi,59.49686,8.4684,HYDAPI
+16.122.0,Grovåi,Grovåi,59.6414,8.31172,HYDAPI
+16.123.0,Seljordvatn,Bøelva,59.47502,8.64909,HYDAPI
+16.124.0,Botnedalsvatn,Dalåi,59.48864,7.78639,HYDAPI
+16.125.0,Bitdalsvatn,Bitu,59.78389,7.97074,HYDAPI
+16.126.0,Hogga total,Vest-vassdraget,59.30296,9.04378,HYDAPI
+16.127.0,Viertjern,Austbygdåi,60.12529,8.4502,HYDAPI
+16.128.0,Austbygdåi,Austbygdåi,59.99525,8.82766,HYDAPI
+16.129.0,Tokke 5 (Byrte),Rukkeåi,59.49532,7.82942,HYDAPI
+16.13.0,Dalen,Vest-vassdraget,59.44212,8.0217,HYDAPI
+16.130.0,Tokke 6 (Lio),Vest-vassdraget,59.46211,7.93643,HYDAPI
+16.134.0,Langen,Skoeelva,59.20676,9.19469,HYDAPI
+16.135.0,Tyri,Skoeelva,59.27241,9.12401,HYDAPI
+16.136.0,Grunningsåi,Grunnåi,59.51516,8.64868,HYDAPI
+16.138.0,Tokke kraftverk,Vest-vassdraget,59.44315,8.03931,HYDAPI
+16.140.0,Kvenna,Skiensvassdraget,60.01842,7.86546,HYDAPI
+16.141.0,Kalhovdfjord Vf.,Mår,60.0666,8.37753,HYDAPI
+16.142.0,Strengen,Gøyst,59.99475,8.37472,HYDAPI
+16.143.0,Vadtjønn,Vae,59.72509,7.54576,HYDAPI
+16.144.0,Våmarvatn,Kåvsåi,59.64771,7.89153,HYDAPI
+16.147.0,Kjelaåi inntak ndf.,Vinjeåi,59.78175,7.26866,HYDAPI
+16.148.0,Hyljelihyl ndf.,Vinjeåi,59.73837,7.45089,HYDAPI
+16.149.0,Vinje kraftverk,Vinjeåi,59.61589,7.85536,HYDAPI
+16.150.0,Kalhovdfjord justert,Mår,60.06899,8.31582,HYDAPI
+16.154.0,Brusetbekken,Skiensvassdraget,59.22058,9.39876,HYDAPI
+16.155.0,Sønnlandsvatn,Skogsåi,59.70388,8.85882,HYDAPI
+16.156.0,Grunnåi,Grunnåi,59.53717,8.76515,HYDAPI
+16.157.0,Børtevatn overløp,Rukkeåi,59.49356,7.83301,HYDAPI
+16.158.0,Botnedalsvatn overl.,Dalåi,59.48864,7.7855,HYDAPI
+16.159.0,Bøelva ndf. Seljordsvatnet,Bøelva,59.43327,8.86936,HYDAPI
+16.161.0,Bøelva v/Gvarv,Bøelva,59.38802,9.16861,HYDAPI
+16.164.0,Heddøla ovf. Ørvella,Heddøla-hjartdøla,59.61145,8.99399,HYDAPI
+16.18.0,Møsvatn,Skiensvassdraget,59.8232,8.31555,HYDAPI
+16.183.0,Vallaråi ovf. Sundsbarm kraftstasjon,Bøelva,59.49987,8.63628,HYDAPI
+16.184.0,Haukeli kraftverk,Vinjeåi,59.73317,7.54541,HYDAPI
+16.185.0,Songa kraftverk,Vest-vassdraget,59.77814,7.72513,HYDAPI
+16.187.0,Hogga Dam,Vest-vassdraget,59.30308,9.0425,HYDAPI
+16.188.0,Langeidvatn,Vae,59.71104,7.57481,HYDAPI
+16.189.0,Bjønntjønn,Grytåi,59.54482,8.01581,HYDAPI
+16.19.0,"Møsvatn, Langhøl",Skiensvassdraget,59.82936,8.32609,HYDAPI
+16.190.0,Hegre,Bitu,59.79092,8.00014,HYDAPI
+16.191.0,Grønåi,Vest-vassdraget,59.85366,7.47288,HYDAPI
+16.193.0,Hørte,Hørteelva,59.43135,9.13372,HYDAPI
+16.194.0,Kilen,Kileåi,59.34851,8.78597,HYDAPI
+16.195.0,Hjartdal kraftstasjon,Heddøla-hjartdøla,59.60449,8.71564,HYDAPI
+16.196.0,Totak,Vest-vassdraget,59.7731,7.72532,HYDAPI
+16.197.0,Songavatn,Vest-vassdraget,59.82225,7.56114,HYDAPI
+16.198.0,Mår Kraftverk,Skiensvassdraget,59.88449,8.67516,HYDAPI
+16.199.0,Poddevatn,elv fra Holmesjøen,59.89379,7.23988,HYDAPI
+16.20.0,Møsvatn ndf.,Skiensvassdraget,59.82476,8.31727,HYDAPI
+16.200.0,Hjartsjø,Heddøla-hjartdøla,59.6081,8.76288,HYDAPI
+16.202.0,Vinjevatn,Vinjeåi,59.61459,7.85243,HYDAPI
+16.203.0,Strengen - Hogga,Vest-vassdraget,59.30209,9.04495,HYDAPI
+16.204.0,Kjelddal ndf.,Vest-vassdraget,59.29311,9.05298,HYDAPI
+16.205.0,Lunde ndf.,Vest-vassdraget,59.30142,9.09163,HYDAPI
+16.208.0,Straumen ndf. Flåvatn,Vest-vassdraget,59.31778,8.98129,HYDAPI
+16.209.0,Straumen ovf. Kviteseidvatnet,Vest-vassdraget,59.3637,8.52279,HYDAPI
+16.21.0,Tinnsjø,Skiensvassdraget,59.95662,8.82775,HYDAPI
+16.210.0,Bandak utløp v/Sandodd,Vest-vassdraget,59.38333,8.45696,HYDAPI
+16.211.0,Kjela ndf. Vesle Kjelavatnet,Vinjeåi,59.78105,7.28097,HYDAPI
+16.212.0,Kjela ndf. Eivindbuvatn,Vinjeåi,59.76922,7.32926,HYDAPI
+16.213.0,Kjela ndf. Vågslivatnet,Vinjeåi,59.76272,7.3941,HYDAPI
+16.214.0,Tyrvelibekken,Tyrvelibekken,59.77888,7.32836,HYDAPI
+16.215.0,Hestvollbekken,Hestvollbekken,59.77683,7.29174,HYDAPI
+16.216.0,Skåfonnbekken,Skåfonnbekken,59.76513,7.31064,HYDAPI
+16.217.0,Straumen ovf. Hogga kraftstasjon,Vest-vassdraget,59.31332,9.04174,HYDAPI
+16.218.0,Straumen ndf. Hogga kraftstasjon,Vest-vassdraget,59.30207,9.09602,HYDAPI
+16.219.0,Flothylåi v/Flothyl,Vinjeåi,59.72754,7.4736,HYDAPI
+16.22.0,Hogga,Vest-vassdraget,59.30307,9.04246,HYDAPI
+16.220.0,Bøelva v/Oterholt,Bøelva,59.42974,9.04673,HYDAPI
+16.221.0,Vallaråi ndf. Sundsbarm kraftstasjon,Bøelva,59.49295,8.63879,HYDAPI
+16.222.0,Bøelva v/Sanda bru,Bøelva,59.41993,8.899,HYDAPI
+16.223.0,Sundsbarm kraftstasjon,Bøelva,59.49904,8.63538,HYDAPI
+16.224.0,Hjartdøla ndf. Hjartsjøen,Heddøla-hjartdøla,59.60826,8.76315,HYDAPI
+16.225.0,Hjartsjø kraftstasjon,Heddøla-hjartdøla,59.60482,8.71567,HYDAPI
+16.226.0,Skogsåa ndf. Sønnelandsvatnet,Skogsåi,59.70163,8.85906,HYDAPI
+16.227.0,Skogsåa v/Mellombø,Skogsåi,59.62605,8.94713,HYDAPI
+16.228.0,Hjartdøla ndf. Hanefossen,Heddøla-hjartdøla,59.62175,8.90105,HYDAPI
+16.23.0,Kirkevoll bru,Skiensvassdraget,59.68969,9.03759,HYDAPI
+16.231.1,Eikamoen rør 1,Bøelva,59.44289,9.06681,HYDAPI
+16.231.10,Eikamoen rør 10,Bøelva,59.43898,9.08283,HYDAPI
+16.231.12,Eikamoen rør 12,Bøelva,59.44308,9.05322,HYDAPI
+16.231.2,Eikamoen rør 2,Bøelva,59.44486,9.06731,HYDAPI
+16.231.3,Eikamoen rør 3,Bøelva,59.44532,9.06909,HYDAPI
+16.231.4,Eikamoen rør 4,Bøelva,59.44516,9.06727,HYDAPI
+16.231.5,Eikamoen rør 5,Bøelva,59.44936,9.06425,HYDAPI
+16.231.7,Eikamoen rør 7,Bøelva,59.44285,9.05895,HYDAPI
+16.231.9,Eikamoen rør 9,Bøelva,59.43994,9.07969,HYDAPI
+16.232.1,Groset grunnvannsrør 1A,Grosetåe,59.83572,8.31427,HYDAPI
+16.232.10,Groset rør 10,Grosetåe,59.8444,8.33917,HYDAPI
+16.232.12,Groset rør 12,Grosetåe,59.83521,8.31085,HYDAPI
+16.232.14,Groset,Grosetåe,59.8357,8.31446,HYDAPI
+16.232.15,Groset klima,Grosetåe,59.84052,8.31059,HYDAPI
+16.232.16,Vm1 Hegestjern,Grosetåe,59.8414,8.33761,HYDAPI
+16.232.17,Vm2 Heitjern,Grosetåe,59.84631,8.33542,HYDAPI
+16.232.18,Vm 3 Nystultjern,Grosetåe,59.84418,8.31168,HYDAPI
+16.232.19,Vm 4 Hogsettjern,Grosetåe,59.84052,8.31059,HYDAPI
+16.232.2,Groset rør 2,Grosetåe,59.83569,8.31303,HYDAPI
+16.232.20,Vm 5 Olmostjern,Grosetåe,59.83793,8.29561,HYDAPI
+16.232.21,Vm 6 Neristjern,Grosetåe,59.83497,8.31529,HYDAPI
+16.232.22,Vm 7 Gosettjern,Grosetåe,59.83594,8.3205,HYDAPI
+16.232.23,"Groset, totalisator",Grosetåe,59.83527,8.31081,HYDAPI
+16.232.3,Groset rør 3,Grosetåe,59.83859,8.30146,HYDAPI
+16.232.4,Groset rør 4,Grosetåe,59.84798,8.31817,HYDAPI
+16.232.5,Groset rør 5,Grosetåe,59.85162,8.31579,HYDAPI
+16.232.6,Groset rør 6,Grosetåe,59.85123,8.31457,HYDAPI
+16.232.7,Groset rør 7,Grosetåe,59.8524,8.32331,HYDAPI
+16.232.9,Groset rør 9,Grosetåe,59.84863,8.33195,HYDAPI
+16.233.0,Groset markvann,Grosetåe,59.83565,8.3138,HYDAPI
+16.234.1,Holld.bekken rør 1,Bora,59.79868,7.55681,HYDAPI
+16.234.2,Holld.bekken rør 2,Bora,59.79053,7.55966,HYDAPI
+16.235.1,Bitu rør 1,Bitu,59.7623,8.02553,HYDAPI
+16.235.2,Bitu rør 2,Bitu,59.76458,8.03027,HYDAPI
+16.24.0,Mårvatn,Mår,60.08947,8.28304,HYDAPI
+16.244.0,Vm Grovåi,Grovåi,59.64082,8.31803,HYDAPI
+16.244.9,Tele Grovåi,Grovåi,59.6372,8.29747,HYDAPI
+16.245.1,Tele 1 Strengen,Gøyst,59.99529,8.37238,HYDAPI
+16.248.1,Myrane rør,Vinjeåi,59.7657,7.36371,HYDAPI
+16.249.1,Bø rør 1,Kåvsåi,59.61488,7.8935,HYDAPI
+16.249.2,Gbr  Bø 2,Kåvsåi,59.61264,7.89446,HYDAPI
+16.25.0,Mårvatn ndf.,Mår,60.08679,8.28489,HYDAPI
+16.250.12,Bandak v/Dalen kai,Vest-vassdraget,59.44477,8.02423,HYDAPI
+16.258.12,Våmarvatn v/innløpstunnelen,Kåvsåi,59.67955,7.88387,HYDAPI
+16.259.15,Vinjevatn v/Evja (12),Vinjeåi,59.60978,7.86076,HYDAPI
+16.26.0,Kalhovdfjord,Mår,60.06569,8.37338,HYDAPI
+16.261.1,Lognvikvatn v/Brandland (11),Tansåi,59.67265,8.15493,HYDAPI
+16.27.0,Kalhovdfj-Gøystvatn,Gøyst,60.03042,8.3229,HYDAPI
+16.28.0,Kalhovdfjord ndf.,Mår,60.06749,8.37514,HYDAPI
+16.29.0,Eidsfoss ndf.,Vest-vassdraget,59.29652,9.22153,HYDAPI
+16.3.0,Flatsjø,Bøelva,59.53462,8.63256,HYDAPI
+16.30.0,Ulefoss,Vest-vassdraget,59.2821,9.25478,HYDAPI
+16.31.0,Omnesfoss,Heddøla-hjartdøla,59.61172,8.99327,HYDAPI
+16.32.0,Hjartsjø,Heddøla-hjartdøla,59.6081,8.76288,HYDAPI
+16.33.0,Seljordvatn,Bøelva,59.43179,8.83815,HYDAPI
+16.34.0,Totak,Vest-vassdraget,59.69866,8.03168,HYDAPI
+16.35.0,Totak ndf.,Vest-vassdraget,59.6378,8.00892,HYDAPI
+16.36.0,Grungevatn,Vinjeåi,59.7128,7.74717,HYDAPI
+16.37.0,Vinjevatn,Vinjeåi,59.58504,7.91484,HYDAPI
+16.38.0,Øygardshylen,Vinjeåi,59.59817,7.88253,HYDAPI
+16.4.0,Flatsjø,Bøelva,59.53451,8.63256,HYDAPI
+16.40.0,Strengen,Vest-vassdraget,59.31789,8.98155,HYDAPI
+16.42.0,Lsngeidvatn ndf.,Vae,59.71373,7.57473,HYDAPI
+16.43.0,Hogga ndf.,Vest-vassdraget,59.3012,9.04478,HYDAPI
+16.44.0,Langeidvatn ndf.,Vae,59.71201,7.57484,HYDAPI
+16.45.0,Kjelddal,Vest-vassdraget,59.29221,9.05122,HYDAPI
+16.453.0,Grunnåi 580 m.o.h,Grunnåi,59.52155,8.70465,HYDAPI
+16.454.0,Grunnåi 175 m o.h,Grunnåi,59.5159,8.65429,HYDAPI
+16.455.0,Mår ovf. Tinnsjøen,Mår,60.00111,8.74946,HYDAPI
+16.457.0,Grovåi ovf. inntak,Grovåi,59.64216,8.34551,HYDAPI
+16.458.0,Bjåenåi ovf. inntak,Bøelva,59.6667,8.35258,HYDAPI
+16.459.0,Grovåi ovf. Bjåenåi,Grovåi,59.64328,8.37994,HYDAPI
+16.46.0,Lunde,Vest-vassdraget,59.30028,9.08811,HYDAPI
+16.460.0,Bjåenåi ovf. Grovåi,Bøelva,59.64344,8.38032,HYDAPI
+16.461.0,Baugestaulbekken ovf. Åmotsdalsåi,Bøelva,59.63559,8.3848,HYDAPI
+16.462.0,Åmotsdalsåi ovf. Kyrbekk,Bøelva,59.63684,8.38894,HYDAPI
+16.463.0,Kyrbekk (bekk fra Trae),Bøelva,59.63696,8.38933,HYDAPI
+16.464.0,Åmotsdalsåi v/Bergemoen,Bøelva,59.63335,8.39757,HYDAPI
+16.465.0,Vehustjønnbekken,Bøelva,59.61634,8.42047,HYDAPI
+16.466.0,Åmotsdalsåi v/bru til Vehus,Bøelva,59.62592,8.40915,HYDAPI
+16.467.0,Åmotsdalsåi ovf. Heiåi,Bøelva,59.62144,8.42329,HYDAPI
+16.468.0,Grosetåi ndf. Grosettjørni,Grosetåe,59.83572,8.32065,HYDAPI
+16.469.0,Groset - Bekk1 -  m1,Grosetåe,59.84545,8.31779,HYDAPI
+16.47.0,Vrangfoss ovf.,Vest-vassdraget,59.30558,9.17439,HYDAPI
+16.470.0,Groset - Bekk1 -  m2,Grosetåe,59.84314,8.31707,HYDAPI
+16.471.0,Groset - Bekk 2 - m1,Grosetåe,59.85207,8.31462,HYDAPI
+16.472.0,Groset - Bekk 2 - v1,Grosetåe,59.85186,8.31536,HYDAPI
+16.473.0,Groset - Bekk 2 -v2,Grosetåe,59.85048,8.31713,HYDAPI
+16.474.0,Groset - Bekk 2 - m2,Grosetåe,59.84998,8.31582,HYDAPI
+16.475.0,Groset - Bekk 2 - v3,Grosetåe,59.84902,8.31629,HYDAPI
+16.476.0,Groset - Bekk 2 - m3,Grosetåe,59.84689,8.31624,HYDAPI
+16.477.0,Groset - Bekk 2 - v4,Grosetåe,59.84683,8.31637,HYDAPI
+16.478.0,Groset - Bekk 3 - m1,Grosetåe,59.84318,8.306,HYDAPI
+16.479.0,Groset - Bekk 3 - m2,Grosetåe,59.84185,8.30273,HYDAPI
+16.48.0,Vrangfoss ndf.,Vest-vassdraget,59.29976,9.20982,HYDAPI
+16.480.0,Groset - Bekk 4 - m1,Grosetåe,59.84484,8.29569,HYDAPI
+16.481.0,Groset - Bekk4 - h1,Grosetåe,59.84171,8.29483,HYDAPI
+16.482.0,Groset - Bekk 4 - h2,Grosetåe,59.84108,8.29554,HYDAPI
+16.483.0,Groset - Bekk 4 - m2,Grosetåe,59.84084,8.29744,HYDAPI
+16.484.0,Årmotvatn,Bora,59.91154,7.27225,HYDAPI
+16.487.0,Grunnåi ovf. utløp Grunnåi kraftstasjon,Grunnåi,59.51603,8.66326,HYDAPI
+16.488.0,Rollagåi,Skiensvassdraget,59.91876,8.80538,HYDAPI
+16.49.0,Eidsfoss,Vest-vassdraget,59.29832,9.21979,HYDAPI
+16.490.0,Rusåi,Rusåi,59.61534,7.79752,HYDAPI
+16.491.0,Flatdalsåi ovf. Flatdal,Bøelva,59.56494,8.52258,HYDAPI
+16.492.0,Dalaåi v/Kviteseid,Dalaåi,59.40396,8.47074,HYDAPI
+16.5.0,Eiangsvatn,Håkastulelva,59.46395,9.44639,HYDAPI
+16.50.0,Ulefoss,Vest-vassdraget,59.2821,9.25391,HYDAPI
+16.51.0,Hagadrag,Bøelva,59.432,8.87488,HYDAPI
+16.529.0,Haukeli Forsøksfelt,Vinjeåi,59.81184,7.21377,HYDAPI
+16.53.0,Bråfjord,Skiensvassdraget,59.44453,9.30361,HYDAPI
+16.530.0,Byrte kr.st,Rukkeåi,59.49718,7.83251,HYDAPI
+16.531.0,Lio kr.st.,Vest-vassdraget,59.452,7.95039,HYDAPI
+16.532.0,Gjuvå v/Nybru,Gjuva,59.77168,8.81073,HYDAPI
+16.54.0,Norsjø,Skiensvassdraget,59.38269,9.2485,HYDAPI
+16.6.0,Bandak v/Dalen,Vest-vassdraget,59.443,8.01991,HYDAPI
+16.65.18,Flåvatn v/Fjågesund kai,Vest-vassdraget,59.30384,8.70159,HYDAPI
+16.66.0,Grosettjern,Grosetåe,59.83567,8.32038,HYDAPI
+16.67.0,Tokke ovf. Bandak,Vest-vassdraget,59.44375,8.0006,HYDAPI
+16.68.0,Songavatn,Vest-vassdraget,59.83954,7.58181,HYDAPI
+16.69.0,Langeidvatn ndf.,Vae,59.71193,7.57388,HYDAPI
+16.7.0,Tinnsjø,Skiensvassdraget,59.72685,9.02347,HYDAPI
+16.70.0,Vågslid værstasjon,Vinjeåi,59.76894,7.39144,HYDAPI
+16.72.0,Bordalsvatn,Bora,59.81057,7.40514,HYDAPI
+16.75.0,Tannsvatn (Lognvikvatnet),Tansåi,59.67317,8.06739,HYDAPI
+16.76.0,Hyljelihyl,Vinjeåi,59.73835,7.44911,HYDAPI
+16.77.0,Øykjelihyl,Vinjeåi,59.74639,7.44518,HYDAPI
+16.78.0,Byrtevatn,Rukkeåi,59.49717,7.83465,HYDAPI
+16.79.0,Byrtevatn,Rukkeåi,59.49716,7.83377,HYDAPI
+16.8.0,Nomevatn,Vest-vassdraget,59.29391,9.16709,HYDAPI
+16.81.0,Bitdalsvatn,Bitu,59.7837,7.94759,HYDAPI
+16.82.0,Langhylsfoss,Bøelva,59.57415,8.50114,HYDAPI
+16.83.0,Oftevatn,Dalaåi,59.48925,8.21987,HYDAPI
+16.84.0,Oftevatn ndf.,Dalaåi,59.48891,8.22518,HYDAPI
+16.85.0,Hovdevatn,Dalaåi,59.53617,8.18166,HYDAPI
+16.86.0,Hovdevatn ndf.,Dalaåi,59.53035,8.18533,HYDAPI
+16.87.0,Bonsvatn,Bonsåi,59.78299,8.66368,HYDAPI
+16.88.0,Vindsjåen,Kova,59.77544,8.54266,HYDAPI
+16.89.0,Kovatn,Kova,59.73275,8.67841,HYDAPI
+16.9.0,Strengen Dam ndf.,Gøyst,59.99386,8.37563,HYDAPI
+16.90.0,Skjessvatn,Heddøla-hjartdøla,59.65686,8.52919,HYDAPI
+16.91.0,Breidvatn,Vangsåi,59.65179,8.60289,HYDAPI
+16.93.0,Tokke ovf. Vinjeåi,Vest-vassdraget,59.57157,7.99582,HYDAPI
+16.94.0,Vinjeåi ovf. Tokke,Vinjeåi,59.56599,7.99384,HYDAPI
+16.95.0,Hørte,Hørteelva,59.41879,9.12013,HYDAPI
+16.96.0,Rekanes,Vest-vassdraget,59.31474,8.95081,HYDAPI
+16.97.0,Spjotsodd,Vest-vassdraget,59.36409,8.52358,HYDAPI
+17.1.0,Nedre Tokevatn,Kragerøvassdraget,59.03344,9.19719,HYDAPI
+17.10.0,Dalsfoss ndf.,Kragerøvassdraget,58.96404,9.32025,HYDAPI
+17.11.0,Farsjø,Kragerøvassdraget,58.94118,9.33015,HYDAPI
+17.12.0,Homtjønn,Løkanbekken,59.17053,8.65397,HYDAPI
+17.13.0,Nedre Tokevatn,Kragerøvassdraget,58.98133,9.24908,HYDAPI
+17.14.0,Lundereid,Kragerøvassdraget,58.97667,9.29601,HYDAPI
+17.6.0,Dalsfoss,Kragerøvassdraget,58.96667,9.31057,HYDAPI
+17.7.0,Nedre Tokevatn,Kragerøvassdraget,59.03342,9.19722,HYDAPI
+17.9.0,Dalsfoss,Kragerøvassdraget,58.96676,9.31057,HYDAPI
+18.1.0,Lundevatn,Vegårsvassdraget,58.66859,8.97759,HYDAPI
+18.10.0,Gjerstad,Gjerstadvassdraget,58.88343,9.03313,HYDAPI
+18.11.0,Tjellingtjernbekk,Gjerstadvassdraget,58.93208,8.85938,HYDAPI
+18.12.0,Skardavatn,Leivasselva,58.76119,9.26652,HYDAPI
+18.13.0,Storelva v/Angelstad,Vegårsvassdraget,58.64199,8.90556,HYDAPI
+18.2.0,Lundestrømmen,Vegårsvassdraget,58.66859,8.97966,HYDAPI
+18.3.0,Songevatn,Vegårsvassdraget,58.66948,8.98052,HYDAPI
+18.4.0,Lundevann,Vegårsvassdraget,58.66821,8.97779,HYDAPI
+18.5.0,Lundevann ndf.,KYSTFELT,58.67011,8.98276,HYDAPI
+18.6.0,Ubergelv,Vegårsvassdraget,58.65181,8.84694,HYDAPI
+18.7.0,Ubergvatn,Vegårsvassdraget,58.65323,8.8468,HYDAPI
+18.8.0,Ubergelv,Vegårsvassdraget,58.65271,8.84629,HYDAPI
+18.9.0,Vegår,Vegårsvassdraget,58.78352,8.82789,HYDAPI
+19.1.0,Bøylestadevja,Arendalsvassdraget,58.57523,8.70628,HYDAPI
+19.100.0,Nisser,Arendalsvassdraget,59.01744,8.52141,HYDAPI
+19.103.0,Naper,Frostdøl,59.16613,8.33485,HYDAPI
+19.104.0,Songedalsåi,Songedalsåi,59.29987,7.98507,HYDAPI
+19.105.0,Kjørull,Arendalsvassdraget,58.96272,8.54043,HYDAPI
+19.106.0,Ulvsvatn,Bondøl,59.22902,7.83946,HYDAPI
+19.107.0,Lilleelv,Lilleelva,58.43536,8.70269,HYDAPI
+19.126.0,Gjermundnes,Arendalsvassdraget,58.74599,8.46467,HYDAPI
+19.127.0,Rygene total,Arendalsvassdraget,58.41074,8.67014,HYDAPI
+19.129.0,Nelaug,Arendalsvassdraget,58.65583,8.61944,HYDAPI
+19.13.0,Gjøv ndf. Gjevden,Gjøv,58.958,8.17328,HYDAPI
+19.130.0,Gjøv ndf. Jørundland kraftstasjon,Gjøv,58.89792,8.2474,HYDAPI
+19.131.0,Gjøv v/Mjåland bru,Gjøv,58.88917,8.26727,HYDAPI
+19.132.0,Jørundland kraftstasjon,Gjøv,58.89902,8.24639,HYDAPI
+19.133.0,Nidelva v/Evenstad kraftstasjon,Arendalsvassdraget,58.54326,8.67391,HYDAPI
+19.134.0,Vråvatn utløp,Arendalsvassdraget,59.31883,8.43285,HYDAPI
+19.135.0,Finndøla kraftstasjon,Fyresdalsåna,59.18956,8.05519,HYDAPI
+19.136.0,Fyresdalsåna ndf. Fyresvatn,Fyresdalsåna,59.00597,8.27523,HYDAPI
+19.137.0,Nidelva v/Nisserdam kraftstasjon,Arendalsvassdraget,59.0179,8.52489,HYDAPI
+19.138.0,Dynjanfoss kraftstasjon,Fyresdalsåna,58.95034,8.37113,HYDAPI
+19.139.0,Nidelva v/Nelaug dam,Arendalsvassdraget,58.65908,8.62257,HYDAPI
+19.140.0,Nidelva v/Rykene kraftstasjon,Arendalsvassdraget,58.40542,8.63792,HYDAPI
+19.141.0,Skafså kraftstasjon II,Arendalsvassdraget,59.35663,8.17636,HYDAPI
+19.142.0,Vm Gravå,Fyresdalsåna,59.2331,8.03535,HYDAPI
+19.142.1,Gravå rør 1,Fyresdalsåna,59.24071,8.02884,HYDAPI
+19.142.2,Gbr 2 Gravå,Fyresdalsåna,59.24615,8.03078,HYDAPI
+19.142.3,Gbr 3 Gravå,Fyresdalsåna,59.24677,8.03402,HYDAPI
+19.142.4,Gbr 4 Gravå,Fyresdalsåna,59.24715,8.03013,HYDAPI
+19.142.5,Gravå rør 5,Fyresdalsåna,59.25106,8.03057,HYDAPI
+19.142.6,Gbr 6 Gravå,Fyresdalsåna,59.2473,8.0411,HYDAPI
+19.142.8,"Gravå, lufttemperatur",Songedalsåi,59.24687,8.04206,HYDAPI
+19.143.1,Raudåna rør 1,Arendalsvassdraget,58.96854,8.50458,HYDAPI
+19.143.2,Raudåna rør 2,Arendalsvassdraget,58.97559,8.48592,HYDAPI
+19.143.3,Raudåna rør 3,Arendalsvassdraget,58.97515,8.46759,HYDAPI
+19.143.5,Raudåna rør 5,Arendalsvassdraget,58.97611,8.44531,HYDAPI
+19.143.6,Raudåna rør 6,Arendalsvassdraget,58.97605,8.43376,HYDAPI
+19.143.7,Raudåna rør 7,Arendalsvassdraget,58.97541,8.41629,HYDAPI
+19.143.8,Gbr Dal v/Raudåna,Arendalsvassdraget,58.9681,8.5135,HYDAPI
+19.143.9,Vm Raudåna,Arendalsvassdraget,58.9679,8.50707,HYDAPI
+19.144.0,Vm Stigvassåi,Stigvasselva,58.74923,8.51553,HYDAPI
+19.144.2,Stigvassåi rør 2,Stigvasselva,58.76781,8.53479,HYDAPI
+19.144.3,Stigvassåi rør 3,Stigvasselva,58.76205,8.54467,HYDAPI
+19.144.4,Stigvassåi rør 4,Stigvasselva,58.76788,8.55424,HYDAPI
+19.144.5,Stigvassåi rør 5,Stigvasselva,58.75549,8.54144,HYDAPI
+19.144.6,Stigvassåi rør 6,Stigvasselva,58.75111,8.51287,HYDAPI
+19.144.7,Stigvassåi rør 7,Stigvasselva,58.76011,8.54008,HYDAPI
+19.144.9,"Stigvassåi, rør 9",Stigvasselva,58.75106,8.51434,HYDAPI
+19.16.0,Rossøy,Arendalsvassdraget,58.40701,8.60843,HYDAPI
+19.18.0,Buodden,Arendalsvassdraget,58.40441,8.63926,HYDAPI
+19.2.0,Glomsfoss,Fyresdalsåna,59.00863,8.26894,HYDAPI
+19.21.0,Monsåi v/Gåttstøl,Arendalsvassdraget,59.36716,7.87327,HYDAPI
+19.23.0,Nisser,Arendalsvassdraget,59.01841,8.52195,HYDAPI
+19.241.0,Øysæ ndf.,Bondøl,59.2543,7.80797,HYDAPI
+19.25.0,Fyresvatn,Fyresdalsåna,59.01627,8.27066,HYDAPI
+19.250.0,Reddalsåni,Landvikelva,58.3502,8.44919,HYDAPI
+19.26.0,Nesvatn ndf.,Gjøv,58.96485,8.09264,HYDAPI
+19.27.0,Drangsvatn,Fyresdalsåna,58.98415,8.30962,HYDAPI
+19.29.0,Aamfoss,Arendalsvassdraget,58.77032,8.48591,HYDAPI
+19.3.0,Fyresvatn,Fyresdalsåna,59.01539,8.27416,HYDAPI
+19.31.0,Fyresvatn,Fyresdalsåna,59.01584,8.27415,HYDAPI
+19.34.0,Haukerhølen,Arendalsvassdraget,59.00224,8.54077,HYDAPI
+19.35.0,Tveitsund,Arendalsvassdraget,59.01291,8.51103,HYDAPI
+19.36.0,Evenstad,Arendalsvassdraget,58.54281,8.67392,HYDAPI
+19.37.0,Nelaug ovf.,Arendalsvassdraget,58.65906,8.62512,HYDAPI
+19.39.0,Bøylefoss,Arendalsvassdraget,58.59591,8.71647,HYDAPI
+19.40.0,Lunde Mølle,Arendalsvassdraget,58.40532,8.64439,HYDAPI
+19.41.0,Vråvatn,Arendalsvassdraget,59.32059,8.4246,HYDAPI
+19.46.0,Tveitsund,Arendalsvassdraget,59.01923,8.52055,HYDAPI
+19.5.0,Nesvatn,Gjøv,58.96574,8.09088,HYDAPI
+19.51.0,Drang,Fyresdalsåna,58.99832,8.27278,HYDAPI
+19.52.0,Haugsjå,Fyresdalsåna,58.95894,8.47149,HYDAPI
+19.53.0,Fjalestad,Litleåi,59.16158,8.39614,HYDAPI
+19.55.0,Jørundland,Gjøv,58.89677,8.24857,HYDAPI
+19.57.0,Underberg bru,Arendalsvassdraget,59.37403,8.04302,HYDAPI
+19.58.0,Borsæ,Arendalsvassdraget,59.38034,7.82634,HYDAPI
+19.59.0,Bordsæ bru,Arendalsvassdraget,59.37601,7.83673,HYDAPI
+19.6.0,Refnes bru,KYSTFELT,58.44508,8.74506,HYDAPI
+19.60.0,Langkvernhusfoss,Arendalsvassdraget,59.36119,8.07153,HYDAPI
+19.61.0,Tovslielva ndf. Birtevatn,Tovsliåni,59.06103,7.98262,HYDAPI
+19.62.0,Urvatn,Arendalsvassdraget,59.40673,7.71973,HYDAPI
+19.63.0,Finndøla,Fyresdalsåna,59.22968,8.07686,HYDAPI
+19.64.0,Nesvatn ovf.,Gjøv,58.96536,8.09176,HYDAPI
+19.66.0,Skåltjern,Bondøl,59.24334,7.87313,HYDAPI
+19.67.0,Dalanfoss,Frostdøl,59.15022,8.3832,HYDAPI
+19.68.0,Torsdalsmagasinet,Fyresdalsåna,59.20366,7.7582,HYDAPI
+19.7.0,Torsdalsmagasinet,Fyresdalsåna,59.20321,7.75804,HYDAPI
+19.70.0,Torsdalen ndf.,Fyresdalsåna,59.20242,7.75999,HYDAPI
+19.71.0,Landak,Horgevikåi,59.25765,8.4076,HYDAPI
+19.72.0,Jørundland,Gjøv,58.89454,8.25122,HYDAPI
+19.73.0,Kilåi bru,Kilåi,59.00204,8.29921,HYDAPI
+19.75.0,Nisser ndf.,Arendalsvassdraget,59.01079,8.54588,HYDAPI
+19.76.0,Tovsliøytjønn,Gjøv,59.06934,8.0114,HYDAPI
+19.77.0,Horgevikåi,Horgevikåi,59.26204,8.37192,HYDAPI
+19.78.0,Grytå,Grytåi,59.17244,8.34414,HYDAPI
+19.79.0,Gravå,Fyresdalsåna,59.23484,8.03641,HYDAPI
+19.80.0,Stigvassåi,Stigvasselva,58.74981,8.51559,HYDAPI
+19.81.0,Skredvatn,Arendalsvassdraget,59.34721,8.13868,HYDAPI
+19.82.0,Rauåna,Arendalsvassdraget,58.96851,8.50818,HYDAPI
+19.83.0,Rolleivstadvatn,Gjuvåni,59.24451,8.14483,HYDAPI
+19.84.0,Napevatn,Frostdøl,59.16309,8.33805,HYDAPI
+19.85.0,Lytingsvatn,Borstadåi,59.19642,8.37277,HYDAPI
+19.86.0,Øysæ,Bondøl,59.25816,7.81374,HYDAPI
+19.87.0,Votna,Fyresdalsåna,59.20396,7.93452,HYDAPI
+19.88.0,Gausvatn,Gausåni,59.18981,8.01842,HYDAPI
+19.89.0,Skornetten,Arendalsvassdraget,59.16281,8.56333,HYDAPI
+19.91.0,Åbogstjønn ndf.,Kilåi,59.05819,8.3029,HYDAPI
+19.92.0,Tjønnstronda,Heimdøl,59.06055,8.62468,HYDAPI
+19.93.0,Årak,Arendalsvassdraget,59.03988,8.51936,HYDAPI
+19.94.0,Åbogstjønn ovf.,Kilåi,59.05818,8.29854,HYDAPI
+19.96.0,Storgama ovf.,Heimdøl,59.05231,8.65362,HYDAPI
+19.98.0,Nelaug,Arendalsvassdraget,58.66212,8.62023,HYDAPI
+19.99.0,Vråvatn,Arendalsvassdraget,59.3189,8.43341,HYDAPI
+2.102.0,Gjende,Sjoa,61.49502,8.8069,HYDAPI
+2.103.0,Memurubre. Nedre hytte.,Muru,61.5334,8.51106,HYDAPI
+2.1049.0,Øyberget kraftstasjon,Otta,61.9154,8.10324,HYDAPI
+2.105.0,A. Memurubre. Øvre hytte,Muru,61.55855,8.51443,HYDAPI
+2.1050.0,Framrusti kraftstasjon,Otta,61.94668,7.90514,HYDAPI
+2.1051.0,Otta 4 km ndf. Øyberget kraftstasjon,Otta,61.90345,8.18402,HYDAPI
+2.1093.0,Vinsteråne ndf. Vinstre,Vinstra,61.35278,9.0703,HYDAPI
+2.1094.0,Innløp Øvre Heimdalsvatn/Brurskardbekken,Hinøgla,61.42916,8.83964,HYDAPI
+2.1095.0,Brurskardbekken 1116 m o.h.,Hinøgla,61.43217,8.83302,HYDAPI
+2.1096.0,Brurskardbekken 1200 m o.h.,Hinøgla,61.43506,8.83487,HYDAPI
+2.1097.0,Utløp Brurskardtjønn 1301 m o.h,Hinøgla,61.44575,8.83882,HYDAPI
+2.1098.0,Tilløpsbekk til Brurskardtj. 1351 m o.h.,Hinøgla,61.45354,8.85094,HYDAPI
+2.1099.0,Høyvatnelvi ovf. Bøvre,Høya,61.66806,8.1308,HYDAPI
+2.1109.0,Storbreagrove,Leira,61.58979,8.17755,HYDAPI
+2.1110.0,Leira v/inngang Leridalen,Leira,61.65976,8.18264,HYDAPI
+2.1127.0,Rådåe,Vorma-Lågen,62.0175,9.21313,HYDAPI
+2.1128.0,Leina v/Furumo kulvert E6,Vorma-Lågen,62.01289,9.20827,HYDAPI
+2.1134.1,Dovre rør 1,Vorma-Lågen,62.01715,9.21554,HYDAPI
+2.1134.2,Dovre rør 2,Vorma-Lågen,62.02045,9.22447,HYDAPI
+2.1135.1,Heidal rør,Trykju,61.75317,9.32185,HYDAPI
+2.1136.1,Grotli rør,Otta,62.01326,7.81939,HYDAPI
+2.1136.2,Grotli rør 2,Otta,62.01365,7.81651,HYDAPI
+2.1141.1,Otta v/Haugalykkja rør 1,Otta,61.76671,9.48905,HYDAPI
+2.1142.1,Otta v/Haugalykkja rør 2,Otta,61.76735,9.48791,HYDAPI
+2.12.0,Nedre Sjodalsvatn,Sjoa,61.54837,8.93451,HYDAPI
+2.1230.1,Bismo rør 1,Otta,61.88498,8.24989,HYDAPI
+2.1230.2,Bismo rør 2,Otta,61.8796,8.25794,HYDAPI
+2.1230.3,Bismo rør 3,Otta,61.8786,8.27631,HYDAPI
+2.1231.0,Otta v/Bismo 1,Otta,61.88678,8.25086,HYDAPI
+2.1232.0,Otta v/Bismo 2,Otta,61.8776,8.27084,HYDAPI
+2.1235.0,Rosten total,Vorma-Lågen,61.85858,9.40477,HYDAPI
+2.128.0,Vålåsjø,Folla,62.17591,9.42476,HYDAPI
+2.13.0,Nedre Sjodalsvatn,Sjoa,61.56064,8.91856,HYDAPI
+2.143.0,Lårgård bru,Vorma-Lågen,61.84953,9.42593,HYDAPI
+2.147.0,Breiddalsvatn ndf.,Otta,62.00856,7.62908,HYDAPI
+2.148.0,Vågåvatn,Otta,61.85105,8.89776,HYDAPI
+2.149.0,Vågåmo,Otta,61.8681,9.10302,HYDAPI
+2.15.0,Breiddalsvatn ndf.,Otta,62.00504,7.63749,HYDAPI
+2.150.0,Lalm,Otta,61.8167,9.27365,HYDAPI
+2.151.0,Aura,Aura,61.89355,8.35157,HYDAPI
+2.153.0,Aura,Aura,61.89265,8.35159,HYDAPI
+2.155.0,Sagfoss,Tessa,61.84525,8.96237,HYDAPI
+2.156.0,Oterstokfoss,Tessa,61.84838,8.96047,HYDAPI
+2.157.0,Tessa bru,Tessa,61.84165,8.95763,HYDAPI
+2.159.0,Tessa,Tessa,61.84614,8.96047,HYDAPI
+2.16.0,Aura,Aura,61.8931,8.35158,HYDAPI
+2.161.0,Faukstad bru,Sjoa,61.7095,9.42211,HYDAPI
+2.163.0,Otta v/Åsaren,Otta,61.79205,9.44401,HYDAPI
+2.164.0,Bygdin,Vinstra,61.33051,8.74671,HYDAPI
+2.165.0,Bygdin ndf.,Vinstra,61.32735,8.8124,HYDAPI
+2.167.0,Vinsteren,Vinstra,61.32454,8.83218,HYDAPI
+2.168.0,Nedre Bjørnhølen,Vinstra,61.3551,9.07446,HYDAPI
+2.172.0,Olstappen,Vinstra,61.50048,9.40466,HYDAPI
+2.173.0,Kampfoss,Vinstra,61.51162,9.40063,HYDAPI
+2.175.0,Fosse,Vinstra,61.51559,9.42136,HYDAPI
+2.20.0,Kittilstad,Otta,61.89695,8.22781,HYDAPI
+2.21.0,Visa,Visa,61.74881,8.40385,HYDAPI
+2.22.0,Endefoss,Tessa,61.84838,8.96047,HYDAPI
+2.220.0,Sjodalsvatn,Sjoa,61.54324,8.93604,HYDAPI
+2.223.0,Fredriksvatn,Otta,61.94608,7.9826,HYDAPI
+2.232.0,Elveseter,Leira,61.70245,8.28373,HYDAPI
+2.236.0,Breiddalsvatn,Otta,62.02462,7.56967,HYDAPI
+2.237.0,Rauddalsvatn,Framrusti,61.91058,7.79666,HYDAPI
+2.24.0,Kampfoss,Vinstra,61.51117,9.39875,HYDAPI
+2.248.0,Bitihorn,Vinstra,61.29479,8.7982,HYDAPI
+2.25.0,Lalm,Otta,61.81748,9.27394,HYDAPI
+2.252.0,Leirvatn,Leira,61.54786,8.25061,HYDAPI
+2.255.0,Kaldfjord-Øyvatn,Vinstra,61.3494,9.26309,HYDAPI
+2.257.0,Heimdalsvatn,Hinøgla,61.42601,9.07626,HYDAPI
+2.260.0,Øyangen,Hølsa,61.416,9.27426,HYDAPI
+2.268.0,Akslen,Bøvri,61.79955,8.44722,HYDAPI
+2.275.0,Liavatn,Ostri,61.85415,7.76288,HYDAPI
+2.282.0,Aursjøen,Aura,61.93029,8.24476,HYDAPI
+2.283.0,Skjåk Kraftverk,Otta,61.8992,8.22775,HYDAPI
+2.284.0,Sælatunga,Finna,61.88439,9.06212,HYDAPI
+2.289.0,Høydalsvatn,Høya,61.66876,8.1249,HYDAPI
+2.290.0,Brustuen,Bøvri,61.7262,8.29597,HYDAPI
+2.291.0,Tora,Tora,62.00772,7.86636,HYDAPI
+2.292.0,Skjøli,Skjøli,61.86008,8.2854,HYDAPI
+2.294.0,Visa,Visa,61.7488,8.40196,HYDAPI
+2.295.0,Tundra,Tundra,61.90433,8.04395,HYDAPI
+2.297.0,Memurubu,Muru,61.49149,8.621,HYDAPI
+2.298.0,Russa,Russa,61.57555,8.92317,HYDAPI
+2.299.0,Sulheim,Sula,61.76497,8.40354,HYDAPI
+2.300.0,Bøvertjern,Bøvri,61.65668,8.13185,HYDAPI
+2.301.0,Runningen,Bøvri,61.72536,8.28699,HYDAPI
+2.302.0,Øvre Visa,Visa,61.66184,8.43008,HYDAPI
+2.303.0,Dombås,Jora,62.08677,9.10108,HYDAPI
+2.304.0,Jora,Jora,62.13483,8.99845,HYDAPI
+2.324.0,Storøygardsbrua,Sjoa,61.69408,9.47105,HYDAPI
+2.346.0,Lesjaverk (Lesjaskogvatnet),Vorma-Lågen,62.1892,8.53825,HYDAPI
+2.348.0,Sel,Selsbekken,61.8415,9.41063,HYDAPI
+2.36.0,Øvre Heimdalsvatn,Hinøgla,61.41871,8.89356,HYDAPI
+2.378.0,Heimdalsoset,Hinøgla,61.44619,9.10725,HYDAPI
+2.382.0,Sognefjellshytta,Hervasselvi,61.56474,7.99606,HYDAPI
+2.39.0,Sjoa ndf. Gjende,Sjoa,61.4884,8.81994,HYDAPI
+2.399.0,Torsvatn,elv fra Torsvatnet,62.11285,7.84191,HYDAPI
+2.415.0,Espedalsvatn,Espa,61.43769,9.49436,HYDAPI
+2.416.0,Vågåvatn,Otta,61.85789,8.95621,HYDAPI
+2.434.0,Ofossen,Otta,61.88258,8.31304,HYDAPI
+2.440.0,Grønvatn,Vulu,62.09944,7.64989,HYDAPI
+2.455.0,Elveseter,Leira,61.68888,8.2642,HYDAPI
+2.480.0,"Storbreen, Rundhø",Leira,61.574,8.17849,HYDAPI
+2.481.0,Jora v/Nysetra,Jora,62.19227,8.91951,HYDAPI
+2.50.0,"Vågåmo, Nørdre Grindstugu",Otta,61.87325,9.0922,HYDAPI
+2.57.0,Nordre Flybekken,Hinøgla,61.40351,8.89556,HYDAPI
+2.58.0,Brurskardbekken 1200 m o.h.,Hinøgla,61.43469,8.83479,HYDAPI
+2.59.0,Brurskardbekken ndf. Brurskardtjønna,Hinøgla,61.44624,8.84263,HYDAPI
+2.592.0,Fokstua,Folla,62.11198,9.28987,HYDAPI
+2.595.0,Faukstad,Sjoa,61.70961,9.42517,HYDAPI
+2.606.0,Andfinds bru,Folla,62.17455,9.4305,HYDAPI
+2.607.0,Vålåsjø,Folla,62.17481,9.42389,HYDAPI
+2.614.0,Rosten,Vorma-Lågen,61.85853,9.4047,HYDAPI
+2.630.0,Kaldfjord-Øyvatn ndf.,Vinstra,61.35056,9.28374,HYDAPI
+2.658.0,Lågen ndf. Lora,Vorma-Lågen,62.12317,8.7215,HYDAPI
+2.660.0,Hinøgla ndf. Øvre Heimdalsvatnet,Hinøgla,61.41791,8.89544,HYDAPI
+2.662.0,Sjoa ovf. Rinda,Sjoa,61.72665,9.17301,HYDAPI
+2.663.0,Rinda,Rinda,61.72744,9.17249,HYDAPI
+2.664.0,Flybekken,Leirungsåi,61.40238,8.80384,HYDAPI
+2.665.0,Vågåvatnet utløp,Otta,61.86631,9.09731,HYDAPI
+2.666.0,Otta ovf. Skim v/Marlo bru,Otta,61.87891,8.3894,HYDAPI
+2.667.0,Skjåk kraftstasjon,Otta,61.90301,8.18864,HYDAPI
+2.668.0,Nedre Tesse kraftstasjon,Tessa,61.84704,8.96142,HYDAPI
+2.669.0,Tora v/Billingen,Tora,62.00957,7.86697,HYDAPI
+2.670.0,Ostri ovf. Otta,Ostri,61.91347,8.05242,HYDAPI
+2.671.0,Skjøli ovf. Otta,Skjøli,61.87086,8.30132,HYDAPI
+2.672.0,Bøvri ovf. Leira,Bøvri,61.71544,8.31322,HYDAPI
+2.673.0,Leira v/Odden,Leira,61.71384,8.3157,HYDAPI
+2.674.0,Otta v/Eidefoss kraftstasjon,Otta,61.80407,9.30531,HYDAPI
+2.675.0,Otta v/Nesset bru,Otta,61.87277,9.18462,HYDAPI
+2.676.0,Otta ndf. Skjåk kraftstasjon,Otta,61.90222,8.19119,HYDAPI
+2.677.0,Bøvre ovf. Otta,Bøvri,61.83521,8.56266,HYDAPI
+2.679.0,"Vågåvatnet v/Lia bru, sør",Otta,61.85978,8.69256,HYDAPI
+2.680.0,"Vågåvatnet v/Lia bru, nord",Otta,61.86196,8.69158,HYDAPI
+2.681.0,Otta ovf. Tora,Otta,62.00748,7.84963,HYDAPI
+2.682.0,Otta ovf. utløp Øyberget kraftstasjon,Otta,61.91515,8.09795,HYDAPI
+2.683.0,Otta v/Pollfoss,Otta,61.95889,7.89732,HYDAPI
+2.684.0,Framrusti,Framrusti,61.91092,7.79719,HYDAPI
+2.685.0,Otta ndf. Vågåvatnet,Otta,61.86661,9.10438,HYDAPI
+2.718.1,Dombås rør 1,Kvernåi,62.07967,9.03212,HYDAPI
+2.718.2,Dombås rør 2,Kvernåi,62.07959,9.03141,HYDAPI
+2.719.1,Øyangen rør 1,Hølsa,61.43908,9.21971,HYDAPI
+2.719.2,Øyangen rør 2,Vinstra,61.39167,9.18579,HYDAPI
+2.720.0,Vm Espedalsvann,Espa,61.43545,9.49376,HYDAPI
+2.721.1,Lykjestøylane rør 1,Vinstra,61.33834,8.83801,HYDAPI
+2.722.1,Finnbølseter rør 1,Hinøgla,61.46359,9.32059,HYDAPI
+2.722.2,Olstappen,Vinstra,61.51477,9.39597,HYDAPI
+2.726.5,Lufttemp Flåten,Otta,61.78474,9.41783,HYDAPI
+2.73.0,Leirungsåi 1080 m o.h.,Leirungsåi,61.46479,8.77429,HYDAPI
+2.74.0,Leirungsåi 1270 m o.h.,Leirungsåi,61.42501,8.71981,HYDAPI
+2.77.0,Brurskardbekken 1100 m o.h.,Hinøgla,61.43081,8.83343,HYDAPI
+2.772.4,Lufttemp. Løland,Selsbekken,61.83701,9.44969,HYDAPI
+2.779.1,Elvestad rør 1,Otta,61.84868,9.21029,HYDAPI
+2.779.2,Lufttemp. Lalm,Otta,61.84824,9.2077,HYDAPI
+2.782.0,Vm Sørem,Otta,61.87255,9.14895,HYDAPI
+2.782.4,Lufttemp. Sørem,Otta,61.87614,9.14868,HYDAPI
+2.783.0,Vm 414 Vågåmo,Otta,61.86901,9.09161,HYDAPI
+2.784.3,Lufttemp. Grasdalen,Otta,61.86736,8.79125,HYDAPI
+2.785.0,Vm Garmo,Vulu,61.84826,8.81038,HYDAPI
+2.785.12,Lufttemp. Garmo,Otta,61.85141,8.81378,HYDAPI
+2.786.7,Lufttemp. Lom/Blakar,Otta,61.846,8.59431,HYDAPI
+2.787.0,Vm,Visa,61.7506,8.39814,HYDAPI
+2.787.10,Vm Galdebrua,Bøvri,61.71971,8.34274,HYDAPI
+2.787.5,Vm Horftabrua,Visa,61.7488,8.40196,HYDAPI
+2.788.0,Vm Slålibrua,Bøvri,61.71508,8.31408,HYDAPI
+2.788.4,Rusten rør 1,Bøvri,61.71495,8.30482,HYDAPI
+2.788.7,Vm 3 Kv.Dalsvoll,Bøvri,61.72198,8.2426,HYDAPI
+2.79.0,Tessevatn,Tessa,61.80484,8.94811,HYDAPI
+2.790.6,Breistulen rør 1b,Otta,61.87504,8.87087,HYDAPI
+2.791.0,Vm Sterringi,Finna,61.93147,8.7751,HYDAPI
+2.793.0,Vm Leirbrua,Leira,61.71275,8.31376,HYDAPI
+2.793.10,Vm Storlibrua,Leira,61.68143,8.23207,HYDAPI
+2.793.6,Vm Stulabrua,Leira,61.68988,8.26682,HYDAPI
+2.802.2,Lufttemp. Sperstad,Otta,61.87935,8.36231,HYDAPI
+2.806.1,Listøylane rør,Vinstra,61.34681,8.99615,HYDAPI
+2.806.2,Buhøflogane rør,Hølsa,61.3943,9.15341,HYDAPI
+2.81.0,Tessevatn ndf.,Tessa,61.81517,8.94153,HYDAPI
+2.810.3,Lufttemp. Skjåk PRG.,Otta,61.87703,8.37482,HYDAPI
+2.811.0,VM   ?,Otta,61.87445,8.30064,HYDAPI
+2.811.1,LUFTTEMP SKJÅ0K,Otta,61.87838,8.3614,HYDAPI
+2.812.0,VM   ?,Otta,61.88668,8.23758,HYDAPI
+2.812.10,Vm B. Søre Åmodt,Ostri,61.91368,8.07317,HYDAPI
+2.812.5,Vm B. Bokkeodden,Otta,61.89555,8.21833,HYDAPI
+2.812.6,Skjåk rør 2,Otta,61.89925,8.19238,HYDAPI
+2.812.7,Skjåk rør 1,Otta,61.89817,8.1924,HYDAPI
+2.813.0,VM   ?,Ostri,61.9087,8.02763,HYDAPI
+2.813.3,"Tundrali, Skjåk rør",Otta,61.90842,8.06552,HYDAPI
+2.813.4,Vm R. Lund,Ostri,61.90871,8.02763,HYDAPI
+2.9.0,Vålåsjø,Folla,62.17501,9.42858,HYDAPI
+2.94.0,Marstein,Bøvri,61.82153,8.52393,HYDAPI
+2.98.0,Olstappen,Vinstra,61.51252,9.39688,HYDAPI
+2.980.0,Vinstri ndf. Katla,Vinstra,61.5222,9.43517,HYDAPI
+2.995.0,Måråe ovf. elv fra Breidalsvatnet,Måråi,62.00215,7.6376,HYDAPI
+2.996.0,Otta ovf. Grotlivatnet,Otta,62.00568,7.64611,HYDAPI
+2.997.0,Otta v/Stuttgongen,Otta,62.00726,7.74576,HYDAPI
+20.10.0,Eptevatn,Vatndalselva,58.67219,8.05166,HYDAPI
+20.1021.0,Ljosevatn ndf.,Engelsåna,58.54098,8.17491,HYDAPI
+20.1022.0,Eptevatn ndf.,Uldalsåna,58.58142,8.22185,HYDAPI
+20.11.0,Tveitdalen,Tovdalsvassdraget,58.38541,8.24237,HYDAPI
+20.12.0,Tveitvatn,Tovdalsvassdraget,58.79405,8.20525,HYDAPI
+20.2.0,Austenå,Tovdalsvassdraget,58.83963,8.10052,HYDAPI
+20.21.0,Uldalsåna ovf. Herefossfjorden,Uldalsåna,58.5303,8.3314,HYDAPI
+20.22.0,Høvringen,Flatelandsåna,58.63741,7.96678,HYDAPI
+20.23.0,Hanefoss,Uldalsåna,58.53584,8.33562,HYDAPI
+20.24.0,Ljosevatn,Engelsåna,58.53956,8.16374,HYDAPI
+20.25.0,Koldstrømmen,Uldalsåna,58.60358,8.19601,HYDAPI
+20.26.0,Skreros,Skrerosåna,58.46657,8.12094,HYDAPI
+20.27.0,Tovdalselva ndf. Tveitvatnet,Tovdalsvassdraget,58.79004,8.20967,HYDAPI
+20.28.0,Tovdalselva ndf. Gauslåfjorden,Tovdalsvassdraget,58.53739,8.35107,HYDAPI
+20.29.0,Tovdalselva ovf. Flaksvatnet,Tovdalsvassdraget,58.34397,8.23156,HYDAPI
+20.3.0,Flakksvann,Tovdalsvassdraget,58.33046,8.20306,HYDAPI
+20.30.0,Tovdalselva ovf. Herefossfjorden,Tovdalsvassdraget,58.53077,8.34173,HYDAPI
+20.31.0,Hanefossen kraftstasjon,Tovdalsvassdraget,58.52984,8.33745,HYDAPI
+20.32.0,Skjeggedalsåni ndf. Kjellhombekken,Uldalsåna,58.7589,8.11703,HYDAPI
+20.33.0,Skjeggedalsåni ndf. Verevatnet,Uldalsåna,58.68958,8.16019,HYDAPI
+20.34.1,Birkenes rør 1,Moelva,58.3005,8.24151,HYDAPI
+20.34.2,Birkenes rør 2,Moelva,58.29887,8.24018,HYDAPI
+20.34.3,Birkenes rør 3,Moelva,58.30073,8.23685,HYDAPI
+20.34.4,Birkenes rør 4,Moelva,58.29887,8.24018,HYDAPI
+20.35.0,Vm Drangsholt Tovd.,Tovdalsvassdraget,58.24928,8.15658,HYDAPI
+20.35.8,Vm kanal Dr.holt,Tovdalsvassdraget,58.25046,8.16121,HYDAPI
+20.37.0,Vm Rugsland,Tovdalsvassdraget,58.28896,8.18417,HYDAPI
+20.38.0,Vm Pramsnes,Tovdalsvassdraget,58.28897,8.18417,HYDAPI
+20.39.1,Haugland rør 1,Tovdalsvassdraget,58.60715,8.39897,HYDAPI
+20.39.4,Haugland rør 4,Tovdalsvassdraget,58.60721,8.39323,HYDAPI
+20.4.0,Vikstølvatn,Flatelandsåna,58.59209,7.96984,HYDAPI
+20.40.0,Vm Svennes,Tovdalsvassdraget,58.61688,8.39365,HYDAPI
+20.41.0,Vm Baas,Tovdalsvassdraget,58.71407,8.29909,HYDAPI
+20.47.0,Vindfetåna ndf. Eptevatn,Vatndalselva,58.67183,8.05379,HYDAPI
+20.5.0,Retterstøl,Uldalsåna,58.54198,8.32661,HYDAPI
+20.6.0,Ogge,Rettåna,58.41426,8.09095,HYDAPI
+20.7.0,Herefossfjord,Tovdalsvassdraget,58.52893,8.33407,HYDAPI
+20.8.0,Vikstølvatn,Flatelandsåna,58.59211,7.96987,HYDAPI
+20.9.0,Vikstølvatn ndf.,Flatelandsåna,58.58582,7.97175,HYDAPI
+21.1.0,Vm 1 Avløpsk. Birkeland,Otra,58.99229,7.54774,HYDAPI
+21.1.1,Vm 2 Sanden Birkeland,Otra,58.98292,7.59425,HYDAPI
+21.1.2,Vm 3 Langeid Birkeland,Otra,58.98712,7.55092,HYDAPI
+21.1.3,Vm 4 Fellesb. Birkeland,Otra,59.00177,7.5435,HYDAPI
+21.10.0,Otra v/Nomeland kraftstasjon,Otra,58.35621,7.90471,HYDAPI
+21.11.0,Heisel,Otra,58.24751,7.95147,HYDAPI
+21.114.0,Skarjesvatn,Skargjesåni,59.38934,7.21675,HYDAPI
+21.12.0,Byglandsfjord,Otra,58.64868,7.81395,HYDAPI
+21.127.0,Breidvatn,Otra,59.61937,7.42698,HYDAPI
+21.128.0,Hemningsvann,Justvikbekken,58.20297,8.02762,HYDAPI
+21.129.1,Otra terskelbasseng v/Valle pkt. 1,Otra,59.20757,7.52654,HYDAPI
+21.129.2,Otra terskelbasseng v/Valle pkt. 2,Otra,59.20468,7.52973,HYDAPI
+21.129.3,Otra terskelbasseng v/Valle pkt. 3,Otra,59.20446,7.52913,HYDAPI
+21.129.4,Otra terskelbasseng v/Valle pkt. 4,Otra,59.2042,7.52851,HYDAPI
+21.129.5,Otra terskelbasseng v/Valle pkt. 5,Otra,59.20405,7.5281,HYDAPI
+21.129.6,Otra terskelbasseng v/Valle pkt. 6,Otra,59.20101,7.53073,HYDAPI
+21.129.7,Otra terskelbasseng v/Valle pkt. 7,Otra,59.20127,7.52843,HYDAPI
+21.129.8,Otra terskelbasseng v/Valle pkt. 8,Otra,59.20146,7.52597,HYDAPI
+21.13.0,Storstrømmen,Otra,58.85061,7.74899,HYDAPI
+21.130.0,Gyvatn ndf.,Skjerka,58.70466,7.68177,HYDAPI
+21.15.0,Hekni min.vf.,Otra,59.04158,7.5617,HYDAPI
+21.16.0,Otra ovf. Hekni kraftstasjon utløp,Otra,58.98981,7.54082,HYDAPI
+21.19.0,Førresvatn,Førsvassåni,59.56408,7.23323,HYDAPI
+21.2.0,Vm 1 Øraksøyne,Otra,59.03363,7.54949,HYDAPI
+21.20.0,Hartevatn,Otra,59.52536,7.36432,HYDAPI
+21.22.0,Valle,Otra,59.19158,7.521,HYDAPI
+21.23.0,Byglandsfjord,Otra,58.66691,7.79436,HYDAPI
+21.24.0,Byglandsfjord ndf.,Otra,58.64866,7.81136,HYDAPI
+21.25.0,Dåsnes bru,Dåselva,58.56116,7.77222,HYDAPI
+21.26.0,Røyknes,Otra,58.34051,7.90458,HYDAPI
+21.27.0,Vatndalsvatn,Løyningsåni,59.45669,7.36168,HYDAPI
+21.28.0,Løyning,Løyningsåni,59.46008,7.38159,HYDAPI
+21.29.0,Bossvatn,Bossvassåi,59.34626,7.29525,HYDAPI
+21.3.0,Vm 1 Helle Qr,Otra,59.06125,7.57012,HYDAPI
+21.3.7,Vm 1 Straume nedstr.,Otra,59.06894,7.57503,HYDAPI
+21.3.8,Vm 2 Straume oppstr.,Otra,59.06984,7.575,HYDAPI
+21.30.0,Holen,Bossvassåi,59.34653,7.28853,HYDAPI
+21.31.0,Lislevatn,Longerakåni,58.75219,7.88906,HYDAPI
+21.33.0,Longerakvatn,Longerakåni,58.75312,7.89249,HYDAPI
+21.34.0,Kilefjord,Otra,58.41028,7.77549,HYDAPI
+21.35.0,Breidvatn-Sesvatn,Otra,59.61982,7.42589,HYDAPI
+21.36.0,Gyvatn,Skjerka,58.7054,7.6817,HYDAPI
+21.37.0,Hovatn,Hovassåni,58.9547,7.7852,HYDAPI
+21.38.0,Vigeland uv.kanal,Otra,58.25247,7.95671,HYDAPI
+21.39.0,Ormsavatn,Løyningsåni,59.50657,7.16644,HYDAPI
+21.4.0,Vm 1 Rystad,Otra,59.09954,7.52952,HYDAPI
+21.40.0,Store Urdarvatn,Uraåni,59.45578,7.1639,HYDAPI
+21.41.0,Lisle Urdarvatn,Uraåni,59.45785,7.1832,HYDAPI
+21.42.0,Skyvatn,Kaldsåi,59.62793,7.17402,HYDAPI
+21.44.0,Storvatn,Bossvassåi,59.30284,6.93766,HYDAPI
+21.45.0,Steinsfoss,Otra,58.30025,7.97035,HYDAPI
+21.46.0,Reinevatn,Reinevassåni,59.41891,7.18761,HYDAPI
+21.47.0,Lislefjødd,Lislefjøddåi,59.60883,7.41962,HYDAPI
+21.48.0,Åraksfjorden,Otra,58.92223,7.73869,HYDAPI
+21.49.0,Sømskleiva,KYSTFELT,58.14983,8.05205,HYDAPI
+21.5.0,Vm 1 Bjørgevje,Bjørgåni,59.10257,7.53287,HYDAPI
+21.51.0,Fardal,Faråni,59.09586,7.45521,HYDAPI
+21.52.0,Lundane,Otra,59.59145,7.3925,HYDAPI
+21.53.0,Børtemannsbekk,Otra,59.57207,7.37528,HYDAPI
+21.54.0,Hartevatn,Otra,59.52445,7.36348,HYDAPI
+21.55.0,Bykil,Otra,59.32226,7.32049,HYDAPI
+21.56.0,"Storvatn, Blåsjø",Bossvassåi,59.3014,6.9316,HYDAPI
+21.62.0,Hovatn kraftstasjon,Otra,58.98043,7.66598,HYDAPI
+21.69.0,Syrtveit,Otra,58.63958,7.80774,HYDAPI
+21.7.14,Otra v/Ose,Otra,58.95115,7.68221,HYDAPI
+21.7.4,Otra v/Flæmoen,Otra,59.45262,7.40449,HYDAPI
+21.7.5,Otra v/Haslemo,Otra,59.43405,7.40482,HYDAPI
+21.7.7,Otra v/Steinsland,Otra,59.20584,7.52772,HYDAPI
+21.70.0,Skisland ndf.,Otra,58.34458,7.90787,HYDAPI
+21.71.0,Vigeland,Otra,58.25157,7.95643,HYDAPI
+21.73.0,Otra ovf. Byglandsfjorden,Otra,58.85049,7.74904,HYDAPI
+21.74.0,Brokke kraftstasjon,Otra,59.12481,7.50623,HYDAPI
+21.75.0,Otra ovf. Brokke kraftstasjon,Otra,59.12343,7.51456,HYDAPI
+21.76.0,Otra v/Straume bru,Otra,59.06795,7.57321,HYDAPI
+21.77.0,Otra ovf. Ljosåi,Otra,59.2879,7.37566,HYDAPI
+21.78.0,Bjørnaråni,Vasstøylsåni,59.29321,7.40543,HYDAPI
+21.79.0,Otra v/Mosby,Otra,58.20734,7.92995,HYDAPI
+21.80.1,Evje rør 1,Otra,58.5091,7.75828,HYDAPI
+21.80.2,Evje rør 2,Otra,58.50963,7.75864,HYDAPI
+21.80.3,Evje rør 3,Otra,58.50935,7.75968,HYDAPI
+21.80.6,Evje rør 6,Otra,58.51027,7.75769,HYDAPI
+21.81.0,Vm Lislefjødåi,Lislefjøddåi,59.60867,7.41964,HYDAPI
+21.81.1,Lislefjødåi rør 1,Lislefjøddåi,59.56773,7.48927,HYDAPI
+21.81.2,Lislefjødåi rør 2,Lislefjøddåi,59.56752,7.47949,HYDAPI
+21.81.3,Lislefjødåi rør 3,Lislefjøddåi,59.57063,7.469,HYDAPI
+21.81.4,Lislefjødåi rør 4,Lislefjøddåi,59.57498,7.48726,HYDAPI
+21.81.5,Lislefjødåi rør 5,Lislefjøddåi,59.6079,7.43049,HYDAPI
+21.81.6,Lislefjødåi rør 6,Lislefjøddåi,59.60754,7.42282,HYDAPI
+21.88.28,Byglandsfjorden utløp (11),Otra,58.66561,7.79872,HYDAPI
+22.1.0,Ørevatn,Mandalselva,58.56231,7.38711,HYDAPI
+22.11.0,Forgård bru,Mandalselva,58.6165,7.4113,HYDAPI
+22.13.0,Nåvatn,Skjerka,58.57334,7.30234,HYDAPI
+22.16.0,Myglevatn ndf.,Kosåna,58.44589,7.58499,HYDAPI
+22.17.0,Stegilvatn,Uvdalsåni,58.71774,7.32035,HYDAPI
+22.18.0,Kvernevatn,Ljosåni,58.79253,7.31501,HYDAPI
+22.19.0,Langevatn,Mandalselva,58.81184,7.36774,HYDAPI
+22.2.0,Ørevassoset,Mandalselva,58.55455,7.37801,HYDAPI
+22.20.0,Håverstad,Mandalselva,58.49812,7.42681,HYDAPI
+22.21.0,Gjuvvatnet,Logna,58.80135,7.54825,HYDAPI
+22.22.0,Søgne,Søgneelva,58.09098,7.83511,HYDAPI
+22.23.0,Laudal,Mandalselva,58.23982,7.51219,HYDAPI
+22.24.0,Lognavatn,Logna,58.74355,7.51406,HYDAPI
+22.25.0,Mandalselva v/Kjølemo,Mandalselva,58.12084,7.52884,HYDAPI
+22.26.1,Mannflåvannet utløp,Mandalselva,58.29404,7.52793,HYDAPI
+22.27.0,Skjerka kraftstasjon,Mandalselva,58.55495,7.37701,HYDAPI
+22.28.0,Mandalselva v/Gunnarsfossen,Kosåna,58.53768,7.5881,HYDAPI
+22.29.0,Kosåna ovf. Mandalselva,Kosåna,58.43335,7.5326,HYDAPI
+22.3.0,Ørevassoset ndf.,Mandalselva,58.54753,7.39122,HYDAPI
+22.30.0,Mandalselva v/Fuglestveit,Mandalselva,58.22073,7.51757,HYDAPI
+22.31.0,Smeland kraftstasjon,Logna,58.66552,7.4539,HYDAPI
+22.32.0,Mandalselva v/Laudal kraftstasjon,Mandalselva,58.23863,7.5117,HYDAPI
+22.33.0,Håverstad kraftstasjon,Mandalselva,58.50504,7.42029,HYDAPI
+22.4.0,Kjølemo,Mandalselva,58.12024,7.52813,HYDAPI
+22.47.0,Mannflåvatn ndf.,Mandalselva,58.29187,7.52707,HYDAPI
+22.5.0,Austerhus,Logna,58.61303,7.42062,HYDAPI
+22.53.0,Beinsvatn,Logna,58.86662,7.50213,HYDAPI
+22.54.0,Lognavatn Q min,Logna,58.7319,7.48979,HYDAPI
+22.55.0,Monn Q min,Mandalselva,58.67265,7.40554,HYDAPI
+22.56.0,Logna v/Torsland bru,Logna,58.63576,7.44062,HYDAPI
+22.6.0,Rjukan,Mandalselva,58.63937,7.40854,HYDAPI
+22.7.0,Nedre Skjerkevatn,Skjerka,58.57491,7.35354,HYDAPI
+22.8.0,Storevatn,Grytå,58.72753,7.20815,HYDAPI
+22.9.0,Skjerka kraftstasjon,Mandalselva,58.55497,7.37541,HYDAPI
+23.1.0,Sundsvatn,Trylandselva,58.29763,7.27461,HYDAPI
+23.10.0,Øvre Øydnavatn,Audna,58.39367,7.37086,HYDAPI
+23.11.0,Ytre Øydnavatn,Audna,58.32896,7.36872,HYDAPI
+23.13.0,Aklandstjønn,Trylandselva,58.22066,7.32517,HYDAPI
+23.14.0,Audna ndf. Øvre Øydnavatnet,Audna,58.38093,7.37244,HYDAPI
+23.15.0,Audna v/Melhusfossen,Audna,58.12606,7.33993,HYDAPI
+23.16.0,Tryland kraftstasjon,Audna,58.2221,7.33617,HYDAPI
+23.17.1,Lindesnes rør 1,KYSTFELT,58.04715,7.12228,HYDAPI
+23.17.2,Lindesnes rør 2,KYSTFELT,58.04535,7.12041,HYDAPI
+23.17.3,Lindesnes rør 3,KYSTFELT,58.04637,7.12403,HYDAPI
+23.17.4,Lindesnes rør 4,KYSTFELT,58.04408,7.12432,HYDAPI
+23.17.5,Lindesnes rør 5,KYSTFELT,58.04428,7.12775,HYDAPI
+23.17.9,Lindesnes rør 9,KYSTFELT,58.04574,7.12276,HYDAPI
+23.2.0,Færåsen,Trylandselva,58.23631,7.29036,HYDAPI
+23.22.0,Audna v/Vigeland,Audna,58.08337,7.30798,HYDAPI
+23.23.0,"Kiddelsbekken, Hestehaven",Trædalselva,58.07784,7.31245,HYDAPI
+23.24.0,Trædalsbekken u/E39,Trædalselva,58.07573,7.33446,HYDAPI
+23.3.0,Lelandsvatn,Lelandsvatnelva,58.21746,7.29212,HYDAPI
+23.4.0,Brådlandsvatn,Trylandselva,58.22766,7.31121,HYDAPI
+23.5.0,Lona,Lonebekken,58.0537,7.24148,HYDAPI
+23.6.0,Tarvatn,Lonebekken,58.06026,7.22675,HYDAPI
+23.8.0,Gaupefossen,Audna,58.14439,7.36667,HYDAPI
+24.1.0,Tingvatn (Lygne),Lygna,58.40069,7.22337,HYDAPI
+24.2.0,Tingvatn (Lygne),Lygna,58.40003,7.22426,HYDAPI
+24.3.0,Møska (Skolandsvatnet),Møska,58.16162,7.06192,HYDAPI
+24.4.0,Storåni ovf. Lygne,Lygna,58.49761,7.17182,HYDAPI
+24.5.0,Lygna ndf. Lygne,Lygna,58.3905,7.23329,HYDAPI
+24.6.0,Bjeromselva,Steinslandsåni,58.38926,7.23515,HYDAPI
+24.7.0,Landdalsåni,Landdalsåni,58.47712,7.22051,HYDAPI
+24.8.0,Møska (Skolandsvatnet),Møska,58.16059,7.06594,HYDAPI
+24.9.0,Tingvatn (Lygne),Lygna,58.40114,7.22335,HYDAPI
+25.1.0,Rafoss,Kvina,58.36527,6.95674,HYDAPI
+25.10.0,Rafoss,Kvina,58.36527,6.95674,HYDAPI
+25.11.0,Homstølvatn,Kvina,58.72604,6.93303,HYDAPI
+25.13.0,Kumlevollvatn,Fedaelva,58.37122,6.82728,HYDAPI
+25.14.0,Sandvikvatn,Kvina,59.03886,7.15482,HYDAPI
+25.15.0,Kvi bru,Kvina,58.96977,7.13903,HYDAPI
+25.16.0,Farbru,Kvina,58.31143,6.9607,HYDAPI
+25.18.0,Kvidingen,Kvina,58.61433,6.90936,HYDAPI
+25.2.0,Kvinen,Kvina,58.87006,7.06755,HYDAPI
+25.21.0,Roskrepfjord,Kvina,59.04226,7.14069,HYDAPI
+25.22.0,Nesjen,Kvina,58.77853,7.01468,HYDAPI
+25.23.0,Homstølvatn,Kvina,58.69819,6.93296,HYDAPI
+25.24.0,Gjuvvatn,Kvina,59.15918,7.21481,HYDAPI
+25.26.0,Øyarvatn,Kvina,58.97333,7.12614,HYDAPI
+25.3.0,Netland,Kvina,58.62656,6.91566,HYDAPI
+25.31.0,Homstølvatn ndf.,Kvina,58.69496,6.93758,HYDAPI
+25.32.0,Knabåni,Knabeåni,58.6695,6.97318,HYDAPI
+25.33.0,Kvina ndf. Knabeåni,Kvina,58.65732,6.94786,HYDAPI
+25.34.0,Kvina ovf. Selandsåni,Kvina,58.55074,6.90549,HYDAPI
+25.35.0,Kvina v/Rafossen,Kvina,58.36419,6.95808,HYDAPI
+25.4.0,Røynstad bru,Kvina,58.38091,6.95155,HYDAPI
+25.5.0,Rafoss,Kvina,58.36274,6.96717,HYDAPI
+25.51.0,Krågehølen,Litleåni,58.32257,6.975,HYDAPI
+25.7.0,Refsti,Fedaelva,58.27429,6.82228,HYDAPI
+25.8.0,Mygland,Litleåni,58.51195,7.02008,HYDAPI
+25.81.0,Stigansåna,Stigansåni,58.63314,6.77904,HYDAPI
+25.82.0,Osmundsåna,Åsmundsåni,58.61507,6.79057,HYDAPI
+25.83.0,Marevatn,Maråna,58.6118,6.7863,HYDAPI
+25.85.0,Røynestad,Kvina,58.38291,6.95373,HYDAPI
+25.87.1,Liknes rør 1,Litleåni,58.3185,6.96411,HYDAPI
+25.87.2,Liknes rør 2,Litleåni,58.31731,6.96301,HYDAPI
+25.87.3,Liknes rør 3,Kvina,58.31429,6.96246,HYDAPI
+26.1.0,Stølsvatn,Hauklandsbekken,58.47954,6.55557,HYDAPI
+26.10.0,Liland,Lilandsåni,58.74965,6.78556,HYDAPI
+26.11.0,Heigravatnet,elv fra Heigravatnet,58.46327,6.24118,HYDAPI
+26.12.0,Litle Rosseland,Rosslandsåa,58.37106,6.27832,HYDAPI
+26.13.0,Stemmevatn,Hauklandsbekken,58.47151,6.55548,HYDAPI
+26.14.0,Eiavatn,Rosslandsåa,58.40684,6.26754,HYDAPI
+26.15.0,Svartevatn,Sira,59.12209,6.89786,HYDAPI
+26.16.0,Sirekrok,Sira,58.99227,6.89708,HYDAPI
+26.17.0,Tjørhom,Sira,58.86607,6.81303,HYDAPI
+26.18.0,Langhølen,Sira,58.29616,6.45382,HYDAPI
+26.19.0,Tonstad,Sira,58.66933,6.71391,HYDAPI
+26.2.0,Gilevatn,Brekkebekken,58.47401,6.57225,HYDAPI
+26.20.0,Årdal,Moisåni,58.54367,6.49791,HYDAPI
+26.21.0,Sandvatn,Espetveitåni,58.48967,6.77313,HYDAPI
+26.22.0,Deg,Deg,58.93415,6.79225,HYDAPI
+26.23.0,Gravatn,Gravassåni,58.88609,6.77858,HYDAPI
+26.24.0,Ousdalsvatn,Ausdalsåni,58.83733,6.81723,HYDAPI
+26.26.0,Jogla,Jogla,58.95761,6.93809,HYDAPI
+26.27.0,Djupevatn,Storvassåni,59.09969,6.95773,HYDAPI
+26.28.0,Svartevatn,Sira,59.13289,6.89458,HYDAPI
+26.29.0,Refsvatn,Litla-mydlandsåna,58.35038,6.34421,HYDAPI
+26.3.0,Ortevatn,Sira,58.98189,6.92207,HYDAPI
+26.30.0,Djupevatn,Sira,59.27767,6.93655,HYDAPI
+26.31.0,Åna-Sira kraftverk,Sira,58.29374,6.45065,HYDAPI
+26.33.0,Skårstemvatn,Brekkebekken,58.47082,6.56616,HYDAPI
+26.34.0,Kulivatn2,Finsåni,58.72117,6.62415,HYDAPI
+26.35.0,Nespervatn,Finsåni,58.672,6.63784,HYDAPI
+26.36.0,Furevatn,Finsåni,58.71139,6.65072,HYDAPI
+26.37.0,Bjørnestadvatn,Bjørnestadbekken,58.66219,6.61695,HYDAPI
+26.38.0,Lindvatn,Lindåni,58.63972,6.66587,HYDAPI
+26.39.0,Drivdal,elv fra Åvedalsvatne,58.34314,6.53821,HYDAPI
+26.4.0,Fidjelandsvatn,Sira,58.95142,6.92652,HYDAPI
+26.42.0,Storstein,Sira,59.26315,6.9269,HYDAPI
+26.43.0,Sirdalsvatn,Sira,58.66038,6.71536,HYDAPI
+26.44.0,Lundevatn,Sira,58.30065,6.47886,HYDAPI
+26.46.0,Tonstad kraftstasjon,Sira,58.65884,6.71718,HYDAPI
+26.47.0,Sira ndf. Sirdalsvatnet,Sira,58.42675,6.66372,HYDAPI
+26.48.0,Åna ndf. Lundevatnet,Sira,58.30045,6.4751,HYDAPI
+26.49.0,Åna-Sira kraftstasjon,Sira,58.29598,6.45049,HYDAPI
+26.50.0,Tjørhom kraftstasjon,bekk fra Listøltjørn,58.88034,6.82202,HYDAPI
+26.51.0,Sira ovf. Sirdalsvatnet,Sira,58.66608,6.71021,HYDAPI
+26.52.0,Litlå,Litla-mydlandsåna,58.34425,6.3147,HYDAPI
+26.53.0,Sokno ovf. Litlå,Sokno,58.34516,6.31311,HYDAPI
+26.6.0,Lindeland,Sira,58.76689,6.74386,HYDAPI
+26.64.0,Rekedalselv,KYSTFELT,58.37135,6.25035,HYDAPI
+26.67.0,Duge værstasjon,Sira,59.11931,6.8965,HYDAPI
+26.7.0,Sirdalsvatn,Sira,58.42679,6.66628,HYDAPI
+26.8.0,Lundevatn,Sira,58.31303,6.49451,HYDAPI
+26.9.0,Valevatn,Deg,58.91694,6.74446,HYDAPI
+26.91.0,Yksnedalsåni ndf. Yksnedalsvatnet,Yksnedalsåni,58.59086,6.72211,HYDAPI
+26.92.0,Sokndalselva,Sokno,58.34188,6.29357,HYDAPI
+27.1.0,Helgå,elv fra Helgåvatnet,58.52654,5.81098,HYDAPI
+27.13.0,Maudal,Bjerkreimvassdraget,58.76405,6.36739,HYDAPI
+27.14.0,Saglandsvatn,Bjerkreimvassdraget,58.55305,6.07202,HYDAPI
+27.15.0,Austrumdal (Austrumdalsvatnet),Austrumdalsåna,58.68172,6.23135,HYDAPI
+27.16.0,Bjordal,Oreåna,58.68554,6.49427,HYDAPI
+27.19.0,Teksevatn,Tekseåni,58.55184,6.24367,HYDAPI
+27.2.0,Bjerkreim bru,Bjerkreimvassdraget,58.58314,6.07429,HYDAPI
+27.20.0,Gya,Hellelandselva,58.60003,6.36139,HYDAPI
+27.21.0,Bilstadvatn,Tekseåni,58.53614,6.35145,HYDAPI
+27.23.0,Urdalsvatn,Tekseåni,58.53801,6.37708,HYDAPI
+27.24.0,Helleland,Hellelandselva,58.5336,6.14931,HYDAPI
+27.25.0,Gjedlakleiv,Bjerkreimvassdraget,58.57358,6.06604,HYDAPI
+27.26.0,Ogna v/Hetland,Ognaåni,58.52592,5.8454,HYDAPI
+27.27.0,Bjerkland bru,Hellelandselva,58.52637,6.12713,HYDAPI
+27.28.0,Gyaåni v/Helleland,Hellelandselva,58.53362,6.14924,HYDAPI
+27.29.0,Bjerkreimselvi v/Bjerkreim,Bjerkreimvassdraget,58.5836,6.07469,HYDAPI
+27.3.0,Hetland,Ognaåni,58.52348,5.83706,HYDAPI
+27.31.0,Storrsheivatn,Storå,58.64449,6.05537,HYDAPI
+27.33.0,Nodlandsvatnet,Grødeimelva,58.45294,6.14425,HYDAPI
+27.34.0,Liavatnet,Grødeimelva,58.4294,6.13202,HYDAPI
+27.35.0,Kydlandsvatnet,Grødeimelva,58.42171,6.11871,HYDAPI
+27.37.0,Smievatnet,Grødeimelva,58.40982,6.10148,HYDAPI
+27.38.0,Spjodevatnet,Rangåa,58.3801,6.16932,HYDAPI
+27.4.0,Holmavatn,elv fra Helgåvatnet,58.52987,5.83645,HYDAPI
+27.40.0,Øygreisvatnet,Hellelandselva,58.48689,6.05739,HYDAPI
+27.42.0,Slevelandsåna,Hellelandselva,58.48768,6.03369,HYDAPI
+27.48.0,Byrkjelandsvatnet,Bjerkreimvassdraget,58.69897,6.0892,HYDAPI
+27.5.0,Hagavatn ovf.,Eigelandselva,58.60068,5.8814,HYDAPI
+27.52.0,Byrkjelandsvatnet utløp,Bjerkreimvassdraget,58.69754,6.19728,HYDAPI
+27.6.0,Stavtjørna,Austrumdalsåna,58.70582,6.3633,HYDAPI
+27.7.0,Stølsvatn-overføring,elv fra Stølsvatnet,58.71768,6.08287,HYDAPI
+27.8.0,Matnisdal,Fuglestadåna,58.58412,5.83155,HYDAPI
+27.9.0,Stølsvatn ndf.,elv fra Stølsvatnet,58.71671,6.08344,HYDAPI
+28.1.0,Haugland,Hååna,58.69154,5.63503,HYDAPI
+28.10.0,Lye 1,Orreåna,58.73509,5.73831,HYDAPI
+28.11.0,Lye 2,Orreåna,58.73448,5.7263,HYDAPI
+28.12.0,Figgjo ndf. Øksna bruk,Figgjo,58.80046,5.6586,HYDAPI
+28.13.0,Særheim,Figgjo,58.76061,5.65079,HYDAPI
+28.14.1,Jæren rør 1,KYSTFELT,58.73618,5.52045,HYDAPI
+28.14.2,Jæren rør 2,KYSTFELT,58.73663,5.52241,HYDAPI
+28.14.3,Jæren rør 3,KYSTFELT,58.73724,5.52218,HYDAPI
+28.2.0,Mosevatn,Hååna,58.63436,5.80976,HYDAPI
+28.3.0,Åsvatn,Hååna,58.736,5.75897,HYDAPI
+28.5.0,Foss Eikjeland,Figgjo,58.79882,5.73752,HYDAPI
+28.6.0,Bryne,Orreåna,58.73677,5.64267,HYDAPI
+28.7.0,Haugland,Hååna,58.69291,5.64757,HYDAPI
+28.8.0,Kvassheimåna,Kvassheimsåna,58.54776,5.69041,HYDAPI
+29.1.0,Aspervik klima,KYSTFELT,58.86425,5.76358,HYDAPI
+29.10.0,Stokkelandsvatnet,Storåna,58.82153,5.71774,HYDAPI
+29.11.0,Sandvedparken,Storåna,58.84229,5.73024,HYDAPI
+29.12.0,Svebestadkanalen,Storåna,58.83294,5.75133,HYDAPI
+29.17.0,Grønt tak Sandnes,KYSTFELT,58.86339,5.76026,HYDAPI
+29.18.0,Frøylandsvatnet,KYSTFELT,58.91998,5.85935,HYDAPI
+29.19.0,Høylandsåna,Storåna,58.83221,5.7402,HYDAPI
+29.2.0,Sviland,Imselva,58.83025,5.82643,HYDAPI
+29.3.0,Skjelbreivatn,Imselva,58.82751,5.86134,HYDAPI
+29.4.0,Aspervik,KYSTFELT,58.86615,5.75925,HYDAPI
+29.5.0,Gramstad,KYSTFELT,58.88256,5.79494,HYDAPI
+29.6.0,Ims,Imselva,58.90321,5.9639,HYDAPI
+29.7.0,Gramstaddalen,KYSTFELT,58.88144,5.78683,HYDAPI
+30.1.0,Moluf bru,Frafjordelva,58.84298,6.35059,HYDAPI
+30.2.0,Byrkjedal bru,Dirdalsåna,58.78357,6.32397,HYDAPI
+30.3.0,Hunnevatn,Dirdalsåna,58.88758,6.6353,HYDAPI
+30.4.0,Eikjeskog,Frafjordelva,58.85463,6.37137,HYDAPI
+30.5.0,Øvstabølstøl,Dirdalsåna,58.85537,6.54268,HYDAPI
+30.6.0,Norddal,elv fra Lauvvatnet,58.86018,6.3354,HYDAPI
+30.7.0,Byrkjedal,Dirdalsåna,58.79242,6.33886,HYDAPI
+30.8.0,Øvstabøstøl,Dirdalsåna,58.86764,6.5739,HYDAPI
+31.10.0,Venekvev,Tjodanåna,59.03612,6.68667,HYDAPI
+31.2.0,Lysedalen,Lysevassdraget,59.06355,6.70345,HYDAPI
+31.39.0,Ternevatnet,KYSTFELT,59.00787,6.44744,HYDAPI
+31.6.0,Store Tjodevatn,Tjodanåna,59.0108,6.66691,HYDAPI
+31.8.0,Låtervikvatnet,Låterviksbekken,59.01603,6.56116,HYDAPI
+32.3.0,Dalevatn,Jørpelandsåna,59.04173,6.10688,HYDAPI
+32.4.0,Øygadalshølen,Jørpelandsåna,59.03615,6.09863,HYDAPI
+32.6.0,Liarvatn ndf.,Jørpelandsåna,59.04923,6.11823,HYDAPI
+32.7.0,Jørpelandsåna v/Jørpeland,Jørpelandsåna,59.02035,6.05553,HYDAPI
+33.1.0,Nes,Årdalselva,59.14928,6.34618,HYDAPI
+33.11.0,Bergland bru ovf.,Tusso,59.13588,6.26329,HYDAPI
+33.12.0,Årdalselva v/Soppeland,Årdalselva,59.14546,6.20999,HYDAPI
+33.2.0,Tveid,Årdalselva,59.13416,6.24595,HYDAPI
+33.3.0,Lyngsvatn,Lyngsåna,59.09879,6.56664,HYDAPI
+33.4.0,Kalltveit i Årdal,Årdalselva,59.13492,6.2839,HYDAPI
+33.48.0,Bjørndalsvatn,Bjørndalselva,59.23363,6.61545,HYDAPI
+33.5.0,Nilsebuvatn,Årdalselva,59.16397,6.61418,HYDAPI
+33.6.0,Lyngsvatn,Lyngsåna,59.08607,6.53524,HYDAPI
+33.7.0,Bergeland bru,Tusso,59.13502,6.26511,HYDAPI
+33.8.0,Leirberget i Årdal,Årdalselva,59.14841,6.18817,HYDAPI
+33.9.0,Breiavatn,Årdalselva,59.14798,6.60336,HYDAPI
+35.1.0,Førre bru,Førreelva,59.32868,6.58537,HYDAPI
+35.10.0,Sandsavatn,Kvennåna,59.39759,6.547,HYDAPI
+35.11.0,"Oddatjørn, Blåsjø",Oddeåna,59.40483,6.80196,HYDAPI
+35.12.0,"Førrevatn, Blåsjø",Førreelva,59.37333,6.74591,HYDAPI
+35.14.0,Vassbottvatn,Søråna,59.30817,6.61845,HYDAPI
+35.15.0,Stovedalsvatn,Flottåna,59.38085,6.66266,HYDAPI
+35.16.0,Djupadalsvatn,Vormo,59.2809,6.38108,HYDAPI
+35.17.0,Førre Limnigraf,Førreelva,59.32345,6.56992,HYDAPI
+35.2.0,Hauge bru,Ulla,59.3299,6.4495,HYDAPI
+35.3.0,Førre,Førreelva,59.32342,6.56817,HYDAPI
+35.4.0,Undeknut,Førreelva,59.36884,6.82541,HYDAPI
+35.5.0,Moavatn,Ulla,59.40137,6.65508,HYDAPI
+35.6.0,Tøtlandsvik,Vormo,59.27129,6.33756,HYDAPI
+35.7.0,Nedre Moen,Ulla,59.40666,6.69965,HYDAPI
+35.8.0,Håland,Hålandselva,59.35104,6.24071,HYDAPI
+35.9.0,Osali (Botnavatnet),Kvennåna,59.41438,6.6242,HYDAPI
+36.1.0,Suldalsoset,Suldalsvassdraget,59.49096,6.51991,HYDAPI
+36.10.0,Vivassdal Limnigraf,Suldalsvassdraget,59.95322,6.96869,HYDAPI
+36.105.0,Suldalslågen v/Stråpa,Suldalsvassdraget,59.48906,6.51706,HYDAPI
+36.11.0,Stråpa,Suldalsvassdraget,59.48909,6.51634,HYDAPI
+36.12.0,Fossåna,Fossåna,59.45319,6.35768,HYDAPI
+36.120.0,Roalkvamåna,Roaldkvamsåna,59.65318,6.88988,HYDAPI
+36.121.0,Tornes,Suldalsvassdraget,59.68182,6.75753,HYDAPI
+36.127.1,Vetrehus v/Suldalsvatn rør 1,Storåna,59.58953,6.80854,HYDAPI
+36.128.1,Kjetilstad v/Suldalvatn rør 1,Kvilldalsåna,59.49808,6.64981,HYDAPI
+36.13.0,Grimsvatn,Lingvangelva,59.5815,6.53967,HYDAPI
+36.14.0,Røldalsvatn,Suldalsvassdraget,59.75317,6.7898,HYDAPI
+36.15.0,Valldalsvatn,Suldalsvassdraget,59.87525,6.89426,HYDAPI
+36.16.0,Vasstølvatn,Stølsåna,59.70013,6.83688,HYDAPI
+36.17.0,Finnabu,Stølsåna,59.71919,6.87655,HYDAPI
+36.18.0,Votna,Kaldevasselva,59.82898,6.89361,HYDAPI
+36.2.0,Røldalsvatn,Suldalsvassdraget,59.75407,6.78974,HYDAPI
+36.20.0,Djupetjønn,Stølsåna,59.76307,6.99984,HYDAPI
+36.21.0,Kaldevatn,Kaldevasselva,59.80922,7.00898,HYDAPI
+36.22.0,V. Middyrsvatn,Risbuelva,59.87486,6.95503,HYDAPI
+36.23.0,Ø. Middyrsvatn,Risbuelva,59.88052,6.97255,HYDAPI
+36.24.0,Nupstjønn,Kvesso,59.88434,7.04738,HYDAPI
+36.25.0,Sandvatn,Bleskestadåna,59.64835,7.05813,HYDAPI
+36.26.0,Isvatn,Isåa,59.72745,7.09268,HYDAPI
+36.27.0,Holmavatn,Bleskestadåna,59.67793,7.147,HYDAPI
+36.30.0,Lauvastølsvatn,Kvilldalsåna,59.49537,6.68654,HYDAPI
+36.31.0,Kvilldal,Kvilldalsåna,59.51197,6.63351,HYDAPI
+36.32.0,Lauvastøl,Kvilldalsåna,59.50574,6.70589,HYDAPI
+36.34.0,Prestvika,Suldalsvassdraget,59.4884,6.491,HYDAPI
+36.35.0,Suldalslågen v/Mo,Suldalsvassdraget,59.461,6.41357,HYDAPI
+36.36.0,Suldalslågen v/Prestvika,Suldalsvassdraget,59.4875,6.49061,HYDAPI
+36.37.0,Suldalslågen ndf. Steinsåna,Suldalsvassdraget,59.47693,6.43302,HYDAPI
+36.38.0,Suldalslågen v/Forsøkskanalen,Suldalsvassdraget,59.45666,6.37635,HYDAPI
+36.39.0,Kvæstadbekken,Suldalsvassdraget,59.45536,6.38181,HYDAPI
+36.4.0,Førland bru,Suldalsvassdraget,59.46054,6.41094,HYDAPI
+36.40.0,Brommelandsbekken,Suldalsvassdraget,59.47692,6.3173,HYDAPI
+36.41.0,Mosåna,Mosåna,59.46125,6.42231,HYDAPI
+36.42.0,Sand kraftstasjon,Suldalsvassdraget,59.4673,6.32189,HYDAPI
+36.43.0,Tjøstheimsåna,Tjøsteimsåna,59.47583,6.46549,HYDAPI
+36.5.0,Lunde bru,Suldalsvassdraget,59.48341,6.47719,HYDAPI
+36.50.0,Mosvatn,Mosåna,59.4268,6.43115,HYDAPI
+36.51.0,Suldalsvatn,Suldalsvassdraget,59.49091,6.51726,HYDAPI
+36.52.0,Kvanndalså,Roaldkvamsåna,59.68122,6.97781,HYDAPI
+36.53.0,Blåbergdalen,Grytøyrelva,59.78662,6.92537,HYDAPI
+36.54.0,Suldal I,Suldalsvassdraget,59.65116,6.81337,HYDAPI
+36.56.0,Stølsåna,Stølsåna,59.67366,6.81635,HYDAPI
+36.57.0,Suldal 2,Suldalsvassdraget,59.65117,6.81426,HYDAPI
+36.6.0,Lavika,Suldalsvassdraget,59.48171,6.25919,HYDAPI
+36.60.0,Suldalslågen v/Suldalsosen,Suldalsvassdraget,59.49045,6.51592,HYDAPI
+36.61.0,Suldalslågen v/Tjelmane bru,Suldalsvassdraget,59.48193,6.26977,HYDAPI
+36.62.0,Suldalslågen v/Lavika,Suldalsvassdraget,59.48152,6.25675,HYDAPI
+36.63.0,Hylen kraftstasjon,KYSTFELT,59.55846,6.59858,HYDAPI
+36.64.0,Kvilldal kraftstasjon,Suldalsvassdraget,59.53156,6.65686,HYDAPI
+36.65.0,Steinsåna,Steinsåna,59.48035,6.43592,HYDAPI
+36.66.0,Suldalslågen v/bru i Forsøkskanalen,Suldalsvassdraget,59.45694,6.36533,HYDAPI
+36.67.0,Suldalslågen inntak Forsøkskanalen,Suldalsvassdraget,59.45751,6.37146,HYDAPI
+36.68.0,Hamrabøåna ndf. Tverråna,Hamrabøåna,59.59743,6.70523,HYDAPI
+36.69.0,Suldalslågen ndf. Gjuvfossen,Suldalsvassdraget,59.462,6.32787,HYDAPI
+36.7.0,Tjelmane bru,Suldalsvassdraget,59.48146,6.26893,HYDAPI
+36.8.0,Kvanndal,Roaldkvamsåna,59.67931,6.97229,HYDAPI
+36.86.0,Brattlandsdalsåna ndf. Røldalsvatnet,Suldalsvassdraget,59.75306,6.79112,HYDAPI
+36.9.0,Middal,Middalselva,59.95409,6.98207,HYDAPI
+36.91.0,"Håraelva, Røldal",Håraelva,59.81284,6.76074,HYDAPI
+37.1.0,Storlivatn,Saudavassdraget,59.68589,6.51884,HYDAPI
+37.10.0,Dalvatn,Dalsvatnelva,59.67958,6.54151,HYDAPI
+37.11.0,Breiborg,Elgjuvsåna,59.72882,6.58059,HYDAPI
+37.12.0,Nedre Berdalsvatn,Berdalselva,59.74502,6.53403,HYDAPI
+37.13.0,Øvre Berdalsvatn,Berdalselva,59.77613,6.58875,HYDAPI
+37.14.0,Slettedalsvatn,Saudavassdraget,59.71061,6.49211,HYDAPI
+37.15.0,Fetavatn,Tverrelva,59.7006,6.4161,HYDAPI
+37.16.0,Helgedalsvatn,Åbøelva,59.74514,6.40052,HYDAPI
+37.17.0,Finnflotvatn,Finnflotvatnelva,59.68567,6.57926,HYDAPI
+37.18.0,Førstavatn,Dalsvatnelva,59.69523,6.56169,HYDAPI
+37.19.0,Sauda kraftstasjon III,KYSTFELT,59.64476,6.36707,HYDAPI
+37.2.0,Svartavatn,Dalsvatnelva,59.7315,6.62933,HYDAPI
+37.20.0,Storelva,Saudavassdraget,59.66374,6.40305,HYDAPI
+37.21.0,Åbøelva,Åbøelva,59.65942,6.35922,HYDAPI
+37.27.0,Breiborgvatn,Elgjuvsåna,59.72247,6.56497,HYDAPI
+37.3.0,Nedre Sandvatn,Dalsvatnelva,59.77174,6.66477,HYDAPI
+37.30.0,Dokkavatn,Fjellvatnelva,59.66993,6.57431,HYDAPI
+37.4.0,Øvre Sandvatn,Dalsvatnelva,59.80154,6.67784,HYDAPI
+37.5.0,Holmavatn,Finnflotvatnelva,59.70218,6.59375,HYDAPI
+37.6.0,Brekkestøl,Risvollelva,59.65747,6.28569,HYDAPI
+37.7.0,Hølland,Åbøelva,59.65859,6.35929,HYDAPI
+37.8.0,Buer,Åbøelva,59.73557,6.34877,HYDAPI
+38.1.0,Holmen,Vikadalselva,59.49883,5.91306,HYDAPI
+38.2.0,Vikedalselva utløp,Vikadalselva,59.49868,5.91231,HYDAPI
+38.3.0,Vikedalselva ovf. Fjellgardsvatnet,Vikadalselva,59.56967,6.05685,HYDAPI
+38.4.1,Låkafoss rør 1,Vikadalselva,59.52845,5.97504,HYDAPI
+38.4.2,Låkafoss rør 2,Vikadalselva,59.52845,5.97504,HYDAPI
+38.4.3,Fjellgårdvtn rør 3,Vikadalselva,59.55507,5.99921,HYDAPI
+38.6.0,Rødneelv ved Sandeid,Øvstabøelva,59.57143,5.8885,HYDAPI
+39.1.0,Tysvær,KYSTFELT,59.32949,5.44324,HYDAPI
+39.2.0,Kallandsvatnet,KYSTFELT,59.47989,5.30568,HYDAPI
+41.1.0,Stordalsvatn,Etnevassdraget,59.68285,6.01001,HYDAPI
+41.10.0,Etneelva utløp,Etnevassdraget,59.67062,5.94295,HYDAPI
+41.11.0,Stordalselva ovf. Stordalsvatnet,Etnevassdraget,59.72765,6.15811,HYDAPI
+41.12.0,Hardeland kraftstasjon,Sørelva,59.65852,6.09528,HYDAPI
+41.13.0,Stordalselva v/Skjold,Etnevassdraget,59.74114,6.19527,HYDAPI
+41.14.0,Frette værstasjon,Etnevassdraget,59.72379,6.16135,HYDAPI
+41.2.0,Løkelsvatn,Sørelva,59.66017,6.11767,HYDAPI
+41.20.0,Vm Skjold bru,Etnevassdraget,59.74115,6.19571,HYDAPI
+41.23.2,Auestad rør 2,Sørelva,59.65408,6.00813,HYDAPI
+41.24.0,Vm Bru,Sørelva,59.65174,6.0191,HYDAPI
+41.3.0,Litledalsvatn,Sørelva,59.66351,6.0659,HYDAPI
+41.32.0,Svendsbøelva,Svensbøelva,59.54213,5.57882,HYDAPI
+41.34.0,Hardelandsvatn,Sørelva,59.66208,6.08188,HYDAPI
+41.36.0,Grindheimsvatn,Kritlaelva,59.63773,6.1043,HYDAPI
+41.37.0,Bassurvatn-Krokavatn,Kritlaelva,59.63485,6.08696,HYDAPI
+41.38.0,Ilsvatn,Kaldeimselva,59.61716,6.07317,HYDAPI
+41.4.0,Rygg,Sørelva,59.65193,5.99836,HYDAPI
+41.5.0,Stakkastadvatn,Vigdarvassdraget,59.4791,5.37706,HYDAPI
+41.7.0,Blomstølvatn,Etnevassdraget,59.76767,6.24916,HYDAPI
+41.8.0,Hellaugvatn,Etnevassdraget,59.72001,6.18786,HYDAPI
+41.9.0,Stordalsvatnet utløp,Etnevassdraget,59.68294,6.01089,HYDAPI
+42.1.0,Fjellhaugvatn,Blåelva,59.86787,6.04344,HYDAPI
+42.10.0,Staffivatn,Blåelva,59.86963,6.0817,HYDAPI
+42.11.0,Midtbotnvatn,Blåelva,59.91592,6.18589,HYDAPI
+42.12.0,Dalelva utløp,Dalelva,59.87566,6.39035,HYDAPI
+42.13.0,Blåfalli kraftstasjon II,Opstveitvassdraget,59.85769,6.01481,HYDAPI
+42.14.1,Kvinherad rør 1,Handalandselva,59.80886,5.82087,HYDAPI
+42.14.2,Kvinherad rør 2,KYSTFELT,59.80305,5.80751,HYDAPI
+42.16.0,Fjellhaugen,Blåelva,59.85848,6.06271,HYDAPI
+42.17.0,Svelgen,Blåelva,59.92031,6.26303,HYDAPI
+42.18.0,Inste Botnane,Blåelva,59.93682,6.31225,HYDAPI
+42.2.0,Djupevad,Handalandselva,59.81744,5.84441,HYDAPI
+42.23.0,Blåfalli Vik kraftstasjon,Opstveitvassdraget,59.84377,5.99408,HYDAPI
+42.4.0,Husnes,Onarheimselva,59.85513,5.76858,HYDAPI
+42.5.0,Rullestadvatn,Dalelva,59.87422,6.40833,HYDAPI
+42.6.0,Baklihøl,Eikemoelva,59.85902,6.27076,HYDAPI
+42.7.0,Blådalsvatn,Blåelva,59.90461,6.16091,HYDAPI
+42.8.0,Lonå,Mosneselva,59.90519,6.33974,HYDAPI
+42.9.0,Møsevatn,elv fra Insta Moseva,59.93039,6.21152,HYDAPI
+44.1.0,Storevatn,Storavatnvassdraget,59.89769,5.30288,HYDAPI
+45.1.0,Guddalselv,Guddalselva,59.96394,6.00335,HYDAPI
+45.10.0,Guddalselv oppstrøms Seimsfoss,Guddalselva,59.9639,6.00332,HYDAPI
+45.2.0,Fonnavatn i Guddalselv,Guddalselva,59.96834,6.17573,HYDAPI
+45.4.0,Seimsfoss i Guddalselv,Guddalselva,59.96464,6.00008,HYDAPI
+46.1.0,Øvrehuselv,Austrepollelva,60.13528,6.34459,HYDAPI
+46.10.0,Langavatn,elv fra Langavatnet,60.19557,6.32709,HYDAPI
+46.11.0,Blådalsvatn,elv i Fagerdalen,60.14351,6.41959,HYDAPI
+46.12.0,Svartadalsvatn,elv i Fagerdalen,60.17505,6.37925,HYDAPI
+46.13.0,Mysevatn,Austrepollelva,60.12798,6.36138,HYDAPI
+46.16.0,Juklavatn,Øyreselva,60.2041,6.34895,HYDAPI
+46.19.0,Bondhusbrea sedimentkammer,Fonneelva,60.06633,6.30755,HYDAPI
+46.2.0,Øvrehuselv,Austrepollelva,60.13482,6.34373,HYDAPI
+46.25.0,Fonnelva ndf. Bondhusbreen,Fonneelva,60.07537,6.29659,HYDAPI
+46.26.0,Bondhuselva utløp,Bondhuselva,60.11584,6.26848,HYDAPI
+46.28.0,Mauranger kraftstasjon,KYSTFELT,60.12863,6.31932,HYDAPI
+46.3.0,Øyreselv,Øyreselva,60.15765,6.31755,HYDAPI
+46.4.0,Bondhus,Bondhuselva,60.1147,6.26832,HYDAPI
+46.5.0,Botnavatn,Tverrelva,60.08795,6.31423,HYDAPI
+46.6.0,Øvrehus,Austrepollelva,60.13216,6.32323,HYDAPI
+46.7.0,Brakhaug,Tveitelva,60.16954,6.28412,HYDAPI
+46.8.0,Botnane,elv fra Botnatjørna,60.19065,6.39209,HYDAPI
+46.9.0,Fønnerdalsvatn,Pyttelva,60.06708,6.28302,HYDAPI
+47.1.0,Eidevatn (Byrkjelandsvatnet),Jondalselvi,60.28348,6.2982,HYDAPI
+47.11.0,Jondalstjern,Stølselvi,60.2534,6.33311,HYDAPI
+47.2.0,Stølselv,Jondalselvi,60.27971,6.28946,HYDAPI
+47.4.0,Dravladalsvatn,Flatabøelvi,60.24873,6.42577,HYDAPI
+47.5.0,Jukladalsvatn,elv fra Jukladalsvat,60.23038,6.4525,HYDAPI
+47.7.0,Fodnastøl,Storelvi,60.32508,6.42519,HYDAPI
+47.8.0,Kvanngrøvatn,Storelvi,60.31375,6.49037,HYDAPI
+48.1.0,Sandvenvatn,Opo,60.0139,6.54692,HYDAPI
+48.2.0,Raundalsvatn,Byteselvi,60.18399,6.51652,HYDAPI
+48.24.0,Reinsnosvatn v/Naustbukti,Austdølo,59.95249,6.6749,HYDAPI
+48.3.0,Dyrskardvatna,Opo,59.83644,6.5951,HYDAPI
+48.4.0,Jordal,Opo,60.04368,6.53156,HYDAPI
+48.5.0,Reinsnosvatn,Austdølo,59.96939,6.72526,HYDAPI
+48.6.0,Steinavatn,Steinavatnbekken,59.85686,6.57794,HYDAPI
+48.8.0,Opo v/Odda,Opo,60.06023,6.55189,HYDAPI
+49.1.0,Oksla,KYSTFELT,60.12184,6.55631,HYDAPI
+49.10.0,Håvardsvatn,Nybuåna,60.1044,6.91475,HYDAPI
+49.2.0,Ringedalsvatn,Tysso,60.12863,6.63323,HYDAPI
+49.3.0,Tyssefallene,Tysso,60.11566,6.56217,HYDAPI
+49.4.0,Øvre Tyssevatn,Tysso,60.16796,6.85935,HYDAPI
+49.5.0,Vendevatn,Vendo,60.21938,6.68538,HYDAPI
+49.6.0,Øvre Bersåvatn,Mågelielvi,60.17608,6.6749,HYDAPI
+49.7.0,Nibbehølen,Nybuåna,60.0981,6.80317,HYDAPI
+49.8.0,Breidavatn,Breidåni,60.07298,6.8736,HYDAPI
+49.9.0,Langevatn,bekk fra Langevatnet,60.09148,6.76989,HYDAPI
+50.1.0,Hølen,Kinso,60.35738,6.74625,HYDAPI
+50.10.0,Isdøla,Isdølo,60.41995,7.26331,HYDAPI
+50.12.0,Sysenvatn,Leiro,60.40858,7.39555,HYDAPI
+50.13.0,Bjoreio,Eidfjordvassdraget,60.38499,7.39712,HYDAPI
+50.14.0,Rembesdalsvatn,Simavassdraget,60.52092,7.25881,HYDAPI
+50.2.0,Garen,Eidfjordvassdraget,60.40985,7.28109,HYDAPI
+50.3.0,Eidfjordvatn,Eidfjordvassdraget,60.44957,7.09805,HYDAPI
+50.38.0,Leiro,Leiro,60.43454,7.46126,HYDAPI
+50.39.0,Eio utløp,Eidfjordvassdraget,60.46453,7.07631,HYDAPI
+50.4.0,Viveli,Veig,60.34613,7.15034,HYDAPI
+50.40.0,Veig ovf. Eidfjordvatnet,Veig,60.4122,7.12253,HYDAPI
+50.41.0,Bjoreia ovf. Eidfjordvatnet,Eidfjordvassdraget,60.42456,7.13953,HYDAPI
+50.42.0,Eio ndf. Eidfjordvatnet,Eidfjordvassdraget,60.45823,7.08308,HYDAPI
+50.43.0,Leiro,Leiro,60.40337,7.37311,HYDAPI
+50.44.0,Bjoreio v/dam ovf. Sysen,Eidfjordvassdraget,60.38318,7.40329,HYDAPI
+50.45.0,Bjoreio ovf. Vøringsfossen,Eidfjordvassdraget,60.4212,7.25597,HYDAPI
+50.46.0,Bjoreio v/Måbø bru,Eidfjordvassdraget,60.42281,7.20504,HYDAPI
+50.47.0,Isdøla,Isdølo,60.42762,7.26653,HYDAPI
+50.48.0,Bjoreio ovf. Leiro,Eidfjordvassdraget,60.39972,7.36257,HYDAPI
+50.49.0,Sima v/Midhus,Simavassdraget,60.50285,7.19239,HYDAPI
+50.5.0,Sima,Simavassdraget,60.50312,7.20332,HYDAPI
+50.50.1,Ø. Eidfjord I rør 1,Veig,60.42154,7.1209,HYDAPI
+50.50.10,Ø. Eidfjord I rør 10,Eidfjordvassdraget,60.41726,7.12729,HYDAPI
+50.50.11,Ø. Eidfjord I rør 11,Eidfjordvassdraget,60.41708,7.12897,HYDAPI
+50.50.12,Ø. Eidfjord I rør 12,Eidfjordvassdraget,60.41726,7.13077,HYDAPI
+50.50.13,Ø. Eidfjord I rør 13,Eidfjordvassdraget,60.42741,7.12543,HYDAPI
+50.50.15,LUFTTEMP Ø. EIDFJORD,Eidfjordvassdraget,60.42213,7.12267,HYDAPI
+50.50.2,Ø. Eidfjord I rør 2,Eidfjordvassdraget,60.42233,7.12229,HYDAPI
+50.50.22,VM  Ø. Veig Eidfj.,Veig,60.41194,7.12234,HYDAPI
+50.50.23,VM  N.Veig Eidfj.,Veig,60.42443,7.11623,HYDAPI
+50.50.24,VM  Ø. Bjor. Eidfj.,Eidfjordvassdraget,60.42148,7.14061,HYDAPI
+50.50.25,VM  N.BJOR. EIDFJ.,Eidfjordvassdraget,60.42522,7.12825,HYDAPI
+50.50.26,VM  N.B.II  EIDFJ,Eidfjordvassdraget,60.42303,7.12837,HYDAPI
+50.50.27,Vm Steinbergveita,Eidfjordvassdraget,60.42304,7.12837,HYDAPI
+50.50.3,Ø. Eidfjord I rør 3,Eidfjordvassdraget,60.42339,7.12461,HYDAPI
+50.50.30,Ø. Eidfjord I rør 14,Eidfjordvassdraget,60.42535,7.11894,HYDAPI
+50.50.31,Ø. Eidfjord I rør 15,Eidfjordvassdraget,60.42623,7.12252,HYDAPI
+50.50.32,Ø. Eidfjord I rør 16,Eidfjordvassdraget,60.42258,7.12804,HYDAPI
+50.50.33,Ø. Eidfjord I rør 18,Eidfjordvassdraget,60.42252,7.13034,HYDAPI
+50.50.34,Ø. Eidfjord I rør 19,Eidfjordvassdraget,60.42043,7.1303,HYDAPI
+50.50.35,Ø. Eidfjord II rør 21,Eidfjordvassdraget,60.42274,7.13631,HYDAPI
+50.50.36,Ø. Eidfjord II rør 22,Eidfjordvassdraget,60.42211,7.13404,HYDAPI
+50.50.37,Ø. Eidfjord II rør 23,Eidfjordvassdraget,60.42095,7.13414,HYDAPI
+50.50.38,Ø. Eidfjord II rør 24,Eidfjordvassdraget,60.42018,7.13411,HYDAPI
+50.50.39,Ø. Eidfjord II rør 25,Eidfjordvassdraget,60.42487,7.13646,HYDAPI
+50.50.4,Ø. Eidfjord I rør 4,Eidfjordvassdraget,60.42447,7.12682,HYDAPI
+50.50.40,Ø. Eidfjord II rør 26,Eidfjordvassdraget,60.42569,7.13543,HYDAPI
+50.50.41,Ø. Eidfjord II rør 27,Eidfjordvassdraget,60.42605,7.13192,HYDAPI
+50.50.42,Ø. Eidfjord Vm,Eidfjordvassdraget,60.42606,7.13192,HYDAPI
+50.50.5,Ø. Eidfjord I rør 5,Eidfjordvassdraget,60.42501,7.12808,HYDAPI
+50.50.6,Ø. Eidfjord I rør 6,Eidfjordvassdraget,60.42149,7.12546,HYDAPI
+50.50.7,Ø. Eidfjord I rør 7,Eidfjordvassdraget,60.42071,7.12624,HYDAPI
+50.50.8,Ø. Eidfjord I rør 8,Veig,60.41739,7.1235,HYDAPI
+50.50.9,Ø. Eidfjord I rør 9,Veig,60.41743,7.12497,HYDAPI
+50.51.0,Vm bru nedre,Simavassdraget,60.4967,7.14284,HYDAPI
+50.51.1,Sima rør 1,KYSTFELT,60.49548,7.14375,HYDAPI
+50.51.10,Vm rør,Simavassdraget,60.49829,7.14441,HYDAPI
+50.51.2,Sima rør 2,KYSTFELT,60.4952,7.1446,HYDAPI
+50.51.3,Sima rør 3,KYSTFELT,60.49477,7.1464,HYDAPI
+50.51.4,Sima rør 4,KYSTFELT,60.49671,7.14597,HYDAPI
+50.51.5,Sima rør 5,KYSTFELT,60.49577,7.14506,HYDAPI
+50.51.6,Sima rør 6,KYSTFELT,60.49578,7.14506,HYDAPI
+50.51.7,Sima rør 7,KYSTFELT,60.49579,7.14506,HYDAPI
+50.6.0,Rembesdalsvatn,Simavassdraget,60.5299,7.25833,HYDAPI
+50.60.0,Isdalsvatn,Isdølo,60.44272,7.28265,HYDAPI
+50.64.0,Bjoreio v/Våkavadet,Eidfjordvassdraget,60.38162,7.40629,HYDAPI
+50.7.0,Fossavatn,Simavassdraget,60.53689,7.24337,HYDAPI
+50.8.0,Langevatn,Holsno,60.45926,7.5467,HYDAPI
+50.9.0,Fisketjønn,Kjeldo,60.4278,7.50269,HYDAPI
+50.91.0,Tussafoten Klimastasjon,Eidfjordvassdraget,60.43899,7.15608,HYDAPI
+51.1.0,Lakjen,Langvasselva,60.55811,7.12001,HYDAPI
+51.10.0,Norddøla ovf. Austdøla,Osa-vassdraget,60.59155,7.03446,HYDAPI
+51.11.0,Vm 1 bolt v/elv,Osa-vassdraget,60.59178,7.03116,HYDAPI
+51.11.1,Osa rør 1,Osa-vassdraget,60.5886,7.0269,HYDAPI
+51.11.2,Osa rør 2,Osa-vassdraget,60.58889,7.02796,HYDAPI
+51.11.3,Osa rør 3,Osa-vassdraget,60.58912,7.02756,HYDAPI
+51.11.4,Osa rør 4,Osa-vassdraget,60.59045,7.03219,HYDAPI
+51.11.5,Osa rør 5,Osa-vassdraget,60.59084,7.034,HYDAPI
+51.11.6,Osa rør 6,Osa-vassdraget,60.59121,7.03425,HYDAPI
+51.11.7,Osa rør 7,Osa-vassdraget,60.59002,7.03483,HYDAPI
+51.11.8,Vm 2 Sævartveitbrua,Osa-vassdraget,60.59304,7.03446,HYDAPI
+51.14.0,Norddøla 280 m o.h.,Osa-vassdraget,60.61324,7.05155,HYDAPI
+51.15.0,Norddøla 70 m o.h,Osa-vassdraget,60.59623,7.04262,HYDAPI
+51.18.0,Austdøla i Osa,Austdøla,60.584,7.05365,HYDAPI
+51.2.0,Austdalsvatn øvre,Austdøla,60.5876,7.14203,HYDAPI
+51.3.0,Osseter,Osa-vassdraget,60.61927,7.06345,HYDAPI
+51.4.0,Rundavatn,Austdøla,60.58807,7.142,HYDAPI
+51.5.0,Langvatn,Langvasselva,60.56663,7.11951,HYDAPI
+51.7.0,Røykjafoss,Austdøla,60.58541,7.05087,HYDAPI
+51.8.0,Skruelsvatn,Osa-vassdraget,60.64098,7.07403,HYDAPI
+51.9.0,Austdøla,KYSTFELT,60.58747,7.0359,HYDAPI
+52.1.0,Skjervefoss,Granvinvassdraget,60.58943,6.63245,HYDAPI
+52.2.0,Bjølsegrøvatn,Bjølvo,60.44891,6.37175,HYDAPI
+52.4.0,Folkedalselva ndf. Folkedal kraftstasjon,Folkedalselva,60.50148,6.63099,HYDAPI
+52.5.0,Folkedalselva utløp,Folkedalselva,60.48801,6.64839,HYDAPI
+53.1.0,Bjørkenesvatn,Kverselva,60.28029,6.04335,HYDAPI
+53.2.0,Fosse,Kverselva,60.27338,6.03945,HYDAPI
+54.2.0,Stemno,KYSTFELT,60.0156,5.37427,HYDAPI
+55.1.0,Øvre Dukavatn,elv i Dukebotnen,60.49308,5.9566,HYDAPI
+55.10.0,Kvitingsvatn,Samnangervassdraget,60.4556,5.88699,HYDAPI
+55.11.0,Kleivevatn,Samnangervassdraget,60.45074,5.87416,HYDAPI
+55.12.0,Grønsdalsvatn,Samnangervassdraget,60.42892,5.84445,HYDAPI
+55.13.0,Tøsdalsbrua,Oselva,60.21116,5.45908,HYDAPI
+55.14.0,Vindalsvatn,Oselva,60.23163,5.45145,HYDAPI
+55.15.0,Bergstøvatn,Oselva,60.21077,5.44162,HYDAPI
+55.16.0,Kvanndalselva ndf. Skjelbreidvatnet,Eikelandsvassdraget,60.24433,5.76154,HYDAPI
+55.17.0,Kvanndalselva ovf. Vengsvatnet,Eikelandsvassdraget,60.25721,5.81744,HYDAPI
+55.18.0,Oselva v/Røykenes,Oselva,60.2475,5.43979,HYDAPI
+55.2.0,Nedre Dukavatn,elv i Dukebotnen,60.48243,5.93302,HYDAPI
+55.23.0,Storelvi i Samnanger,Samnangervassdraget,60.39806,5.79815,HYDAPI
+55.3.0,Botnavatn,Eikelandsvassdraget,60.28752,5.77484,HYDAPI
+55.4.0,Røykenes,Oselva,60.24881,5.4419,HYDAPI
+55.5.0,Dyrdalsvatn,Oselva,60.3491,5.52008,HYDAPI
+55.7.0,Eikelandsosen,Eikelandsvassdraget,60.24411,5.76369,HYDAPI
+55.8.0,Svartatjønn,Eikelandsvassdraget,60.27676,5.7759,HYDAPI
+55.9.0,Svartavatn,Samnangervassdraget,60.45758,5.95628,HYDAPI
+56.1.0,Sandsli,KYSTFELT,60.29129,5.27762,HYDAPI
+56.10.0,Sandslimarka Rør 2,KYSTFELT,60.2938,5.2761,HYDAPI
+56.11.0,Sandslimarka Rør 4,KYSTFELT,60.29684,5.27513,HYDAPI
+56.12.0,Grimevatnet,Nesttunvassdraget,60.33941,5.39965,HYDAPI
+56.13.0,Birkeland kirke,Nesttunvassdraget,60.31465,5.35541,HYDAPI
+56.14.0,"Regnbed, Danckert Krohn",KYSTFELT,60.39221,5.33239,HYDAPI
+56.2.0,Håvardstun,KYSTFELT,60.29105,5.28234,HYDAPI
+56.3.1,Fana rør 1,Fanaelva,60.26176,5.36635,HYDAPI
+56.3.2,Fana rør 2,Fanaelva,60.26075,5.34906,HYDAPI
+56.3.3,Fana rør 3,Fanaelva,60.26046,5.35137,HYDAPI
+56.5.0,"Bergen, Torgalmenninga",KYSTFELT,60.39134,5.32293,HYDAPI
+56.9.0,Grønt tak Bergen,KYSTFELT,60.38575,5.33495,HYDAPI
+60.2.0,Storevatn,Hellandselva,60.57118,5.58225,HYDAPI
+60.3.0,Løtveitvatn,Hellandselva,60.57618,5.56711,HYDAPI
+60.4.0,Botnavatn,Grautåni,60.56136,5.68882,HYDAPI
+61.1.0,Hamlagrøvatn,Bergsdalsvassdraget,60.52282,6.08141,HYDAPI
+61.10.0,Storefoss,Bergsdalsvassdraget,60.57852,5.86578,HYDAPI
+61.11.1,Rødland rør 1,Bergsdalsvassdraget,60.53085,6.07886,HYDAPI
+61.11.2,Rødland rør 2,Bergsdalsvassdraget,60.5353,6.07664,HYDAPI
+61.11.3,Rødland rør 3,Bergsdalsvassdraget,60.53949,6.06304,HYDAPI
+61.11.4,Rødland rør 4,Bergsdalsvassdraget,60.53667,6.05937,HYDAPI
+61.11.5,Rødland rør 5,Bergsdalsvassdraget,60.54046,6.04991,HYDAPI
+61.11.6,Rødland rør 6,Bergsdalsvassdraget,60.54342,6.04982,HYDAPI
+61.11.7,Lufttempertur Rødland,Bergsdalsvassdraget,60.53865,6.06459,HYDAPI
+61.13.0,Haukåselva,KYSTFELT,60.5028,5.36054,HYDAPI
+61.14.0,Dale II kraftverk,Bergsdalsvassdraget,60.58197,5.82378,HYDAPI
+61.2.0,Bergsvatn,Bergsdalsvassdraget,60.55956,5.99597,HYDAPI
+61.3.0,Rødland,Bergsdalsvassdraget,60.54191,6.05051,HYDAPI
+61.4.0,Torfinntjernkanalen,Bergsdalsvassdraget,60.57237,6.21386,HYDAPI
+61.5.0,Hodnaberg kraftstasjon,Bergsdalsvassdraget,60.55795,6.21145,HYDAPI
+61.6.0,Fosse,Bergsdalsvassdraget,60.58068,5.88809,HYDAPI
+61.7.0,Sedal,Sædalselvi,60.49248,5.77816,HYDAPI
+61.8.0,Kaldåen,Kaldåni,60.56049,6.04126,HYDAPI
+61.9.0,Dale kraftstasjon,Bergsdalsvassdraget,60.58331,5.81843,HYDAPI
+62.1.0,Piksvatn,Teigdalselvi,60.73873,6.30955,HYDAPI
+62.10.0,Myrkdalsvatn,Vossovassdraget,60.79921,6.50157,HYDAPI
+62.11.0,Volavatn,Teigdalselvi,60.74722,6.28497,HYDAPI
+62.114.0,Merkesgrovi ved Evanger,Vossovassdraget,60.64728,6.10787,HYDAPI
+62.115.0,Evangervatn,Vossovassdraget,60.64666,6.00236,HYDAPI
+62.116.0,Strandaelvi/Lønavatn/Vosso,Vossovassdraget,60.67008,6.45689,HYDAPI
+62.117.0,Raundalselva ved Voll,Raundalselvi,60.66853,6.7817,HYDAPI
+62.118.0,Voss grv Magasinvegen v/Båbrua,Vossovassdraget,60.63127,6.43144,HYDAPI
+62.119.0,Voss grv v/Magasinvegen 14,Raundalselvi,60.63125,6.43787,HYDAPI
+62.12.0,Hielva,Hielvi,60.82621,6.44203,HYDAPI
+62.120.0,Voss grv v/Movegen leikeplass,Vossovassdraget,60.62745,6.43346,HYDAPI
+62.121.0,Voss grv v/PplassTintrabrua,Vossovassdraget,60.61918,6.42461,HYDAPI
+62.122.0,Voss grv v/Reinseanlegg,Vossovassdraget,60.61574,6.41055,HYDAPI
+62.123.0,Voss grv v/Vangskyrkja,Vossovassdraget,60.62878,6.41523,HYDAPI
+62.125.0,Voss grv v/Voss kulturhus,Vossovassdraget,60.62818,6.41009,HYDAPI
+62.13.0,Årmot,Vossovassdraget,60.86182,6.49628,HYDAPI
+62.130.1,Bolstadøiri rør 1,Vossovassdraget,60.64122,5.96969,HYDAPI
+62.130.2,Bolstadøiri rør 2,Vossovassdraget,60.64148,5.96952,HYDAPI
+62.14.0,Slondalsvatn,Kvannjolo,60.69053,6.948,HYDAPI
+62.15.0,Kinne,Raundalselvi,60.63039,6.49937,HYDAPI
+62.16.0,Kvitno,Urdlandselvi,60.69719,6.58056,HYDAPI
+62.17.0,Mestad,Teigdalselvi,60.67532,6.097,HYDAPI
+62.18.0,Svartavatn,Tysseelvi,60.65359,5.9,HYDAPI
+62.19.0,Evanger Kraftverk,Teigdalselvi,60.66224,6.11874,HYDAPI
+62.2.0,Godfoss,Raundalselvi,60.70612,6.89695,HYDAPI
+62.20.0,Flagehølen,Vossovassdraget,60.63279,6.26809,HYDAPI
+62.22.0,Voss v/Saue,Vossovassdraget,60.67757,6.45523,HYDAPI
+62.26.0,Evanger,Vossovassdraget,60.65017,6.11198,HYDAPI
+62.27.0,Myrkdalselvi ovf. Strondaelvi,Vossovassdraget,60.79218,6.50775,HYDAPI
+62.28.0,Vosso ndf. Vangsvatnet,Vossovassdraget,60.63139,6.27457,HYDAPI
+62.29.0,Evanger kraftstasjon,Vossovassdraget,60.65163,6.09629,HYDAPI
+62.3.0,Rjoande,Rjoåni,60.70172,6.84593,HYDAPI
+62.30.0,Vosso ovf. Evangervatnet,Vossovassdraget,60.64793,6.11218,HYDAPI
+62.31.0,Strondaelvi ovf. Myrkdalselvi,Vinjedalselvi,60.79238,6.51876,HYDAPI
+62.32.0,Strondaelvi ovf. Lønavatnet,Vossovassdraget,60.70449,6.48023,HYDAPI
+62.33.0,Strondaelvi ovf. Raundalselvi,Vossovassdraget,60.63475,6.43527,HYDAPI
+62.34.0,Raundalselvi ovf. Strondaelvi,Raundalselvi,60.63072,6.43605,HYDAPI
+62.35.0,Bolstadelvi,Vossovassdraget,60.64643,5.98196,HYDAPI
+62.4.0,Rjoande,Rjoåni,60.69457,6.84824,HYDAPI
+62.42.0,Vetlebotn,Vossovassdraget,60.86551,6.47327,HYDAPI
+62.44.0,Voss grv v/Holbergsplassen (Park hotell),Vossovassdraget,60.62787,6.41443,HYDAPI
+62.45.0,Voss grv ndf kulturhuset,Vossovassdraget,60.62766,6.40974,HYDAPI
+62.46.0,Voss grv v/Tullebanen Gjernesvegen,Vossovassdraget,60.62413,6.42988,HYDAPI
+62.47.0,"Voss grv v/Ungdomsskule, Hestabakkvegen",Vossovassdraget,60.62615,6.42109,HYDAPI
+62.48.0,Voss grv v/Prestegardslandet,Vossovassdraget,60.62086,6.41872,HYDAPI
+62.49.0,Voss grv v/Prestegardsalleen,Vossovassdraget,60.62416,6.42021,HYDAPI
+62.5.0,Bulken (Vangsvatnet),Vossovassdraget,60.62868,6.29254,HYDAPI
+62.50.0,Voss grv v/Prestegardsmoen fotballbane,Vossovassdraget,60.62359,6.42464,HYDAPI
+62.51.0,Voss grv v/Grasbane Svinto,Vossovassdraget,60.62452,6.4272,HYDAPI
+62.52.0,Voss grv v/Gulfjordungsvegen 31,Vossovassdraget,60.62876,6.40198,HYDAPI
+62.53.0,Vosso ndf. Langebrua,Vossovassdraget,60.6283,6.42789,HYDAPI
+62.54.0,Vosso v/Tintrabrua,Vossovassdraget,60.61978,6.42401,HYDAPI
+62.6.0,Austmannhølen,Raundalselvi,60.68607,6.82225,HYDAPI
+62.7.0,Torfinnvatn,Torfinno,60.56401,6.24378,HYDAPI
+62.8.0,Torfinntjern,Torfinno,60.54843,6.23927,HYDAPI
+63.1.0,Nese,Eksingedalsvassdrage,60.78646,5.93798,HYDAPI
+63.10.0,Ekso v/Ekse,Eksingedalsvassdrage,60.82743,6.24275,HYDAPI
+63.11.0,Ekso ovf. Myster kraftstasjon,Eksingedalsvassdrage,60.74386,5.81144,HYDAPI
+63.12.0,Fjellanger,Fagerdalselvi,60.79716,6.05462,HYDAPI
+63.2.0,Brakestad,Eksingedalsvassdrage,60.81088,6.17015,HYDAPI
+63.3.0,Fosse,Eksingedalsvassdrage,60.7737,6.07056,HYDAPI
+63.4.0,Ekse,Eksingedalsvassdrage,60.82765,6.24227,HYDAPI
+63.5.0,Kvanndalvatn,Kvanndalselvi,60.85815,6.21846,HYDAPI
+63.6.0,Grøndalsvatn,Eksingedalsvassdrage,60.84089,6.31937,HYDAPI
+63.7.0,Ekse,Eksingedalsvassdrage,60.82763,6.24135,HYDAPI
+63.8.0,Skjerjevatn,Norddalselvi,60.89353,6.149,HYDAPI
+63.9.0,Askjellsdalsvatn,Norddalselvi,60.87435,6.17651,HYDAPI
+64.1.0,Sjokleiven,Eikefetelvi,60.70765,5.54208,HYDAPI
+64.10.0,Steinsland,Steinslandsvassdrage,60.92574,5.97814,HYDAPI
+64.11.0,Moelvi v/Hellandsfossen,Steinslandsvassdrage,60.83203,5.8876,HYDAPI
+64.2.0,Steinslandsvatn,Steinslandsvassdrage,60.87186,5.97955,HYDAPI
+64.23.0,Hellandsfoss kraftverk,Steinslandsvassdrage,60.83077,5.88186,HYDAPI
+64.3.0,Holskardvatn,Hodnafjellselvi,60.943,6.15196,HYDAPI
+64.4.0,Stølsvatn,Steinslandsvassdrage,60.96699,6.05555,HYDAPI
+64.6.0,Solrenningsvatn (Vøvringevatnet),Steinslandsvassdrage,60.98349,6.11228,HYDAPI
+64.7.0,Kvanngrøvatn,Krossdalselva,60.91618,6.07409,HYDAPI
+65.1.0,Hunvensvatnet,Neselva,60.66711,5.23871,HYDAPI
+67.1.0,Fossevatn,Matrevassdraget,60.91187,5.6368,HYDAPI
+67.11.0,Meinshemdevatn,elv fra Meinsemdevat,60.88938,5.71144,HYDAPI
+67.12.0,Nordgjilsvatn,Nordgilsdalselvi,60.93536,5.60882,HYDAPI
+67.13.0,Nedre Mosedalsvatn,Mosedalselvi,60.93365,5.66625,HYDAPI
+67.14.0,Storavatn,Haugsdalsvassdraget,60.86726,5.74412,HYDAPI
+67.15.0,Svartavatn,Haugsdalsvassdraget,60.87885,5.7964,HYDAPI
+67.16.0,Skjerjavatn,elv fra Skjerjavatne,60.88335,5.83467,HYDAPI
+67.17.0,Smalavatn,Haugsdalsvassdraget,60.92144,5.84935,HYDAPI
+67.2.0,Gobotvatn,Haugsdalsvassdraget,60.85315,5.64517,HYDAPI
+67.3.0,Haukeland bru,Haugsdalsvassdraget,60.82603,5.56795,HYDAPI
+67.5.0,Kvanngrøvatn,Mosedalselvi,60.97991,5.64753,HYDAPI
+67.6.0,Hjortevatn,Haugsdalsvassdraget,60.9051,5.82329,HYDAPI
+67.7.0,Stordalsvatn,Matrevassdraget,60.95078,5.68663,HYDAPI
+67.8.0,Krokevatn,Krokevasselva,60.9776,5.71804,HYDAPI
+67.9.0,Store Fjellvatn,Kringlebotnselvi,60.96436,5.80259,HYDAPI
+68.1.0,Kløvtveitvatn,Klyvtveitelva,60.97053,5.2898,HYDAPI
+68.2.0,Havelandselv,Nordgulelva,61.00576,5.19215,HYDAPI
+68.3.0,Svartdalsvatn,Svardalselva,60.89811,5.08142,HYDAPI
+68.4.0,Svartdalsvatn ndf.,Svardalselva,60.899,5.08131,HYDAPI
+69.1.0,Fridalsvatn,Fridalselva,61.00426,5.78006,HYDAPI
+69.2.0,Austbø,Øystrebøelva,61.06275,5.69069,HYDAPI
+69.3.0,Årsdalsvatn,Førdeelva,61.02005,5.82059,HYDAPI
+69.4.0,Tverrvatn,Tverrelva,61.03881,5.78767,HYDAPI
+69.5.0,Stølsvatn,Øystrebøelva,61.03136,5.71156,HYDAPI
+70.1.0,Gravseta,Dalselvi,60.98995,6.43164,HYDAPI
+70.10.0,Årbotnvatn,Pyttane,60.97071,6.5561,HYDAPI
+70.11.0,Skjellingavatn,Dalselvi,60.95381,6.46781,HYDAPI
+70.12.0,Kvilesteinsvatn,Gravseta,60.94556,6.36597,HYDAPI
+70.13.0,Målsetvatn,Pyttane,60.9896,6.50842,HYDAPI
+70.17.0,Hestavollen,Pyttane,60.97219,6.50218,HYDAPI
+70.2.0,Vange bru,Viksvassdraget,61.08893,6.58686,HYDAPI
+70.21.0,Muravatn,Rislåg,60.98928,6.58981,HYDAPI
+70.22.0,Storelva utløp,KYSTFELT,61.10924,6.13237,HYDAPI
+70.23.0,Daleelva,Vesleelva,61.10136,6.12102,HYDAPI
+70.24.0,Vassdalselva,Vesleelva,61.10138,6.12194,HYDAPI
+70.3.0,Refsdal ovenfor,Viksvassdraget,61.02034,6.56894,HYDAPI
+70.4.0,Refsdal nedenfor,Viksvassdraget,61.02079,6.5689,HYDAPI
+70.5.0,Setebakken,Seljedalselvi,61.03716,6.65654,HYDAPI
+70.6.0,Turvoll,Turao,61.04318,6.64128,HYDAPI
+70.7.0,Tistel,Hopra,61.05337,6.53613,HYDAPI
+71.1.0,Skjerping,Nærøydalselvi,60.85894,6.793,HYDAPI
+71.4.0,Tretteteig,Storelvi,61.05206,6.90741,HYDAPI
+71.5.0,Feios,Feioselvi,61.14294,6.74997,HYDAPI
+72.1.0,Klevevatn,Flåmselvi,60.71787,7.2115,HYDAPI
+72.11.0,Storevargevatn,Fremste varga,60.71593,7.53237,HYDAPI
+72.12.0,Ljosegrunnsvatn,Langedøla,60.92072,7.57923,HYDAPI
+72.13.0,Nyhellervatn,Grøna,60.81551,7.65192,HYDAPI
+72.14.0,Vetlebotnvatn,Aurlandsvassdraget,60.79845,7.56535,HYDAPI
+72.15.0,Viddalsvatn,Grimsetelvi,60.82643,7.27166,HYDAPI
+72.16.0,Langedøla,Langedøla,60.84182,7.50769,HYDAPI
+72.17.0,Vestredalstjørn,Aurlandsvassdraget,60.74418,7.57053,HYDAPI
+72.18.0,Svartavatn,Heimre varga,60.7338,7.52422,HYDAPI
+72.19.0,Nedre Mellomvatn,Heimre varga,60.74041,7.47256,HYDAPI
+72.2.0,Seltuftvatn,Flåmselvi,60.73795,7.16819,HYDAPI
+72.20.0,Adamsvatn,Langavatnelvi,60.7751,7.40572,HYDAPI
+72.21.0,Kreklevotni,Reppa,60.78468,7.30789,HYDAPI
+72.24.0,Aurlandselvi v/Skjærshølen,Aurlandsvassdraget,60.88361,7.23862,HYDAPI
+72.25.0,Aurlandselvi ovf. Vassbygdvatnet,Aurlandsvassdraget,60.8741,7.32935,HYDAPI
+72.26.1,Lufttemp. Landbr.sk.,Aurlandsvassdraget,60.90154,7.19479,HYDAPI
+72.27.0,Vm Nyheim,Aurlandsvassdraget,60.89676,7.21019,HYDAPI
+72.28.0,Vm Tokvam,Aurlandsvassdraget,60.8863,7.24032,HYDAPI
+72.29.0,Vm Terum,Aurlandsvassdraget,60.88337,7.23799,HYDAPI
+72.29.6,Vm 607,Aurlandsvassdraget,60.87122,7.26371,HYDAPI
+72.3.0,Reinungavatn,Flåmselvi,60.74562,7.1384,HYDAPI
+72.38.0,Vm Steine,Midjeelvi,60.8739,7.31604,HYDAPI
+72.39.0,Vm 1 Vassbygdi,Aurlandsvassdraget,60.87249,7.30824,HYDAPI
+72.39.16,Vm 1 Vassbygdi,Aurlandsvassdraget,60.87875,7.33882,HYDAPI
+72.4.0,Reppavatn,Reppa,60.79993,7.34292,HYDAPI
+72.6.0,Katlavatnet,Katla,60.80097,7.46784,HYDAPI
+72.62.0,Aurlandselvi v/Belle,Aurlandsvassdraget,60.87313,7.34329,HYDAPI
+72.63.0,Tivesja v/Aurlandselvi,Aurlandsvassdraget,60.87349,7.33023,HYDAPI
+72.64.0,Aurlandselvi ndf. Vassbygdvatnet,Aurlandsvassdraget,60.87586,7.26373,HYDAPI
+72.65.0,Aurlandselvi utløp,Aurlandsvassdraget,60.90499,7.19371,HYDAPI
+72.71.0,Frønningen dam,Sagelvi,61.0958,7.08411,HYDAPI
+72.77.0,Flåm bru,Flåmselvi,60.83693,7.12165,HYDAPI
+72.8.0,Aurdalsvatn,Aurlandsvassdraget,60.82727,7.49049,HYDAPI
+72.9.0,Grøndalsvatn,Flåmselvi,60.68567,7.22061,HYDAPI
+73.1.0,Lo bru,Lærdalsvassdraget,61.05896,7.81603,HYDAPI
+73.10.0,Smeddalen,Lærdalsvassdraget,61.13823,8.00405,HYDAPI
+73.106.1,"Juklevatnet, midten",Jukleåni,61.02838,8.23959,HYDAPI
+73.107.1,Øljusjøen sør,Kjølåni,60.94746,8.10156,HYDAPI
+73.107.2,Øljusjøen nord,Kjølåni,60.9628,8.07511,HYDAPI
+73.108.0,Jukleåna ndf. Store Juklevatnet,Jukleåni,61.02979,8.21666,HYDAPI
+73.11.0,Kyrkjestølane,elv fra Slettningen,61.17794,8.11255,HYDAPI
+73.116.0,Lærdalselvi v/Hellerbrui,Lærdalsvassdraget,61.10159,7.47573,HYDAPI
+73.117.0,Lærdalselvi v/Sjukehusvegen,Lærdalsvassdraget,61.10274,7.51428,HYDAPI
+73.118.0,Lærdalselvi v/Hauge,Lærdalsvassdraget,61.08017,7.52181,HYDAPI
+73.119.0,Lærdal GV-01,Lærdalsvassdraget,61.09972,7.48225,HYDAPI
+73.12.0,Slutebrua,Lærdalsvassdraget,61.16437,8.01903,HYDAPI
+73.120.0,Lærdal GV-02,Lærdalsvassdraget,61.10124,7.49116,HYDAPI
+73.121.0,Lærdal GV-03,Lærdalsvassdraget,61.09986,7.49286,HYDAPI
+73.122.0,Lærdal GV-04,Lærdalsvassdraget,61.09877,7.49358,HYDAPI
+73.123.0,Lærdal GV-05,Lærdalsvassdraget,61.09774,7.49463,HYDAPI
+73.124.0,Lærdal GV-06,Lærdalsvassdraget,61.10279,7.49945,HYDAPI
+73.125.0,Lærdal GV-07,Lærdalsvassdraget,61.10565,7.51149,HYDAPI
+73.126.0,Lærdal GV-08,Lærdalsvassdraget,61.10216,7.51095,HYDAPI
+73.127.0,Lærdal GV-09,Lærdalsvassdraget,61.10154,7.51792,HYDAPI
+73.128.0,Lærdal GV10,Lærdalsvassdraget,61.09525,7.52223,HYDAPI
+73.129.0,Lærdal GV-11,Lærdalsvassdraget,61.086,7.51293,HYDAPI
+73.13.0,Kuvella ovf. Store Grovi,Skorva,61.00826,7.49626,HYDAPI
+73.130.0,Lærdalselvi v/ Nedre Eri,Lærdalsvassdraget,61.07549,7.5076,HYDAPI
+73.14.0,Valdresdøla,Lærdalsvassdraget,61.15519,7.99144,HYDAPI
+73.15.0,Kuvella v/Gamlestøl,Skorva,61.03893,7.50634,HYDAPI
+73.16.0,Oppkomme v/Vetle Snøskreda,Skorva,61.03553,7.50065,HYDAPI
+73.17.0,Sluten,Lærdalsvassdraget,61.16334,8.00047,HYDAPI
+73.2.0,Stuvane,Lærdalsvassdraget,61.04472,7.62114,HYDAPI
+73.20.0,Osen,Lærdalsvassdraget,61.17379,8.0178,HYDAPI
+73.21.0,Frostdalen,Lærdalsvassdraget,61.1774,8.02952,HYDAPI
+73.22.0,Sulevatn,Oddedøla,61.09193,8.19744,HYDAPI
+73.23.0,Lille Juklevatn,Jukleåni,61.02306,8.1668,HYDAPI
+73.24.0,Fossebakken,Lærdalsvassdraget,61.17866,8.07158,HYDAPI
+73.25.0,Store Juklevatn,Jukleåni,61.03009,8.21751,HYDAPI
+73.27.0,Sula,Lærdalsvassdraget,61.17207,8.10401,HYDAPI
+73.28.0,Eldrevatn,Mørkedøla,61.01061,8.11533,HYDAPI
+73.29.0,Vassetvatn,Vetlelvi,61.04387,7.87832,HYDAPI
+73.3.0,Skjærsbrui,Lærdalsvassdraget,61.09248,7.51867,HYDAPI
+73.30.0,Kvevotni,Nivla,60.89609,7.71948,HYDAPI
+73.32.0,Øljusjøen,Kjølåni,60.97263,8.07482,HYDAPI
+73.34.0,Modlaugselva,Modlaugselvi,61.04154,7.33818,HYDAPI
+73.35.0,Horna,Erdalselvi,61.04107,7.33998,HYDAPI
+73.36.0,Erdal,Erdalselvi,61.04193,7.34142,HYDAPI
+73.39.0,Voll bru,Lærdalsvassdraget,61.05317,7.53718,HYDAPI
+73.4.0,Sælthun,Lærdalsvassdraget,61.05216,7.70085,HYDAPI
+73.40.0,Øye bru,Lærdalsvassdraget,61.10321,7.51446,HYDAPI
+73.41.0,Lærdalselvi v/Tønjum,Lærdalsvassdraget,61.06373,7.51724,HYDAPI
+73.42.0,Lærdalselvi v/Nedre Hegg,Lærdalsvassdraget,61.04952,7.75497,HYDAPI
+73.43.0,Smeddalselvi ovf. Mørkedøla,Lærdalsvassdraget,61.07295,7.9369,HYDAPI
+73.44.0,Mørkedøla ovf. Smeddalselvi,Mørkedøla,61.07168,7.93868,HYDAPI
+73.45.0,Mørkedøla v/Breidstøl,Mørkedøla,61.0301,8.02379,HYDAPI
+73.46.0,Lærdalselvi v/Selto,Lærdalsvassdraget,61.05284,7.70192,HYDAPI
+73.47.0,Lærdalselvi v/Fluen,Lærdalsvassdraget,61.05009,7.69277,HYDAPI
+73.48.0,Smeddalselvi ndf. Nedre Smeddalsvatnet,Lærdalsvassdraget,61.13719,8.00438,HYDAPI
+73.49.0,Sluteelvi ovf. Nedre Smeddalsvatnet,Lærdalsvassdraget,61.16322,8.01585,HYDAPI
+73.5.0,Breistøl,Mørkedøla,61.02262,8.03451,HYDAPI
+73.50.0,Sluteelvi ndf. Øvre Smeddalsvatnet,Lærdalsvassdraget,61.16399,8.01783,HYDAPI
+73.51.0,Sluteelvi v/limnigraf,Lærdalsvassdraget,61.16376,8.01743,HYDAPI
+73.52.1,Kyrkjestølen rør 1,elv fra Slettningen,61.18528,8.11416,HYDAPI
+73.52.10,Kyrkjestølen rør 10,elv fra Slettningen,61.18108,8.11188,HYDAPI
+73.52.5,Kyrkjestølen rør 5,elv fra Slettningen,61.17871,8.11381,HYDAPI
+73.52.6,Kyrkjestølen rør 6,elv fra Slettningen,61.17812,8.11234,HYDAPI
+73.52.7,Kyrkjestølen rør 7,elv fra Slettningen,61.17785,8.11149,HYDAPI
+73.52.8,Kyrkjestølen rør 8,elv fra Slettningen,61.17986,8.1115,HYDAPI
+73.52.9,Kyrkjestølen rør 9,elv fra Slettningen,61.18059,8.11187,HYDAPI
+73.6.0,Bergstølfoss,Mørkedøla,61.06024,7.96111,HYDAPI
+73.7.0,Ulvisbakken,Lærdalsvassdraget,61.07697,7.97632,HYDAPI
+73.8.0,Dilma,Dylma,61.03029,7.8131,HYDAPI
+73.9.0,Nivla,Nivla,61.02751,7.66051,HYDAPI
+74.1.0,Årdalsvatn,Årdalsvassdraget,61.24433,7.7182,HYDAPI
+74.10.0,Krekavatn,Raudsdøla,61.25159,7.91753,HYDAPI
+74.108.0,Raundalen i Utla,Rauddøla,61.49819,8.13541,HYDAPI
+74.109.0,Gravdalen i Utla,Årdalsvassdraget,61.5127,8.13739,HYDAPI
+74.11.0,Tyinosen,Tya,61.27473,8.14055,HYDAPI
+74.110.0,Skogadalen i Utla,Skogadøla,61.46508,8.1312,HYDAPI
+74.126.0,Austanbotn bekkeinntak,Austanbotnelvi,61.39744,7.73453,HYDAPI
+74.13.0,Muradn,Fardalselvi,61.40076,7.71725,HYDAPI
+74.14.0,Torolmen,Tya,61.26871,8.03823,HYDAPI
+74.15.0,Utla,Årdalsvassdraget,61.32177,7.82731,HYDAPI
+74.16.0,Langedalen,Fardalselvi,61.40149,7.70727,HYDAPI
+74.17.0,Gravdalen,Gravdøla,61.36322,7.84446,HYDAPI
+74.18.0,Fornabu,Indre offerdalselvi,61.23335,7.55117,HYDAPI
+74.19.0,Berdalsvatn,Berdalselvi,61.25608,7.81112,HYDAPI
+74.2.0,Tya,Tya,61.3111,7.83891,HYDAPI
+74.24.0,Nyset,Nysetelvi,61.16976,7.76713,HYDAPI
+74.25.0,Riskallvatn,Nysetelvi,61.16363,7.70332,HYDAPI
+74.26.0,Koldedalen,Tya,61.3838,8.13883,HYDAPI
+74.27.0,Svalheim bru,Årdalsvassdraget,61.3228,7.84315,HYDAPI
+74.29.0,Årdøla ovf. Årdalsvatnet,Årdalsvassdraget,61.30635,7.79626,HYDAPI
+74.3.0,Tyin,Tya,61.2774,8.13675,HYDAPI
+74.30.0,Tyin kraftstasjon,Årdalsvassdraget,61.31137,7.81929,HYDAPI
+74.31.0,Utla v/Øyni bro,Årdalsvassdraget,61.32555,7.84959,HYDAPI
+74.32.0,Stedjeelvi,Steigeelvi,61.26235,7.76112,HYDAPI
+74.33.0,Hæreidselvi,Årdalsvassdraget,61.23792,7.70268,HYDAPI
+74.34.0,Utla v/Brennteigbrua,Årdalsvassdraget,61.37876,7.93372,HYDAPI
+74.4.0,Kyrkjevatn,Breidbotnelvi,61.3075,7.99927,HYDAPI
+74.5.0,Nysetvatn,Nysetelvi,61.1831,7.6409,HYDAPI
+74.6.0,Mannsbergvatn,Mannsbergelvi,61.29099,8.02207,HYDAPI
+74.7.0,Biskopvatn,Biskopselvi,61.2527,7.97341,HYDAPI
+74.8.0,Nedre Breibotnvatn,Breidbotnelvi,61.29561,7.979,HYDAPI
+74.9.0,Viervatn,Berdalselvi,61.2387,7.87885,HYDAPI
+75.1.0,Hafsfoss,Fortunvassdraget,61.50828,7.7019,HYDAPI
+75.10.0,Fivlemyrane,Nørdstedøla,61.65063,7.75446,HYDAPI
+75.11.0,Gravdalsvatn,Gravdøla,61.64688,7.73762,HYDAPI
+75.12.0,Illevatn,Illvasselvi,61.70575,7.79385,HYDAPI
+75.13.0,Breidalsvatn,Fortunvassdraget,61.70134,7.91125,HYDAPI
+75.14.0,Svartdalsvatn,Fortunvassdraget,61.69971,7.93211,HYDAPI
+75.15.0,Namnlausvatn,Namnlauselvi,61.68038,7.87231,HYDAPI
+75.16.0,Grønevatn øvre,Vetledøla,61.64989,7.8772,HYDAPI
+75.17.0,Grønevatn nedre,Vetledøla,61.64349,7.86233,HYDAPI
+75.18.0,Fortun,Fortunvassdraget,61.49422,7.68652,HYDAPI
+75.19.0,Oppsarelv,Åsetelvi,61.53418,7.55411,HYDAPI
+75.2.0,Ytri bru,Fortunvassdraget,61.50647,7.7001,HYDAPI
+75.20.0,Åsetvatn,Åsetelvi,61.57158,7.56743,HYDAPI
+75.21.0,Rausdal,Mørkrisvassdraget,61.63097,7.57978,HYDAPI
+75.22.0,Gilja,Mørkrisvassdraget,61.54988,7.62133,HYDAPI
+75.23.0,Krokenelv,Krokadalselvi,61.34702,7.39822,HYDAPI
+75.24.0,Øygarden,Dalsdalselvi,61.46089,7.46181,HYDAPI
+75.25.0,Kolstad,Kolstadelvi,61.49313,7.45458,HYDAPI
+75.26.0,Kringlevatn,Kolstadelvi,61.50975,7.45563,HYDAPI
+75.27.0,Smørvivatn,Kolstadelvi,61.52708,7.43973,HYDAPI
+75.28.0,Feigumfoss,Feigedalselvi,61.38168,7.44511,HYDAPI
+75.29.0,Medalsvatn,Fortunvassdraget,61.69588,7.87411,HYDAPI
+75.3.0,Skaga bru,Bergselvi,61.50557,7.70013,HYDAPI
+75.34.0,Skagen kraftstasjon,Fortunvassdraget,61.50559,7.70201,HYDAPI
+75.35.0,Fortundalselva ovf. Skagen kraftstasjon,Fortunvassdraget,61.50579,7.69918,HYDAPI
+75.36.0,Mørkri ovf. Åsetelvi,Mørkrisvassdraget,61.53769,7.61533,HYDAPI
+75.37.0,Mørkri ndf. Åsetelvi,Mørkrisvassdraget,61.53077,7.60069,HYDAPI
+75.38.0,Åsetelvi,Åsetelvi,61.53475,7.60207,HYDAPI
+75.4.0,Bergselv,Bergselvi,61.50203,7.80362,HYDAPI
+75.42.0,Harbardsbreen,Nørdstedøla,61.67817,7.7152,HYDAPI
+75.43.0,Ringsdal,Ringselvi,61.48577,7.78417,HYDAPI
+75.44.0,Mjelkedalen ovf. Skålavatn,Grandfasta,61.58089,7.87363,HYDAPI
+75.5.0,Fortun,Fortunvassdraget,61.4967,7.69299,HYDAPI
+75.6.0,Storevatn,Grandfasta,61.59835,7.94314,HYDAPI
+75.7.0,Skålavatn,Grandfasta,61.56432,7.84264,HYDAPI
+75.70.0,Fortundalselva ndf. Eidsvatnet,Fortunvassdraget,61.49041,7.60349,HYDAPI
+75.71.0,Helgedalen bekkinntak,Bergselvi,61.50175,7.86809,HYDAPI
+75.8.0,Hervavatn øvre,Hervasselvi,61.54839,7.87146,HYDAPI
+75.9.0,Prestesteinvatn,Hervasselvi,61.54605,7.91482,HYDAPI
+75.93.0,Sognefjellet snøstasjon,Hervasselvi,61.5658,7.99954,HYDAPI
+76.1.0,Kroken,Jostedøla,61.65181,7.2824,HYDAPI
+76.10.0,Myklemyr,Jostedøla,61.5074,7.27368,HYDAPI
+76.11.0,Vigdøla,Vigdøla,61.50818,7.32795,HYDAPI
+76.13.0,Styggevatn,Jostedøla,61.76352,7.46567,HYDAPI
+76.14.81,Sperle rør 1,Jostedøla,61.56084,7.29985,HYDAPI
+76.14.82,Sperle rør 2,Jostedøla,61.56087,7.29919,HYDAPI
+76.14.83,Sperle rør 3,Jostedøla,61.56094,7.29712,HYDAPI
+76.14.84,Sperle rør 4,Jostedøla,61.56005,7.29425,HYDAPI
+76.14.85,Vm A1 Sperle,Jostedøla,61.5608,7.30023,HYDAPI
+76.15.0,Bruvollelvi,Bruvollelvi,61.68201,7.39754,HYDAPI
+76.16.1,Myklemyr rør 1,Jostedøla,61.52153,7.27353,HYDAPI
+76.16.10,Vm i Bekken,Jostedøla,61.51576,7.26801,HYDAPI
+76.16.11,Vm i Bekken,Jostedøla,61.51869,7.2686,HYDAPI
+76.16.12,Vm i Bekken,Jostedøla,61.52458,7.27617,HYDAPI
+76.16.2,Myklemyr rør 2,Jostedøla,61.5215,7.27275,HYDAPI
+76.16.23,Vm i Bekken,Jostedøla,61.51834,7.26918,HYDAPI
+76.16.25,O. Myklemyr rør,Jostedøla,61.52119,7.27466,HYDAPI
+76.16.3,Myklemyr rør 3,Jostedøla,61.52148,7.27175,HYDAPI
+76.16.4,Myklemyr rør 4,Jostedøla,61.52146,7.27043,HYDAPI
+76.16.5,M.pkt 5 Myklemyr,Jostedøla,61.52129,7.26926,HYDAPI
+76.16.6,Myklemyr rør 6,Jostedøla,61.52146,7.26882,HYDAPI
+76.16.7,Myklemyr rør 7,Jostedøla,61.52145,7.26745,HYDAPI
+76.16.8,Vm skala Myklemyr,Jostedøla,61.51911,7.2806,HYDAPI
+76.16.9,Vm dike Myklemyr,Jostedøla,61.52158,7.26985,HYDAPI
+76.17.0,Vm 1 Gaupne,Jostedøla,61.40598,7.28136,HYDAPI
+76.17.1,Gaupne rør 1,Jostedøla,61.40469,7.28634,HYDAPI
+76.17.2,Gaupne rør 2,Jostedøla,61.40469,7.28634,HYDAPI
+76.17.3,Gaupne rør 3,Jostedøla,61.40584,7.28603,HYDAPI
+76.17.4,Gaupne rør 4,Jostedøla,61.40613,7.28881,HYDAPI
+76.17.5,Gaupne rør 5,Kvernelvi,61.40618,7.29197,HYDAPI
+76.17.6,Gaupne rør 6,Jostedøla,61.41259,7.27391,HYDAPI
+76.17.7,Gaupne rør 7,Jostedøla,61.41337,7.27481,HYDAPI
+76.18.0,STEINMANNEN,Krundøla,61.67731,7.13225,HYDAPI
+76.2.0,Nigardselv,Breelvi,61.6553,7.27465,HYDAPI
+76.22.0,Tverradøla ovf. Krundøla,Krundøla,61.63841,7.19186,HYDAPI
+76.24.0,Nigardsvann utløp,Breelvi,61.66643,7.22644,HYDAPI
+76.25.0,Nigardsvann innløp,Breelvi,61.6743,7.21087,HYDAPI
+76.28.0,Røykjedøla ovf. Krundøla,Krundøla,61.63305,7.21758,HYDAPI
+76.29.0,Styggevatn,Jostedøla,61.76442,7.46562,HYDAPI
+76.3.0,Fondøla,Fonndøla,61.43583,7.24553,HYDAPI
+76.31.0,Kupvatn,Jostedøla,61.8175,7.39653,HYDAPI
+76.32.0,Tunsbergdalsvatn,Leirdøla,61.46458,7.17823,HYDAPI
+76.33.0,Jostedøla v/Gaupne bro,Jostedøla,61.40667,7.28276,HYDAPI
+76.34.0,Leirdøla,Leirdøla,61.4707,7.25052,HYDAPI
+76.35.0,Jostedøla ovf. Leirdøla,Jostedøla,61.47691,7.25871,HYDAPI
+76.36.0,Leirdøla kraftstasjon (elv),Jostedøla,61.43765,7.24731,HYDAPI
+76.37.0,Jostedøla v/Myklemyr,Jostedøla,61.52422,7.27628,HYDAPI
+76.38.0,Jostedøla ovf. Breelvi,Jostedøla,61.65487,7.27656,HYDAPI
+76.39.0,Breelvi,Breelvi,61.65528,7.27371,HYDAPI
+76.4.0,Leirdal,Leirdøla,61.47033,7.20605,HYDAPI
+76.40.0,Krundøla,Krundøla,61.63202,7.24481,HYDAPI
+76.41.0,Jostedøla ndf. Styggevatnet,Jostedøla,61.75279,7.46281,HYDAPI
+76.42.0,Jostedøla v/Fåbergstølen,Jostedøla,61.71194,7.35378,HYDAPI
+76.43.0,Jostedalen kraftstasjon,KYSTFELT,61.39555,7.30263,HYDAPI
+76.44.0,Leirdøla kraftstasjon (fjord),KYSTFELT,61.39586,7.30212,HYDAPI
+76.45.0,Sperleelvi,Jostedøla,61.5655,7.29515,HYDAPI
+76.46.0,Jostedøla ovf. Sperleelvi,Jostedøla,61.56838,7.29242,HYDAPI
+76.47.0,Sagarøyelvi,Jostedøla,61.59417,7.2779,HYDAPI
+76.48.0,Jostedøla ovf. Sagarøyelvi,Jostedøla,61.59506,7.28279,HYDAPI
+76.49.0,Vanndøla,Vanndøla,61.59993,7.28893,HYDAPI
+76.5.0,Nigardsbrevatn,Breelvi,61.66725,7.24156,HYDAPI
+76.50.0,Jostedøla ovf. Vanndøla,Jostedøla,61.60095,7.28649,HYDAPI
+76.51.0,Jostedøla ovf. Geisdøla,Jostedøla,61.61146,7.29031,HYDAPI
+76.52.0,Geisdøla,Geisdøla,61.61039,7.29531,HYDAPI
+76.53.0,Jostedøla v/Øyagjerdet,Jostedøla,61.46098,7.25371,HYDAPI
+76.54.0,Jostedøla ovf. Leirdøla kraftstasjon,Jostedøla,61.43847,7.24818,HYDAPI
+76.55.0,Hompedøla/Kverndøla,Jostedøla,61.51677,7.26291,HYDAPI
+76.56.0,Vm i elv v/snitt,Jostedøla,61.55054,7.29835,HYDAPI
+76.56.1,Fossyø rør 1,Jostedøla,61.55123,7.3,HYDAPI
+76.56.2,Fossyø rør 2,Jostedøla,61.55095,7.29879,HYDAPI
+76.56.3,Fossyø rør 3,Jostedøla,61.55107,7.29785,HYDAPI
+76.56.4,Fossyø rør 4,Jostedøla,61.5522,7.29534,HYDAPI
+76.56.5,GBR FOSSØY,Jostedøla,61.55037,7.29911,HYDAPI
+76.56.6,Fossyø Tvedt rør,Jostedøla,61.55329,7.29923,HYDAPI
+76.56.7,Lufttemperatur Fossøy,Jostedøla,61.55263,7.29806,HYDAPI
+76.57.1,Espe rør 1,Jostedøla,61.62058,7.27705,HYDAPI
+76.57.11,Espe rør 11,Jostedøla,61.62175,7.28057,HYDAPI
+76.57.12,Espe rør 12,Jostedøla,61.62329,7.27888,HYDAPI
+76.57.13,Espe rør 13,Jostedøla,61.62309,7.27342,HYDAPI
+76.57.14,Espe rør 14,Jostedøla,61.62378,7.27461,HYDAPI
+76.57.15,Espe rør 15,Jostedøla,61.62465,7.27626,HYDAPI
+76.57.2,Espe rør 2,Jostedøla,61.62075,7.27987,HYDAPI
+76.57.3,Espe rør 3,Jostedøla,61.62104,7.28127,HYDAPI
+76.57.4,Espe rør 4,Jostedøla,61.62151,7.2837,HYDAPI
+76.57.5,Espe rør 5,Jostedøla,61.62171,7.28472,HYDAPI
+76.57.6,M.pkt 6 Espe,Jostedøla,61.61973,7.28474,HYDAPI
+76.57.7,Espe rør 7,Jostedøla,61.62458,7.2807,HYDAPI
+76.57.8,Espe rør 8,Jostedøla,61.62505,7.28256,HYDAPI
+76.57.9,M.pkt 1A Espe,Jostedøla,61.6203,7.2766,HYDAPI
+76.58.0,Vm rør 1A Gjerde,Jostedøla,61.62944,7.27477,HYDAPI
+76.58.1,Gjerde rør 1,Jostedøla,61.62984,7.27395,HYDAPI
+76.58.2,Gjerde rør 2,Krundøla,61.62977,7.27256,HYDAPI
+76.58.3,Gjerde rør 3,Krundøla,61.62971,7.27113,HYDAPI
+76.58.4,Gjerde rør 4,Krundøla,61.62966,7.26957,HYDAPI
+76.58.5,Gjerde rør 5,Krundøla,61.62974,7.26734,HYDAPI
+76.58.6,Gjerde rør 6,Krundøla,61.62974,7.26571,HYDAPI
+76.58.7,Gjerde rør 5a,Krundøla,61.63107,7.26754,HYDAPI
+76.6.0,Engedalselv,Kvernelvi,61.4078,7.30143,HYDAPI
+76.65.0,Sagarøyelvi ovf. Jostedøla,Jostedøla,61.59393,7.28176,HYDAPI
+76.66.0,Hompedøla/Kvernelvi ovf. Jostedøla,Jostedøla,61.51447,7.265,HYDAPI
+76.67.0,Vigdøla ovf. Jostedøla,Vigdøla,61.50633,7.27699,HYDAPI
+76.68.0,Sperleelvi,Jostedøla,61.56512,7.29384,HYDAPI
+76.7.0,Nigardsbreelv,Breelvi,61.67754,7.20672,HYDAPI
+76.70.0,Sperleelvi  i Jostedalen,Jostedøla,61.56514,7.29382,HYDAPI
+76.8.0,Stegegjerdet,Jostedøla,61.43229,7.24948,HYDAPI
+76.9.0,Stegegjerdet,Jostedøla,61.42693,7.25166,HYDAPI
+77.1.0,Hafslovatn,Årøyvassdraget,61.29063,7.16406,HYDAPI
+77.11.0,Årøy kraftstasjon I,Årøyvassdraget,61.27718,7.16141,HYDAPI
+77.12.0,Årøy ovf. Årøy kraftstasjon I/II,Årøyvassdraget,61.27734,7.16334,HYDAPI
+77.13.0,"Årøy kraftstasjon I, inntak",Årøyvassdraget,61.286,7.16363,HYDAPI
+77.14.0,Årøy kraftstasjon II,Årøyvassdraget,61.27712,7.16111,HYDAPI
+77.15.0,Årøy ndf. Årøy kraftstasjon I/II,Årøyvassdraget,61.27665,7.15849,HYDAPI
+77.2.0,Veitestrandsvatn,Årøyvassdraget,61.36908,7.09022,HYDAPI
+77.20.0,Henjaelvi ved Flotande,Henjaelvi,61.23228,6.84914,HYDAPI
+77.21.0,Grindselvi,Grindselvi,61.20994,6.74571,HYDAPI
+77.24.0,Anestølen,Sogndalselvi,61.3656,6.90638,HYDAPI
+77.24.1,Anestølen - Rør 1,Sogndalselvi,61.36223,6.91147,HYDAPI
+77.24.2,Anestølen - Rør 2,Sogndalselvi,61.36223,6.91194,HYDAPI
+77.24.3,Anestølen - Rør 3,Sogndalselvi,61.36226,6.91366,HYDAPI
+77.24.4,Anestølen - Rør 4 - HiSF,Sogndalselvi,61.36244,6.91392,HYDAPI
+77.3.0,Sogndalsvatn,Sogndalselvi,61.30136,7.00595,HYDAPI
+77.4.0,Kaupangerelv,Kaupangerelvi,61.21843,7.23903,HYDAPI
+77.5.0,Midtvatnet,KYSTFELT,61.15113,7.0458,HYDAPI
+78.1.0,Mundalselv,Mundalselvi,61.40297,6.72472,HYDAPI
+78.10.0,Vetlefjordelva ovf. Mel kraftstasjon,Vetlefjordelvi,61.33756,6.56087,HYDAPI
+78.11.0,Mel kraftstasjon,Vetlefjordelvi,61.3377,6.56123,HYDAPI
+78.12.0,Mel,Vetlefjordelvi,61.33756,6.56087,HYDAPI
+78.17.0,Vetlefjordelva v/Renndalen,Vetlefjordelvi,61.32837,6.56822,HYDAPI
+78.18.0,Vetlefjordelva utløp,Vetlefjordelvi,61.304,6.56243,HYDAPI
+78.19.0,Flatbreen,Supphelleelvi,61.47522,6.79946,HYDAPI
+78.2.0,Suphellerelv,Supphelleelvi,61.43437,6.77682,HYDAPI
+78.3.0,Bøyumselv,Storelvi,61.45229,6.74216,HYDAPI
+78.35.0,Mel,Vetlefjordelvi,61.33885,6.55993,HYDAPI
+78.4.0,Skaddalsvatnet,Breelvi,61.39515,6.5333,HYDAPI
+78.5.0,Jorddalsvatnet,Jorddalselvi,61.38752,6.63503,HYDAPI
+78.6.0,Øvre Svartevassvatnet,Vetlefjordelvi,61.40609,6.5924,HYDAPI
+78.7.0,Nedre Svartevassvatnet,Vetlefjordelvi,61.3869,6.57421,HYDAPI
+78.8.0,Bøyumselv,Storelvi,61.4487,6.74268,HYDAPI
+78.9.0,Vetlefjordelva ndf. Mel kraftstasjon,Vetlefjordelvi,61.33439,6.56332,HYDAPI
+79.1.0,Nessadalsvatn,Nesselvi,61.16314,6.28461,HYDAPI
+79.10.0,Høgsvatn,Eringsdalselva,61.2336,6.21563,HYDAPI
+79.11.0,Uldalsvatn,Kråkelva,61.21742,5.95454,HYDAPI
+79.12.0,Roesvatn,Eringsdalselva,61.23596,6.19912,HYDAPI
+79.13.0,Vassdalsvatn,Siplauelva,61.23663,6.04061,HYDAPI
+79.14.0,Nedre Breidalsvatn,Hålandselva,61.24677,6.08348,HYDAPI
+79.15.0,Øvre Breidalsvatn,Hålandselva,61.26344,6.09277,HYDAPI
+79.17.0,Gautingsdalselva ndf. Eiriksdal kraftv.,Høyangervassdraget,61.24268,6.14687,HYDAPI
+79.18.0,Daleelva ndf. Eiriksdalselva,Høyangervassdraget,61.23968,6.14139,HYDAPI
+79.19.0,Daleelva utløp,Høyangervassdraget,61.21971,6.07492,HYDAPI
+79.2.0,Bergsvatn,Øyrelva,61.22182,6.04107,HYDAPI
+79.3.0,Nessedalselv,Nesselvi,61.15987,6.27839,HYDAPI
+79.4.0,Stølsvatn,Eringsdalselva,61.21879,6.31614,HYDAPI
+79.5.0,Hardbakkevatn,Eringsdalselva,61.21592,6.34153,HYDAPI
+79.6.0,Norddalsvatn,Norddalselva,61.24186,6.24613,HYDAPI
+79.7.0,Nedre Gruvlebotnvatn,Norddalselva,61.24067,6.27606,HYDAPI
+79.8.0,Øvre Gruvlebotnvatn,Norddalselva,61.24758,6.30716,HYDAPI
+79.9.0,Kaldosvatn,Eringsdalselva,61.22079,6.24797,HYDAPI
+80.1.0,Røyrvikvatn,Dyrneslielva,61.20823,5.7611,HYDAPI
+80.10.0,Blankedalsvatn,Hovlandselva,61.27834,6.05815,HYDAPI
+80.11.0,Monsdalsvatn,Hovlandselva,61.25022,6.00483,HYDAPI
+80.12.0,Vestre  Storevatn,Storevatnelva,61.29097,5.91878,HYDAPI
+80.13.0,Nordstrandsvatn,Lølandselva,61.16408,5.4866,HYDAPI
+80.2.0,Markaulen,Dyrneslielva,61.20217,5.77104,HYDAPI
+80.3.0,Bøvatn,Dyrneslielva,61.19984,5.78617,HYDAPI
+80.4.0,Ullebøelv,elv i Ullebødalen,61.20324,5.78553,HYDAPI
+80.5.0,Espelandsvatn,Lølandselva,61.16023,5.38471,HYDAPI
+80.6.0,Blåvatn,Blåvassgrova,61.25583,5.95393,HYDAPI
+80.7.0,Fossvatn,Hovlandselva,61.25991,5.93582,HYDAPI
+80.8.0,Åsvatn,Veslelva,61.26625,5.87922,HYDAPI
+80.9.0,Seltuftvatn,Seltuftelva,61.28833,5.96105,HYDAPI
+82.1.0,Nautsundvatn,Guddalsvassdraget,61.25067,5.39577,HYDAPI
+82.2.0,Strandevatn,Storelva,61.32826,5.42426,HYDAPI
+82.3.0,Håland bru,Storelva,61.33521,5.41505,HYDAPI
+82.4.0,Nautsundvatn,Guddalsvassdraget,61.2529,5.38535,HYDAPI
+82.5.0,Bogevatn,Guddalsvassdraget,61.25036,5.52173,HYDAPI
+82.6.0,Hovlandsdalsvatnet,Guddalsvassdraget,61.2471,5.4139,HYDAPI
+82.7.0,Breidvatnet,Guddalsvassdraget,61.29084,5.36875,HYDAPI
+82.8.0,Hovlandsvatn,Guddalsvassdraget,61.28013,5.35504,HYDAPI
+83.10.0,Espelandsvatn,Åmotselva,61.37619,5.77949,HYDAPI
+83.11.0,Haukedalsvatn ndf.,Gaularvassdraget,61.36549,6.22965,HYDAPI
+83.12.0,Haukedalsvatn ndf.,Gaularvassdraget,61.36569,6.23159,HYDAPI
+83.13.0,Nysnaelv,Selselva,61.38556,5.6266,HYDAPI
+83.14.0,Østre Storevatn,Sandaelva,61.28692,6.06015,HYDAPI
+83.15.0,Viksdalsvatnet,Gaularvassdraget,61.32713,5.96159,HYDAPI
+83.16.0,Gaula ndf. Eikelandsvatnet,Gaularvassdraget,61.33409,5.85984,HYDAPI
+83.17.0,Gaula utløp,Gaularvassdraget,61.36697,5.68384,HYDAPI
+83.18.0,Gaula ndf. Haukedalsvatnet,Gaularvassdraget,61.36506,6.23015,HYDAPI
+83.19.0,Eldalselva,Eldalselva,61.31851,6.23847,HYDAPI
+83.2.0,Viksvatn (Hestadfjorden),Gaularvassdraget,61.33369,5.88976,HYDAPI
+83.29.0,Selselva v/Bygstad,Selselva,61.39022,5.61274,HYDAPI
+83.3.0,Haukedalsvatn,Gaularvassdraget,61.36598,6.23147,HYDAPI
+83.4.0,Eldal,Eldalselva,61.33333,6.17266,HYDAPI
+83.44.0,Selselva,Selselva,61.39302,5.59516,HYDAPI
+83.5.0,Gjermundstad,Eldalselva,61.3185,6.23754,HYDAPI
+83.6.0,Byttevatn,Eldalselva,61.34341,6.34683,HYDAPI
+83.7.0,Grønengstølsvatn,Gaularvassdraget,61.44324,6.46896,HYDAPI
+83.8.0,Yndestad,Fauskeelva,61.38048,5.67585,HYDAPI
+83.9.0,Skilbreivatn,Åmotselva,61.38079,5.80131,HYDAPI
+84.1.0,Jølstervatn,Jølstra,61.4935,6.11328,HYDAPI
+84.10.0,Nesvatn,Nausta,61.59517,5.98288,HYDAPI
+84.11.0,Hovefoss,Nausta,61.53279,5.75214,HYDAPI
+84.12.0,Ytste Langvatn,Nausta,61.61421,6.15838,HYDAPI
+84.13.0,Jølstra,Jølstra,61.44159,6.00524,HYDAPI
+84.14.0,Prestfossen,Ångedalselva,61.45969,5.89085,HYDAPI
+84.15.0,Jølstervatn ndf.,Jølstra,61.4906,6.10724,HYDAPI
+84.17.0,Brulandsfoss Inntak,Jølstra,61.43519,5.91956,HYDAPI
+84.18.0,Breskarselva,Jølstra,61.52669,6.56437,HYDAPI
+84.19.0,Sygnesandselva,Sygnesandselva,61.52048,6.58697,HYDAPI
+84.2.0,Movatn,Jølstra,61.42889,5.93894,HYDAPI
+84.20.0,Holsenvatn,Holsaelva,61.43177,6.06488,HYDAPI
+84.21.0,Brulandsfoss ndf.,Jølstra,61.43656,5.90117,HYDAPI
+84.22.0,Jølstra ndf. Jølstravatnet,Jølstra,61.49053,6.10736,HYDAPI
+84.23.0,Nausta v/Hovefossen,Nausta,61.53282,5.7518,HYDAPI
+84.24.0,Nausta v/Espeland,Nausta,61.57578,5.89902,HYDAPI
+84.25.2,Førde/Moskog rør 2,Jølstra,61.43919,5.99797,HYDAPI
+84.25.3,Førde/Moskog rør 3,Jølstra,61.43945,5.99522,HYDAPI
+84.25.6,Førde/Morskog rør 3b,Jølstra,61.43945,5.99522,HYDAPI
+84.3.0,Markvatn,Skorveelva,61.43685,5.35082,HYDAPI
+84.30.0,Lunde,Jølstra,61.51784,6.63645,HYDAPI
+84.31.0,Anga ovf. Jølstra,Ångedalselva,61.45941,5.88527,HYDAPI
+84.32.0,Høgset i Jølstra,Jølstra,61.44934,5.89581,HYDAPI
+84.4.0,Sagfoss,Skorveelva,61.4459,5.33662,HYDAPI
+84.5.0,Øyravatn,Skorveelva,61.4467,5.33278,HYDAPI
+84.51.0,Norddøla v/Holsen,Holsaelva,61.42022,6.15818,HYDAPI
+84.52.0,Trollavatnet,Jølstra,61.49673,6.65671,HYDAPI
+84.57.0,Fosshølen i Nausta,Nausta,61.51707,5.72084,HYDAPI
+84.58.0,Stegsvatn,Årdalselva,61.6124,6.28606,HYDAPI
+84.59.0,Helgheim/Huus,Helgheimselva,61.57348,6.40428,HYDAPI
+84.7.0,Sægrova,Sægrova,61.53484,6.49364,HYDAPI
+84.8.0,Holsenvatn,Holsaelva,61.4332,6.05295,HYDAPI
+84.9.0,Vonavatn,Nausta,61.61315,6.00377,HYDAPI
+85.1.0,Norddal,Norddalselva,61.64331,5.37561,HYDAPI
+85.10.0,Svartevatn,Svartevasselva,61.69372,5.32806,HYDAPI
+85.12.0,Eimhjellevatn,Oselvvassdraget,61.61709,5.68504,HYDAPI
+85.15.0,Heimsetelva,Oselvvassdraget,61.6803,5.79229,HYDAPI
+85.2.0,Blåmannsvatn,Oselvvassdraget,61.56561,5.5198,HYDAPI
+85.3.0,Svartebotten,Norddalselva,61.69139,5.45682,HYDAPI
+85.4.0,Straumstad (Solheimsvatnet),Solheimsvassdraget,61.6484,5.44487,HYDAPI
+85.5.0,Sagefossen krv.,Oselvvassdraget,61.61513,5.67817,HYDAPI
+85.6.0,Storbotnvatn,Norddalselva,61.69176,5.44088,HYDAPI
+85.7.0,Blåbrevatn,Norddalselva,61.74506,5.55745,HYDAPI
+85.8.0,Oselva ndf. Endestadvatnet,Oselvvassdraget,61.57344,5.53787,HYDAPI
+85.9.0,Børevatn,Haukåa,61.65776,5.29453,HYDAPI
+86.1.0,Risevatn,Riseelva,61.76268,5.29506,HYDAPI
+86.10.0,Åvatn (Ommedalsvatnet),Gjengedalsvassdraget,61.71941,5.9213,HYDAPI
+86.11.0,Store Åskåravatn,Åskorelva,61.79176,5.66563,HYDAPI
+86.12.0,Skjerdalselv,Storelva,61.81564,5.93555,HYDAPI
+86.13.0,Vingevatn,Vingefosselva,61.8316,5.35909,HYDAPI
+86.14.0,Langevatn/Vatn 11,elv fra Litle snønyk,61.79541,5.54481,HYDAPI
+86.15.0,Nibbevatn,Nibbevatnelva,61.83932,5.42187,HYDAPI
+86.16.0,Hjelmevatn,Iverelva,61.7892,5.3869,HYDAPI
+86.17.0,Svelgsvatn,Svelgenvassdraget,61.78134,5.3195,HYDAPI
+86.18.0,Sørdalsvatn,Svelgenvassdraget,61.79303,5.36176,HYDAPI
+86.19.0,Langevatn,Sødalselva,61.77318,5.56806,HYDAPI
+86.20.0,X-Vatn,Vestre yksneelva,61.76403,5.82224,HYDAPI
+86.21.0,Z-Vatn,elv fra Z-vatnet,61.76136,5.78459,HYDAPI
+86.22.0,Øvre Sødalsvatn,Sødalselva,61.78047,5.60804,HYDAPI
+86.24.0,Nedre Sødalsvatn,Sødalselva,61.79159,5.64003,HYDAPI
+86.25.0,Øksendalsvatn,Vestre yksneelva,61.83252,5.79234,HYDAPI
+86.26.0,Isavatn,Midtre yksneelva,61.81556,5.8359,HYDAPI
+86.27.0,Bjørndalsvatn,Vestre yksneelva,61.81795,5.80336,HYDAPI
+86.28.0,Dauremålsvatn,Sagåa,61.82934,5.72426,HYDAPI
+86.29.0,Åskåra kraftstasjon,KYSTFELT,61.81188,5.66155,HYDAPI
+86.3.0,Breelva v/Ålfotbreen,Litleelva,61.78345,5.65712,HYDAPI
+86.30.0,Ommedalselva utløp,Gjengedalsvassdraget,61.73037,5.91803,HYDAPI
+86.31.0,Ommedalselva v/Ommedal,Gjengedalsvassdraget,61.68799,5.92413,HYDAPI
+86.32.0,Ommedalselva ndf. Ommedalsvatnet,Gjengedalsvassdraget,61.72467,5.91814,HYDAPI
+86.33.0,Ommedalselva ovf. Ommedalsvatnet,Gjengedalsvassdraget,61.69678,5.92401,HYDAPI
+86.34.0,Rongkleivelva,Rongkleivelva,61.66516,5.9184,HYDAPI
+86.35.0,Ommedalselva ndf. Rongkleivelva,Gjengedalsvassdraget,61.66786,5.91861,HYDAPI
+86.36.0,Ommedalselva ovf. Rongkleivelva,Gjengedalsvassdraget,61.66636,5.92206,HYDAPI
+86.37.0,Stølselva,Gjengedalsvassdraget,61.65825,5.98712,HYDAPI
+86.38.0,Slettelva ndf. Dalevatnet,Gjengedalsvassdraget,61.65696,6.04965,HYDAPI
+86.39.0,Lilleteigvatn,Ramskredelva,61.70195,5.28354,HYDAPI
+86.4.0,Gjengedalsvatn,Gjengedalsvassdraget,61.66681,6.05433,HYDAPI
+86.40.0,Handklevatn,Indrehuselva,61.67806,5.24764,HYDAPI
+86.47.0,Ålfotbreen,Litleelva,61.76221,5.66658,HYDAPI
+86.5.0,Sørdalsvatn,Sødalselva,61.79107,5.63724,HYDAPI
+86.56.0,Breelva,Litleelva,61.78291,5.65781,HYDAPI
+86.6.0,Breelva v/Ålfotbreen,Litleelva,61.77991,5.65838,HYDAPI
+86.7.0,Bortne,Bortneelva,61.84733,5.41048,HYDAPI
+86.8.0,Kote 868 Ålfoten,Åskorelva,61.7576,5.75844,HYDAPI
+86.9.0,Cote 700,Åskorelva,61.77117,5.69632,HYDAPI
+87.1.0,Breimsvatn,Breimsvassdraget,61.75296,6.28678,HYDAPI
+87.10.0,Gloppenelv v/Bergheim,Breimsvassdraget,61.7186,6.52064,HYDAPI
+87.2.0,Gloppenelva v/Eidsfoss,Breimsvassdraget,61.75688,6.24515,HYDAPI
+87.3.0,Gloppenelva v/Teita bru,Breimsvassdraget,61.72438,6.51139,HYDAPI
+87.4.0,Gloppenelva utløp,Breimsvassdraget,61.7644,6.21089,HYDAPI
+87.7.0,Storeelva i Innvik,KYSTFELT,61.84794,6.63822,HYDAPI
+87.9.0,Myklebustdalselva ovf. Storelva,Myklebustdalselva,61.73172,6.50491,HYDAPI
+88.1.0,Strynsvatn,Strynevassdraget,61.92761,6.84586,HYDAPI
+88.10.0,Strynsvatn,Strynevassdraget,61.93044,6.85423,HYDAPI
+88.11.0,Strynsvatn,Strynevassdraget,61.9306,6.87882,HYDAPI
+88.12.0,Strynsvatn,Strynevassdraget,61.92858,6.85055,HYDAPI
+88.13.0,Erdalselv,Erdalselva,61.84089,7.18349,HYDAPI
+88.14.0,Sunndøla,Sunndøla,61.89944,7.23236,HYDAPI
+88.15.0,Grasdøla,Grasdøla,61.96764,7.25823,HYDAPI
+88.16.0,Hjelledøla,Strynevassdraget,61.91643,7.12472,HYDAPI
+88.18.0,Oldenelva ovf. Oldevatnet,Oldenvassdraget,61.70168,6.81293,HYDAPI
+88.19.0,Briksdalselva v/Briksdal Fjellstove,Oldenvassdraget,61.66293,6.8233,HYDAPI
+88.2.0,Nordre Oldevatn,Oldenvassdraget,61.79976,6.82446,HYDAPI
+88.20.0,Oldenelva v/Olden kirke,Oldenvassdraget,61.82755,6.80564,HYDAPI
+88.21.0,Grasdalen,Grasdøla,61.99869,7.31109,HYDAPI
+88.22.0,"Vetledalsbreen, optimus",Erdalselva,61.82871,7.27785,HYDAPI
+88.23.0,Erdalsbreen,Erdalselva,61.82604,7.20964,HYDAPI
+88.29.0,Floen,Oldenvassdraget,61.80502,6.81649,HYDAPI
+88.3.0,"Vetledalsbreen, infimus",Erdalselva,61.84712,7.24261,HYDAPI
+88.30.0,Nordre Oldevatn,Oldenvassdraget,61.79201,6.82233,HYDAPI
+88.31.0,Loelva ndf. Lovatnet,Loenvassdraget,61.86047,6.8886,HYDAPI
+88.32.0,Strynselva v/Stauri,Strynevassdraget,61.91867,6.80553,HYDAPI
+88.33.0,Hjelledøla ovf. Oppstrynsvatnet,Strynevassdraget,61.91585,7.11524,HYDAPI
+88.34.0,Hjelledøla v/Skaare,Strynevassdraget,61.93072,7.22916,HYDAPI
+88.35.0,Erdalselva,Erdalselva,61.89186,7.10149,HYDAPI
+88.36.0,Sunndøla,Sunndøla,61.91893,7.17154,HYDAPI
+88.37.0,Glomsdøla,Glomsdøla,61.91833,7.0901,HYDAPI
+88.38.0,Strynselva v/Lunde,Strynevassdraget,61.92589,6.83475,HYDAPI
+88.39.0,Strynselva v/Sætre,Strynevassdraget,61.91141,6.76335,HYDAPI
+88.4.0,Lovatn,Loenvassdraget,61.85897,6.88935,HYDAPI
+88.40.1,Folven rør 1,Strynevassdraget,61.91883,7.16981,HYDAPI
+88.40.2,Folven rør 2,Sunndøla,61.91773,7.17178,HYDAPI
+88.40.3,Folven rør 3,Sunndøla,61.91707,7.17278,HYDAPI
+88.40.4,Folven rør 4,Strynevassdraget,61.91977,7.17309,HYDAPI
+88.40.5,Folven rør 5,Sunndøla,61.91888,7.17334,HYDAPI
+88.40.6,Folven rør 6,Strynevassdraget,61.92019,7.17059,HYDAPI
+88.40.7,Folven rør 7,Strynevassdraget,61.92064,7.17056,HYDAPI
+88.40.8,Folven rør 8,Strynevassdraget,61.92108,7.17016,HYDAPI
+88.42.1,Bødal rør 1,Loenvassdraget,61.80532,6.99866,HYDAPI
+88.42.2,Bødal rør 2,Loenvassdraget,61.80493,6.99964,HYDAPI
+88.42.3,Lufttemp. Bødal,Loenvassdraget,61.80468,7.00108,HYDAPI
+88.43.14,Riise rør 1,Strynevassdraget,61.9109,6.75562,HYDAPI
+88.44.0,Vm bru v/10,Strynevassdraget,61.91103,6.76323,HYDAPI
+88.44.1,Sætre rør 1,Strynevassdraget,61.91493,6.78246,HYDAPI
+88.44.10,Sætre rør 10,Strynevassdraget,61.91148,6.76367,HYDAPI
+88.44.2,Sætre rør 2,Strynevassdraget,61.91465,6.76487,HYDAPI
+88.44.3,Sætre rør 3,Strynevassdraget,61.91399,6.76587,HYDAPI
+88.44.4,Sætre rør 4,Strynevassdraget,61.91265,6.76644,HYDAPI
+88.44.5,Sætre rør 5,Strynevassdraget,61.91155,6.76795,HYDAPI
+88.44.6,Sætre rør 6,Strynevassdraget,61.9109,6.76943,HYDAPI
+88.44.7,Sætre rør 7,Strynevassdraget,61.91266,6.76692,HYDAPI
+88.44.8,Sætre rør 8,Strynevassdraget,61.91241,6.76551,HYDAPI
+88.44.9,Sætre rør 9,Strynevassdraget,61.91194,6.7643,HYDAPI
+88.45.1,Scania rør 1,Strynevassdraget,61.91854,6.76982,HYDAPI
+88.46.1,Berge rør 1,Erdalselva,61.87765,7.11283,HYDAPI
+88.46.10,Vm Berge bru,Erdalselva,61.88478,7.10859,HYDAPI
+88.46.11,Vm bru L.G.,Erdalselva,61.87888,7.12036,HYDAPI
+88.46.12,Vm bru Myrane,Erdalselva,61.87959,7.12317,HYDAPI
+88.46.2,Berge rør 2,Erdalselva,61.8779,7.11424,HYDAPI
+88.46.3,Berge rør 3,Erdalselva,61.87836,7.11517,HYDAPI
+88.46.4,Berge rør 4,Erdalselva,61.87859,7.1161,HYDAPI
+88.46.5,Berge rør 5,Erdalselva,61.87885,7.11799,HYDAPI
+88.46.6,Berge rør 6,Erdalselva,61.87979,7.12126,HYDAPI
+88.46.7,Berge rør 7,Erdalselva,61.88049,7.12359,HYDAPI
+88.46.8,Lufttemp. Berge,Erdalselva,61.8859,7.10861,HYDAPI
+88.47.1,Greidung rør 1,Erdalselva,61.86868,7.13002,HYDAPI
+88.47.2,Greidung rør 2,Erdalselva,61.86892,7.13096,HYDAPI
+88.47.3,Greidung rør 3,Erdalselva,61.86916,7.13237,HYDAPI
+88.48.0,Vm bru Loen,Loenvassdraget,61.86932,6.8509,HYDAPI
+88.48.1,Loen rør 1,KYSTFELT,61.86596,6.85114,HYDAPI
+88.48.2,Loen rør 2,Loenvassdraget,61.86686,6.85155,HYDAPI
+88.48.3,Loen rør 3,Loenvassdraget,61.86753,6.85179,HYDAPI
+88.48.4,Tele Loen,Loenvassdraget,61.8685,6.85571,HYDAPI
+88.48.5,Lufttemp Loen,Loenvassdraget,61.86917,6.85567,HYDAPI
+88.48.6,Vm i elv Loen,Loenvassdraget,61.8685,6.85571,HYDAPI
+88.49.0,Vm Hjelle,Strynevassdraget,61.91705,7.13088,HYDAPI
+88.49.1,Hjelle rør 1,Strynevassdraget,61.91705,7.13088,HYDAPI
+88.49.2,Hjelle rør 2,Strynevassdraget,61.91901,7.13314,HYDAPI
+88.49.3,Hjelle rør 3,Strynevassdraget,61.91833,7.13318,HYDAPI
+88.5.0,Haugenfoss,Loenvassdraget,61.86356,6.88458,HYDAPI
+88.50.0,Vm Rør 7 Kirkeide,Strynevassdraget,61.91716,6.78183,HYDAPI
+88.50.1,Kirkeide rør 1,Strynevassdraget,61.91518,6.78435,HYDAPI
+88.50.2,Kirkeide rør 2,Strynevassdraget,61.9155,6.78461,HYDAPI
+88.50.3,Kirkeide rør 3,Strynevassdraget,61.91605,6.78476,HYDAPI
+88.50.4,Kirkeide rør 4,Strynevassdraget,61.91655,6.7852,HYDAPI
+88.50.5,Kirkeide rør 5,Strynevassdraget,61.91745,6.78562,HYDAPI
+88.50.6,Kirkeide rør 6,Strynevassdraget,61.91719,6.78325,HYDAPI
+88.50.7,Lufttemp. Tenden,Strynevassdraget,61.92971,6.85095,HYDAPI
+88.51.0,Vm Skårerbekk,Strynevassdraget,61.93024,7.21867,HYDAPI
+88.51.1,Skårer rør 1,Strynevassdraget,61.92957,7.21871,HYDAPI
+88.51.2,Skårer rør 2,Strynevassdraget,61.92889,7.21827,HYDAPI
+88.51.3,Skårer rør 3,Strynevassdraget,61.92844,7.21782,HYDAPI
+88.51.4,Skårer rør 4,Strynevassdraget,61.92961,7.22157,HYDAPI
+88.51.5,Vm Skårerbrua,Strynevassdraget,61.93013,7.22725,HYDAPI
+88.51.6,Lufttemp. Skårer,Strynevassdraget,61.93257,7.22473,HYDAPI
+88.51.7,Vm skala,Skjerdingsdøla,62.02882,7.22151,HYDAPI
+88.6.0,Skjæringsdøla,Skjerdingsdøla,61.93416,7.23809,HYDAPI
+88.7.0,Sunndøla,Sunndøla,61.89822,7.24195,HYDAPI
+88.8.0,Vetledalsvatn,Erdalselva,61.84775,7.22774,HYDAPI
+89.1.0,Hornindalsvatn,Hornindalsvassdraget,61.91916,6.11954,HYDAPI
+89.10.1,"Hornindal, rør1",Hornindalsvassdraget,61.99303,6.52449,HYDAPI
+89.2.0,Eidselva ndf. Hornindalsvatnet,Hornindalsvassdraget,61.91401,6.09342,HYDAPI
+89.3.1,Nordfjordeid rør 1,Hornindalsvassdraget,61.91808,6.09229,HYDAPI
+90.1.0,Førdeelv,KYSTFELT,61.84174,5.02764,HYDAPI
+91.1.0,Dalsbøvatn,Storelva,62.16169,5.16954,HYDAPI
+91.2.0,Dalsbøvatn,Storelva,62.16243,5.16649,HYDAPI
+91.3.0,Ervik,Storelva,62.16364,5.11068,HYDAPI
+92.1.0,Skorgevatn,Skorgelva,61.99379,5.47923,HYDAPI
+92.3.0,Gusdalsvatn,Gusdalelva,62.01762,5.55105,HYDAPI
+93.1.0,Branddal,Brandalselva,62.16549,5.55343,HYDAPI
+93.2.0,Brudevoll,Norddalselva,62.09001,5.77667,HYDAPI
+94.1.0,Åmela,Åmela,62.00875,5.83688,HYDAPI
+94.10.0,Steinkvivatn,Åmela,62.00571,5.80279,HYDAPI
+94.12.0,Kilselva,Stigedalselva,62.04302,6.04571,HYDAPI
+94.13.0,Førdselva,Austefjordvassdraget,62.06242,6.32868,HYDAPI
+94.15.1,Eide rør 1,Austefjordvassdraget,62.05311,6.39588,HYDAPI
+94.15.2,Eide rør 2,Austefjordvassdraget,62.05258,6.39495,HYDAPI
+94.15.3,Eide rør 3,Austefjordvassdraget,62.05201,6.3941,HYDAPI
+94.16.1,Kaldvatn rør 1,Austefjordvassdraget,62.03659,6.41001,HYDAPI
+94.16.2,Kaldvatn rør 2,Austefjordvassdraget,62.03668,6.41121,HYDAPI
+94.16.3,Kaldvatn rør 3,Nøre kalvatnelva,62.03675,6.41277,HYDAPI
+94.17.1,Øygarden rør 1,Austefjordvassdraget,62.00104,6.3613,HYDAPI
+94.17.2,Øygarden rør 2,Austefjordvassdraget,62.00118,6.36274,HYDAPI
+94.17.3,Øygarden rør 3,Austefjordvassdraget,62.00142,6.36434,HYDAPI
+94.18.0,Vm Ousdal bru,Austefjordvassdraget,61.99458,6.36104,HYDAPI
+94.18.1,Ousdal rør 1,Austefjordvassdraget,61.99455,6.35978,HYDAPI
+94.18.2,Ousdal rør 2,Austefjordvassdraget,61.99395,6.35914,HYDAPI
+94.19.0,Førdselva v/Gjersdal bru,Austefjordvassdraget,62.06008,6.35208,HYDAPI
+94.3.0,Kaldvatn ndf.,Austefjordvassdraget,62.03313,6.40241,HYDAPI
+94.4.0,Kolfossen,Austefjordvassdraget,62.04825,6.39442,HYDAPI
+95.1.0,Bjørdal,Ørstavassdraget,62.13269,6.27876,HYDAPI
+95.11.0,Ørstaelva v/Høgebrua,Follestaddalselva,62.18448,6.19658,HYDAPI
+95.12.0,Åmdalselva ndf. Vatnevatnet,Ørstavassdraget,62.15749,6.22222,HYDAPI
+95.2.0,Høge bru,Follestaddalselva,62.18451,6.19721,HYDAPI
+95.4.0,Vatnevatnet,Ørstavassdraget,62.15707,6.22284,HYDAPI
+96.3.0,Hareidselv,Hareidselva,62.36242,6.0073,HYDAPI
+96.4.0,Flø,Storelva,62.40079,5.85173,HYDAPI
+96.5.0,Hareidselva ndf. Grimstadvatnet,Hareidselva,62.36241,6.00562,HYDAPI
+96.9.0,Snipsøyrvatnet,Nessetelva,62.35389,5.97951,HYDAPI
+97.1.0,Fetvatn (Fitjavatnet),Velledalselva,62.33236,6.59336,HYDAPI
+97.10.0,Tyssa måledam,Tusselva,62.10691,6.55712,HYDAPI
+97.11.0,Tussevatn,Tusselva,62.09701,6.60774,HYDAPI
+97.2.0,Saurevatn,Vikelva,62.0978,6.55019,HYDAPI
+97.3.0,Aureelv,Aureelva,62.39503,6.59524,HYDAPI
+97.4.0,Skjåstad,Sleddalselva,62.06938,6.46824,HYDAPI
+97.5.0,Sleddalen,Sleddalselva,62.07259,6.4524,HYDAPI
+97.6.0,Trandal,Trandalselva,62.26319,6.50364,HYDAPI
+97.7.0,Standal,Standalelva,62.25737,6.40683,HYDAPI
+97.8.0,Tyssa bru,Tusselva,62.10691,6.55712,HYDAPI
+97.9.0,Skipedalsvatn,Vikelva,62.05249,6.50217,HYDAPI
+98.1.0,Fause bru,Fausaelva,62.35646,6.87894,HYDAPI
+98.2.0,Øye,Bygdaelva,62.06709,6.93383,HYDAPI
+98.3.0,Nysetervatn,Fausaelva,62.35126,6.83293,HYDAPI
+98.4.0,Øye ndf.,Bygdaelva,62.06826,6.93157,HYDAPI
+98.90.19,Åknesskaret klimastasjon,Storelva,62.18835,6.98656,HYDAPI
+99.1.0,Onilsavatn,Tafjordvassdraget,62.21919,7.4272,HYDAPI
+99.10.0,Fagerbotnvatn,Fagerbotnelva,62.12949,7.43377,HYDAPI
+99.14.0,Sakariasvatn,Rødalselva,62.20193,7.48961,HYDAPI
+99.15.0,Fremste Veltdalsvatn,Rødalselva,62.14257,7.74965,HYDAPI
+99.16.0,Muldal,Muldalselva,62.25462,7.46386,HYDAPI
+99.17.0,Rødøla,Rødøla,62.19759,7.49542,HYDAPI
+99.2.0,Heimste Kaldhussetervann,Tafjordvassdraget,62.17516,7.42372,HYDAPI
+99.3.0,Øyen,Rødalselva,62.20222,7.47518,HYDAPI
+99.4.0,Kolbeinsvatn,Tafjordvassdraget,62.0517,7.38421,HYDAPI
+99.5.0,Heimste Vikvatn,Rødøla,62.12556,7.52601,HYDAPI
+99.6.0,Fetvatn,Fetvasselva,62.13471,7.45939,HYDAPI
+99.7.0,Heimste Veltdalsvatn,Rødalselva,62.15934,7.71728,HYDAPI
+99.8.0,Viavatn,Tafjordvassdraget,62.10119,7.39499,HYDAPI
+99.9.0,Slettdalsvatn,Tafjordvassdraget,62.12843,7.38108,HYDAPI

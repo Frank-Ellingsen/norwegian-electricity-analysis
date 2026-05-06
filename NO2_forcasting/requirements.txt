@@ -1,6 +1,7 @@
 # Core scientific stack
 pandas>=2.0.0
 numpy>=1.26.0
+python-dotenv>=1.0.0
 
 # Machine learning
 catboost>=1.2.3
