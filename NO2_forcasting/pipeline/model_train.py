@@ -36,12 +36,22 @@ def train_model(train_df: pd.DataFrame, target_col: str = 'price'):
     
     model.fit(X_train, y_train, cat_features=cat_features)
     
+    # Save Model
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     model_path = os.path.join(base_path, "models", "catboost_no2.cbm")
     os.makedirs(os.path.dirname(model_path), exist_ok=True)
     model.save_model(model_path)
     
-    logging.info(f"Model trained and saved to {model_path}")
+    # Save Feature Importance
+    importance = model.get_feature_importance()
+    feature_names = X_train.columns
+    importance_df = pd.DataFrame({'feature': feature_names, 'importance': importance}).sort_values(by='importance', ascending=False)
+    
+    output_path = os.path.join(base_path, "output", "feature_importance.csv")
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    importance_df.to_csv(output_path, index=False)
+    
+    logging.info(f"Model trained and saved. Feature importance saved to {output_path}")
     return model
 
 if __name__ == "__main__":

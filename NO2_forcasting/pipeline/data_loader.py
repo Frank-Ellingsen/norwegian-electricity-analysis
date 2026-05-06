@@ -42,6 +42,10 @@ def load_and_merge_data() -> pd.DataFrame:
         df['date'] = df['timestamp'].dt.date
         weather_pivoted['date'] = weather_pivoted['timestamp'].dt.date
         df = df.merge(weather_pivoted.drop(columns='timestamp'), on='date', how='left')
+        
+        # Forward fill daily data across the 24 hours
+        weather_cols = [c for c in df.columns if c.startswith('weather_')]
+        df[weather_cols] = df[weather_cols].ffill().bfill()
         df = df.drop(columns='date')
 
     # 3. Load and Pivot Hydrology (Daily)
@@ -59,6 +63,10 @@ def load_and_merge_data() -> pd.DataFrame:
         df['date'] = df['timestamp'].dt.date
         hyd_pivoted['date'] = hyd_pivoted['timestamp'].dt.date
         df = df.merge(hyd_pivoted.drop(columns='timestamp'), on='date', how='left')
+        
+        # Forward fill hydrology across the 24 hours
+        hyd_cols = [c for c in df.columns if c.startswith('hyd_')]
+        df[hyd_cols] = df[hyd_cols].ffill().bfill()
         df = df.drop(columns='date')
 
     logging.info(f"Merged data: {df.shape[0]} rows, {df.shape[1]} columns")
