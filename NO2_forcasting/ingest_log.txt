@@ -1,0 +1,78 @@
+<frozen importlib._bootstrap>:491: Warning: Numpy built with MINGW-W64 on Windows 64 bits is experimental, and only available for 
+testing. You are advised not to use it for production. 
+
+CRASHES ARE TO BE EXPECTED - PLEASE REPORT THEM TO NUMPY DEVELOPERS
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:225: RuntimeWarning: invalid value encountered in exp2
+  epsneg_f128 = exp2(ld(-113))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:226: RuntimeWarning: invalid value encountered in exp2
+  tiny_f128 = exp2(ld(-16382))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:240: RuntimeWarning: invalid value encountered in exp2
+  eps=exp2(ld(-112)),
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:41: RuntimeWarning: invalid value encountered in nextafter
+  self._smallest_subnormal = nextafter(
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:52: RuntimeWarning: invalid value encountered in log10
+  self.precision = int(-log10(self.eps))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:250: RuntimeWarning: invalid value encountered in exp2
+  epsneg_f80 = exp2(ld(-64))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:251: RuntimeWarning: invalid value encountered in exp2
+  tiny_f80 = exp2(ld(-16382))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:265: RuntimeWarning: invalid value encountered in exp2
+  eps=exp2(ld(-63)),
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:277: RuntimeWarning: invalid value encountered in nextafter
+  huge_dd = nextafter(ld(inf), ld(0), dtype=ld)
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:293: RuntimeWarning: invalid value encountered in exp2
+  eps=exp2(ld(-105)),
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:294: RuntimeWarning: invalid value encountered in exp2
+  epsneg=exp2(ld(-106)),
+<frozen importlib._bootstrap>:491: Warning: Numpy built with MINGW-W64 on Windows 64 bits is experimental, and only available for 
+testing. You are advised not to use it for production. 
+
+CRASHES ARE TO BE EXPECTED - PLEASE REPORT THEM TO NUMPY DEVELOPERS
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:225: RuntimeWarning: invalid value encountered in exp2
+  epsneg_f128 = exp2(ld(-113))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:226: RuntimeWarning: invalid value encountered in exp2
+  tiny_f128 = exp2(ld(-16382))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:240: RuntimeWarning: invalid value encountered in exp2
+  eps=exp2(ld(-112)),
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:41: RuntimeWarning: invalid value encountered in nextafter
+  self._smallest_subnormal = nextafter(
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:52: RuntimeWarning: invalid value encountered in log10
+  self.precision = int(-log10(self.eps))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:250: RuntimeWarning: invalid value encountered in exp2
+  epsneg_f80 = exp2(ld(-64))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:251: RuntimeWarning: invalid value encountered in exp2
+  tiny_f80 = exp2(ld(-16382))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:265: RuntimeWarning: invalid value encountered in exp2
+  eps=exp2(ld(-63)),
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:277: RuntimeWarning: invalid value encountered in nextafter
+  huge_dd = nextafter(ld(inf), ld(0), dtype=ld)
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:293: RuntimeWarning: invalid value encountered in exp2
+  eps=exp2(ld(-105)),
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:294: RuntimeWarning: invalid value encountered in exp2
+  epsneg=exp2(ld(-106)),
+<frozen importlib._bootstrap>:491: Warning: Numpy built with MINGW-W64 on Windows 64 bits is experimental, and only available for 
+testing. You are advised not to use it for production. 
+
+CRASHES ARE TO BE EXPECTED - PLEASE REPORT THEM TO NUMPY DEVELOPERS
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:225: RuntimeWarning: invalid value encountered in exp2
+  epsneg_f128 = exp2(ld(-113))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:226: RuntimeWarning: invalid value encountered in exp2
+  tiny_f128 = exp2(ld(-16382))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:240: RuntimeWarning: invalid value encountered in exp2
+  eps=exp2(ld(-112)),
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:41: RuntimeWarning: invalid value encountered in nextafter
+  self._smallest_subnormal = nextafter(
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:52: RuntimeWarning: invalid value encountered in log10
+  self.precision = int(-log10(self.eps))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:250: RuntimeWarning: invalid value encountered in exp2
+  epsneg_f80 = exp2(ld(-64))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:251: RuntimeWarning: invalid value encountered in exp2
+  tiny_f80 = exp2(ld(-16382))
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:265: RuntimeWarning: invalid value encountered in exp2
+  eps=exp2(ld(-63)),
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:277: RuntimeWarning: invalid value encountered in nextafter
+  huge_dd = nextafter(ld(inf), ld(0), dtype=ld)
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:293: RuntimeWarning: invalid value encountered in exp2
+  eps=exp2(ld(-105)),
+C:\Program Files\Python314\Lib\site-packages\numpy\core\getlimits.py:294: RuntimeWarning: invalid value encountered in exp2
+  epsneg=exp2(ld(-106)),
