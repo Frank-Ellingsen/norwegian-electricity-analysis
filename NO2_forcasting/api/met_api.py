@@ -74,14 +74,8 @@ def save_met_data(df: pd.DataFrame, output_path: str):
     if df.empty:
         return
 
-    if os.path.exists(output_path):
-        existing_df = pd.read_csv(output_path)
-        combined_df = pd.concat([existing_df, df]).drop_duplicates(subset=['station_id', 'timestamp', 'variable'], keep='last')
-        combined_df.to_csv(output_path, index=False)
-    else:
-        df.to_csv(output_path, index=False)
-    
-    logging.info(f"Saved {len(df)} MET rows to {output_path}")
+    df.to_csv(output_path, index=False)
+    logging.info(f"Saved {len(df)} MET rows to new file {output_path}")
 
 if __name__ == "__main__":
     yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
