@@ -1,11 +1,49 @@
 import pandas as pd
 import numpy as np
 import logging
-from sklearn.metrics import root_mean_squared_error, mean_absolute_error, mean_absolute_percentage_error
+from sklearn.metrics import mean_squared_error, mean_absolute_error
 import os
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def calculate_mape(y_true: pd.Series, y_pred: pd.Series) -> float:
+    """
+    Calculates Mean Absolute Percentage Error (MAPE).
+    Handles cases where y_true might contain zeros to avoid division by zero.
+    """
+    y_true, y_pred = np.array(y_true), np.array(y_pred)
+    # Filter out elements where y_true is zero to avoid division by zero
+    non_zero_mask = y_true != 0
+    if not np.any(non_zero_mask):
+        return np.inf # Or some other appropriate value if all true values are zero
+
+    return np.mean(np.abs((y_true[non_zero_mask] - y_pred[non_zero_mask]) / y_true[non_zero_mask])) * 100
+
+def evaluate_forecast(y_true: pd.Series, y_pred: pd.Series) -> dict:
+    """
+    Evaluates a single forecast against actual values using RMSE, MAE, and MAPE.
+    
+    Args:
+        y_true (pd.Series): Series of actual values.
+        y_pred (pd.Series): Series of predicted values.
+        
+    Returns:
+        dict: A dictionary containing 'RMSE', 'MAE', and 'MAPE'.
+    """
+    if y_true.empty or y_pred.empty or len(y_true) != len(y_pred):
+        logging.warning("Cannot evaluate: true or predicted series are empty or have different lengths.")
+        return {"RMSE": np.nan, "MAE": np.nan, "MAPE": np.nan}
+    
+    rmse = np.sqrt(mean_squared_error(y_true, y_pred))
+    mae = mean_absolute_error(y_true, y_pred)
+    mape = calculate_mape(y_true, y_pred) # Using custom MAPE function
+    
+    return {
+        "RMSE": rmse,
+        "MAE": mae,
+        "MAPE": mape
+    }
 
 def evaluate_forecasts(test_dfs: dict, forecast_dfs: dict, target_col: str = 'price') -> pd.DataFrame:
     """
@@ -30,38 +68,44 @@ def evaluate_forecasts(test_dfs: dict, forecast_dfs: dict, target_col: str = 'pr
             
         forecast_df = forecast_dfs[zone]
         
-        # Align indices and columns
-        # We need to make sure we are comparing the same timestamps
-        common_timestamps = test_df.index.intersection(forecast_df.index)
-        
-        y_true = test_df.loc[common_timestamps, target_col]
-        y_pred = forecast_df.loc[common_timestamps, target_col]
-        
-        if y_true.empty or y_pred.empty:
-            logging.warning(f"No common timestamps for evaluation in zone {zone}. Skipping.")
-            continue
+            # Add debugging print statements for timestamp alignment
+            logging.info(f"--- Timestamp Debug for Zone: {zone} ---")
+            logging.info(f"Test Data Range: {test_df.index.min()} to {test_df.index.max()}")
+            if zone in forecast_dfs:
+                forecast_df = forecast_dfs[zone]
+                logging.info(f"Forecast Data Range: {forecast_df.index.min()} to {forecast_df.index.max()}")
+            else:
+                logging.warning(f"No forecast generated for zone {zone}, cannot print forecast range.")
+            logging.info(f"--- End Debug ---")
 
-        try:
-            rmse = root_mean_squared_error(y_true, y_pred)
-            mae = mean_absolute_error(y_true, y_pred)
+            common_timestamps = test_df.index.intersection(forecast_df.index)
             
-            # MAPE can be undefined or very large if true values are zero or near zero.
-            # Handle this gracefully or filter them out if appropriate for the domain.
-            mape_values = np.abs((y_true - y_pred) / y_true)
-            mape_values = mape_values[~np.isinf(mape_values) & ~np.isnan(mape_values)]
-            mape = np.mean(mape_values) if not mape_values.empty else np.nan
-
-            metrics = {
-                "zone": zone,
-                "RMSE": rmse,
-                "MAE": mae,
-                "MAPE": mape
-            }
-            all_metrics.append(metrics)
-            logging.info(f"Evaluation Metrics for zone {zone}: {metrics}")
-        except Exception as e:
-            logging.error(f"Error calculating metrics for zone {zone}: {e}")
-            continue
+            y_true = test_df.loc[common_timestamps, target_col]
+            y_pred = forecast_df.loc[common_timestamps, target_col]
+            
+            if y_true.empty or y_pred.empty:
+                logging.info(f"--- Timestamp Debug for Zone: {zone} ---")
+                logging.info(f"Test Data Range: {test_df.index.min()} to {test_df.index.max()}")
+                if zone in forecast_dfs:
+                    forecast_df = forecast_dfs[zone]
+                    logging.info(f"Forecast Data Range: {forecast_df.index.min()} to {forecast_df.index.max()}")
+                else:
+                    logging.warning(f"No forecast generated for zone {zone}, cannot print forecast range.")
+                logging.info(f"--- End Debug ---")
+                logging.warning(f"No common timestamps for evaluation in zone {zone}. Skipping.")
+                continue                
+                all_metrics.append({
+                    "zone": zone,
+                    "RMSE": metrics["RMSE"],
+                    "MAE": metrics["MAE"],
+                    "MAPE": metrics["MAPE"]
+                })
+                logging.info(f"Evaluation Metrics for zone {zone}: {metrics}")
+            except Exception as e:
+                logging.error(f"Error calculating metrics for zone {zone}: {e}")
+                import traceback
+                traceback.print_exc()
+                continue
 
     if not all_metrics:
         logging.warning("No evaluation metrics could be computed for any zone.")
@@ -72,11 +116,10 @@ def evaluate_forecasts(test_dfs: dict, forecast_dfs: dict, target_col: str = 'pr
     return metrics_df
 
 if __name__ == "__main__":
-    from data_loader import load_and_merge_data
-    from feature_engineering import create_features
-    from dataset_split import split_dataset
-    from forecast import generate_forecast
-
+    from .data_loader import load_and_merge_data
+    from .feature_engineering import create_features
+    from .dataset_split import split_dataset
+    from .forecast import generate_forecast
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.abspath(os.path.join(script_dir, os.pardir, os.pardir))
     data_dir_for_test = os.path.join(project_root, "data")
@@ -107,6 +150,7 @@ if __name__ == "__main__":
 
         splits = split_dataset(df_features, test_hours=24) # Use a smaller test_hours for quick demo
         test_dfs = splits.get('test', {})
+        train_dfs = splits.get('train', {}) # Get train data
         
         if not test_dfs:
             logging.error("No test data available for evaluation.")
@@ -117,16 +161,22 @@ if __name__ == "__main__":
         # For demonstration, we'll try to generate forecasts directly.
         
         forecast_dfs = {}
-        unique_zones = df_features['zone'].unique()
-        for zone in unique_zones:
-            # Need to ensure the `generate_forecast` call here passes the full `df_features`
-            # and filters internally.
-            forecast_for_zone = generate_forecast(df_features, zone_to_forecast=zone, horizon_hours=24)
+        # Iterate through zones present in the test set to ensure we forecast for relevant zones
+        # and use the corresponding training data.
+        for zone in test_dfs.keys(): 
+            # Get the training data for the current zone
+            train_df_for_zone = train_dfs.get(zone)
+            if train_df_for_zone is None or train_df_for_zone.empty:
+                logging.error(f"No training data available for zone {zone}. Cannot generate forecast.")
+                continue
+            
+            # Pass only training data to generate_forecast so it forecasts for the test period
+            forecast_for_zone = generate_forecast(train_df_for_zone, zone_to_forecast=zone, horizon_hours=24)
             if not forecast_for_zone.empty:
                 forecast_dfs[zone] = forecast_for_zone
         
         if not forecast_dfs:
-            logging.error("No forecasts generated for evaluation. Ensure models are trained.")
+            logging.error("No forecasts generated for evaluation. Ensure models are trained and data is available.")
             exit()
 
         # 5. Evaluate Forecasts

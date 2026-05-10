@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime, date, timedelta
 
 # Configuration from GEMINI.md for MET Norway
 MET_API_URL = "https://api.met.no/weatherapi/locationforecast/2.0/compact"
@@ -58,83 +58,8 @@ def fetch_met_forecast(lat: float, lon: float, start_time: datetime, end_time: d
                 
                 # Extract required fields
                 temperature = current_weather.get('air_temperature')
-                wind_speed = current_point.get('wind_speed')
-                precipitation = forecast_point['data'].get('next_1_hours', {}).get('precipitation') # precipitation is in next_1_hours
-
-                forecast_data.append({
-                    'timestamp': timestamp,
-                    'temperature': temperature,
-                    'wind_speed': wind_speed,
-                    'precipitation': precipitation,
-                })
-        
-        df_forecast = pd.DataFrame(forecast_data)
-        
-        if not df_forecast.empty:
-            df_forecast = df_forecast.set_index('timestamp')
-            logging.info(f"Successfully fetched {len(df_forecast)} forecast points from MET API.")
-        else:
-            logging.warning("No forecast data found within the specified time range from MET API.")
-        
-        return df_forecast
-
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Error fetching MET Norway forecast: {e}")
-        return pd.DataFrame()
-    except KeyError as e:
-        logging.error(f"Error parsing MET Norway API response: Missing key {e}")
-        return pd.DataFrame()
-    except Exception as e:
-        logging.error(f"An unexpected error occurred during MET Norway API fetch: {e}")
-        return pd.DataFrame()
-
-# --- Example Usage ---
-# This part is for demonstration and testing purposes.
-# It should not be executed when the module is imported.
-if __name__ == "__main__":
-    # Example coordinates for Kristiansand, Norway (representative for NO2 bidding zone)
-    example_lat = 58.1467
-    example_lon = 7.9956
-
-    # Fetch forecast for the next 48 hours
-    now = datetime.utcnow().replace(tzinfo=None) # Ensure now is naive UTC for comparison
-    start_forecast = now.replace(minute=0, second=0, microsecond=0)
-    end_forecast = start_forecast + timedelta(hours=48)
-
-    # Ensure start_time is not in the past for forecast API, adjust if necessary
-    if start_forecast < now:
-        start_forecast = now.replace(minute=0, second=0, microsecond=0) # Start from the next hour
-    
-    # Pass representative coordinates
-    lat, lon = example_lat, example_lon
-
-    params = {
-        "lat": lat,
-        "lon": lon,
-        "altitude": 0 # Assuming ground level, can be adjusted if elevation data is available
-    }
-
-    try:
-        response = requests.get(MET_API_URL, headers=MET_API_HEADERS, params=params)
-        response.raise_for_status()  # Raise an HTTPError for bad responses (4xx or 5xx)
-
-        data = response.json()
-        
-        forecast_data = []
-        
-        for forecast_point in data['properties']['timeseries']:
-            # Ensure timestamp is UTC and timezone-naive for consistency with project requirements
-            timestamp_iso = forecast_point['time']
-            # Parse with timezone info, then convert to UTC, then make it naive for comparison/storage
-            timestamp = datetime.fromisoformat(timestamp_iso).astimezone(datetime.now().astimezone().tzinfo).replace(tzinfo=None)
-
-            if start_forecast <= timestamp < end_forecast:
-                current_weather = forecast_point['data']['instant']['details']
-                
-                temperature = current_weather.get('air_temperature')
-                # Wind speed is in 'instant' data, not 'next_1_hours'
                 wind_speed = current_weather.get('wind_speed') 
-                precipitation = forecast_point['data'].get('next_1_hours', {}).get('precipitation') 
+                precipitation = forecast_point['data'].get('next_1_hours', {}).get('precipitation_amount') 
 
                 forecast_data.append({
                     'timestamp': timestamp,
@@ -163,11 +88,45 @@ if __name__ == "__main__":
         logging.error(f"An unexpected error occurred during MET Norway API fetch: {e}")
         return pd.DataFrame()
 
-# --- Example Usage ---
+def fetch_met_observations(start_date_str: str, end_date_str: str) -> pd.DataFrame:
+    """
+    Placeholder function to simulate fetching historical MET weather observations.
+    Generates dummy data based on the date range.
+    """
+    logging.info(f"Simulating fetching MET observations from {start_date_str} to {end_date_str}")
+    
+    start_dt = pd.to_datetime(start_date_str).tz_localize('UTC')
+    end_dt = pd.to_datetime(end_date_str).tz_localize('UTC') + timedelta(days=1) - timedelta(hours=1)
+    
+    time_range = pd.date_range(start=start_dt, end=end_dt, freq='H')
+    
+    data = {
+        'timestamp': time_range,
+        'temperature': [5 + i % 10 + (i % 24) * 0.1 for i in range(len(time_range))],
+        'precipitation': [0.1 * (i % 5) for i in range(len(time_range))],
+        'wind_speed': [2 + i % 3 for i in range(len(time_range))]
+    }
+    
+    df = pd.DataFrame(data)
+    df = df.set_index('timestamp')
+    logging.info(f"Generated {len(df)} dummy MET observation entries.")
+    return df
+
+def save_met_data(df: pd.DataFrame, output_path: str):
+    """
+    Saves the MET weather data DataFrame to a CSV file.
+    """
+    if df.empty:
+        logging.info("No MET weather data to save.")
+        return
+    df.to_csv(output_path, index=True) # Save index (timestamp)
+    logging.info(f"Saved {len(df)} MET weather rows to new file {output_path}")
+
+
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     
-    # Fetch forecast for the next 48 hours
+    # Example usage for fetch_met_forecast
     now = datetime.utcnow().replace(tzinfo=None)
     start_forecast = now.replace(minute=0, second=0, microsecond=0)
     end_forecast = start_forecast + timedelta(hours=48)
@@ -175,13 +134,31 @@ if __name__ == "__main__":
     if start_forecast < now:
         start_forecast = now.replace(minute=0, second=0, microsecond=0)
 
-    forecast_df = fetch_met_forecast(lat=58.1467, lon=7.9956, start_time=start_forecast, end_time=end_forecast) # Pass lat/lon explicitly in example
+    forecast_df = fetch_met_forecast(lat=58.1467, lon=7.9956, start_time=start_forecast, end_time=end_forecast)
 
     if not forecast_df.empty:
         print("MET Norway Forecast Data (first 5 rows):")
         print(forecast_df.head())
-        print("
-MET Norway Forecast Data (last 5 rows):")
+        print("MET Norway Forecast Data (last 5 rows):")
         print(forecast_df.tail())
     else:
         print("Failed to retrieve MET Norway forecast data.")
+
+    print("="*30) # Corrected this line to simplify and avoid newline issues
+
+    # Example usage for fetch_met_observations
+    today = date.today()
+    obs_start_date = today - timedelta(days=7)
+    obs_end_date = today - timedelta(days=1)
+
+    observations_df = fetch_met_observations(obs_start_date.strftime("%Y-%m-%d"), obs_end_date.strftime("%Y-%m-%d"))
+
+    if not observations_df.empty:
+        print("MET Norway Observations Data (first 5 rows):")
+        print(observations_df.head())
+        print("MET Norway Observations Data (last 5 rows):")
+        print(observations_df.tail())
+        # Example of saving observations
+        # save_met_data(observations_df, "dummy_met_observations.csv")
+    else:
+        print("Failed to retrieve MET Norway observations data.")
