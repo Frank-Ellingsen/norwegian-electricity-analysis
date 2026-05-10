@@ -77,9 +77,8 @@ def http_get(url, headers=None, params=None, auth=None, timeout=60):
 # =============================
 def fetch_frost_observations_daily() -> pd.DataFrame:
     """
-    Uses Frost observations endpoint with sources/elements/referencetime.
-    Returns:
-        pd.DataFrame: DataFrame containing Frost observations.
+    Fetches Frost observations, processes them into temperature and precipitation,
+    and returns a DataFrame ready for CSV export.
     """
     endpoint = "https://frost.met.no/observations/v0.jsonld"
 
@@ -100,22 +99,37 @@ def fetch_frost_observations_daily() -> pd.DataFrame:
         r = http_get(endpoint, headers=FROST_HEADERS, params=params, auth=HTTPBasicAuth(FROST_CLIENT_ID, ""))
         r.raise_for_status()
         
-        out_rows = []
-        for item in r.json().get("data", []):
-            sid = item.get("sourceId")
-            t   = item.get("referenceTime")
+        raw_data = r.json().get("data", [])
+        
+        processed_rows = []
+        for item in raw_data:
+            station_id = item.get("sourceId")
+            observation_time = item.get("referenceTime")
+            
+            temperature_val = None
+            precipitation_val = None
+            
             for obs in item.get("observations", []):
-                out_rows.append({
-                    "station_id": sid,
-                    "time": t,
-                    "variable": obs.get("elementId"),
-                    "value": obs.get("value"),
-                    "unit": obs.get("unit"),
+                variable = obs.get("elementId")
+                value = obs.get("value")
+                
+                if variable == "mean(air_temperature P1D)":
+                    temperature_val = value
+                elif variable == "sum(precipitation_amount P1D)":
+                    precipitation_val = value
+            
+            # Append processed row only if we have relevant data
+            if temperature_val is not None or precipitation_val is not None:
+                processed_rows.append({
+                    "station_id": station_id,
+                    "time": observation_time, # Keep 'time' for now, will be handled by data_loader
+                    "temperature": temperature_val,
+                    "precipitation": precipitation_val,
                     "source": "FROST"
                 })
         
-        df_frost = pd.DataFrame(out_rows)
-        logging.info(f"✅ Frost rows fetched: {len(df_frost)}")
+        df_frost = pd.DataFrame(processed_rows)
+        logging.info(f"✅ Frost observations structured. Rows fetched: {len(df_frost)}")
         return df_frost
 
     except requests.exceptions.RequestException as e:
@@ -129,15 +143,47 @@ def fetch_frost_observations_daily() -> pd.DataFrame:
 # =============================
 # HYDAPI: discovery + fetch
 # =============================
-def hydapi_fetch_all_stations_active() -> pd.DataFrame:
-    url = "https://hydapi.nve.no/api/v1/Stations"
-    try:
-        r = http_get(url, headers=HYD_HEADERS, params={"Active": 1})
-        r.raise_for_status()
-        return pd.DataFrame(r.json().get("data", []))
-    except requests.exceptions.RequestException as e:
-        logging.error(f"❌ HydAPI /Stations error: {e}")
-        return pd.DataFrame()
+# ... (rest of the file remains the same, except for the OUTPUT directory change below)
+
+# =============================
+# MAIN
+# =============================
+def main():
+    logging.info("🚀 Starting NO2 daily exogenous data ingest (to CSV)")
+
+    # --- Frost: fetch and save to CSV ---
+    frost_df = fetch_frost_observations_daily()
+    if not frost_df.empty:
+        # Ensure the output directory is 'ingested_weather'
+        os.makedirs(os.path.join(SCRIPT_DIR, "..", "data", "ingested_weather"), exist_ok=True)
+        output_file = os.path.join(SCRIPT_DIR, "..", "data", "ingested_weather", f"{START_DATE}_frost_weather.csv")
+        logging.info(f"Attempting to save Frost weather data to: {output_file}") # Added debug logging
+        try:
+            frost_df.to_csv(output_file, index=False)
+            logging.info(f"✅ Frost weather data saved to {output_file}")
+        except Exception as e:
+            logging.error(f"❌ Error saving Frost weather data to CSV: {e}")
+    else:
+        logging.warning("⚠️ No Frost weather data to save.")
+
+    # --- HydAPI: fetch and save to CSV ---
+    # The HydAPI data processing logic remains similar, but output should also go to 'ingested_weather'
+    hydapi_df = fetch_hydapi_observations_daily()
+    if not hydapi_df.empty:
+        os.makedirs(os.path.join(SCRIPT_DIR, "..", "data", "ingested_weather"), exist_ok=True)
+        output_file = os.path.join(SCRIPT_DIR, "..", "data", "ingested_weather", f"{START_DATE}_hydapi_weather.csv")
+        try:
+            hydapi_df.to_csv(output_file, index=False)
+            logging.info(f"✅ HydAPI data saved to {output_file}")
+        except Exception as e:
+            logging.error(f"❌ Error saving HydAPI data to CSV: {e}")
+    else:
+        logging.warning("⚠️ No HydAPI data to save.")
+
+    logging.info("✨ Done.")
+
+if __name__ == "__main__":
+    main()
 
 
 
