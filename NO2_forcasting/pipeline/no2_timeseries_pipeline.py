@@ -1,11 +1,14 @@
 import os
-import sqlite3
 import requests
 import pandas as pd
+import logging
 from datetime import datetime, timedelta
 from difflib import SequenceMatcher
 from requests.auth import HTTPBasicAuth
 from dotenv import load_dotenv
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Load environment variables from .env file
 load_dotenv()
@@ -18,9 +21,14 @@ yesterday = datetime.now().date() - timedelta(days=1)
 START_DATE = os.getenv("NO2_START_DATE", yesterday.strftime("%Y-%m-%d"))
 END_DATE   = os.getenv("NO2_END_DATE",   yesterday.strftime("%Y-%m-%d"))
 
-DB_NAME = "C:/Users/Lenovo/OneDrive/Desktop/datafrank/norwegian-electricity-analysis/NO2_forcasting/data/sqlite/no2_timeseries.db"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+FROST_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "data", "ingested_frost")
+HYDAPI_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "data", "ingested_hydapi")
+os.makedirs(FROST_OUTPUT_DIR, exist_ok=True)
+os.makedirs(HYDAPI_OUTPUT_DIR, exist_ok=True)
 
-print(f"📅 Using dates: {START_DATE} → {END_DATE}")
+
+logging.info(f"📅 Using dates: {START_DATE} → {END_DATE}")
 
 # =============================
 # AUTH
@@ -29,8 +37,10 @@ FROST_CLIENT_ID = os.getenv("FROST_CLIENT_ID")
 NVE_API_KEY     = os.getenv("NVE_API_KEY")
 
 if not FROST_CLIENT_ID:
+    logging.error("Missing env var FROST_CLIENT_ID")
     raise RuntimeError("Missing env var FROST_CLIENT_ID")
 if not NVE_API_KEY:
+    logging.error("Missing env var NVE_API_KEY")
     raise RuntimeError("Missing env var NVE_API_KEY")
 
 FROST_HEADERS = {"User-Agent": "no2-model/1.0 (contact: frankellingsen@hotmail.com)"}
@@ -56,103 +66,6 @@ HYDAPI_TARGETS = [
 ]
 
 # =============================
-# SQLITE: schema + fast append (UPSERT)
-# =============================
-def init_db(conn: sqlite3.Connection):
-    cur = conn.cursor()
-
-    # Performance pragmas (safe defaults)
-    cur.execute("PRAGMA journal_mode=WAL;")
-    cur.execute("PRAGMA synchronous=NORMAL;")
-
-    # Frost daily table
-    cur.execute("""
-    CREATE TABLE IF NOT EXISTS obs_frost_daily (
-        station_id   TEXT NOT NULL,
-        time         TEXT NOT NULL,
-        variable     TEXT NOT NULL,
-        value        REAL,
-        unit         TEXT,
-        source       TEXT NOT NULL,
-        PRIMARY KEY (station_id, time, variable)
-    );
-    """)
-
-    # HydAPI daily table
-    cur.execute("""
-    CREATE TABLE IF NOT EXISTS obs_hydapi_daily (
-        station_id      TEXT NOT NULL,
-        time            TEXT NOT NULL,
-        parameter_id    TEXT NOT NULL,
-        value           REAL,
-        unit            TEXT,
-        parameter_name  TEXT,
-        target_name     TEXT,
-        catchment       TEXT,
-        source          TEXT NOT NULL,
-        PRIMARY KEY (station_id, time, parameter_id)
-    );
-    """)
-
-    # Optional: store resolved station mapping (so you don’t fuzzy-match every run if you want)
-    cur.execute("""
-    CREATE TABLE IF NOT EXISTS stations_hydapi_resolved (
-        target_name   TEXT PRIMARY KEY,
-        station_id    TEXT,
-        matched_name  TEXT,
-        match_score   REAL,
-        catchment     TEXT,
-        role          TEXT,
-        updated_at    TEXT
-    );
-    """)
-
-    conn.commit()
-
-
-def upsert_many(conn: sqlite3.Connection, table: str, cols: list[str], rows: list[tuple], pk_cols: list[str], update_cols: list[str]):
-    """
-    Insert many rows using UPSERT:
-      INSERT ... ON CONFLICT(pk) DO UPDATE SET ...
-    Falls back to INSERT OR IGNORE if UPSERT is unavailable.
-    """
-    if not rows:
-        print(f"⚠️ No rows to write -> {table}")
-        return
-
-    placeholders = ",".join(["?"] * len(cols))
-    col_list = ",".join(cols)
-    pk_list = ",".join(pk_cols)
-
-    if update_cols:
-        set_clause = ", ".join([f"{c}=excluded.{c}" for c in update_cols])
-        sql = f"""
-        INSERT INTO {table} ({col_list})
-        VALUES ({placeholders})
-        ON CONFLICT({pk_list}) DO UPDATE SET {set_clause};
-        """
-    else:
-        # Do nothing on conflict
-        sql = f"""
-        INSERT INTO {table} ({col_list})
-        VALUES ({placeholders})
-        ON CONFLICT({pk_list}) DO NOTHING;
-        """
-
-    cur = conn.cursor()
-    try:
-        cur.executemany(sql, rows)
-        conn.commit()
-        print(f"✅ {table}: wrote {cur.rowcount if cur.rowcount != -1 else len(rows)} rows (UPSERT)")
-    except sqlite3.OperationalError:
-        # Fallback (older SQLite): ignore duplicates
-        sql_fallback = f"INSERT OR IGNORE INTO {table} ({col_list}) VALUES ({placeholders});"
-        cur.executemany(sql_fallback, rows)
-        conn.commit()
-        print(f"✅ {table}: wrote {cur.rowcount if cur.rowcount != -1 else len(rows)} rows (INSERT OR IGNORE fallback)")
-
-
-# =============================
 # HTTP
 # =============================
 def http_get(url, headers=None, params=None, auth=None, timeout=60):
@@ -162,9 +75,11 @@ def http_get(url, headers=None, params=None, auth=None, timeout=60):
 # =============================
 # FROST: DAILY OBSERVATIONS
 # =============================
-def fetch_frost_observations_daily():
+def fetch_frost_observations_daily() -> pd.DataFrame:
     """
-    Uses Frost observations endpoint with sources/elements/referencetime. [1](https://confluence.ecmwf.int/display/CKB/ERA5%3A+data+documentation)
+    Uses Frost observations endpoint with sources/elements/referencetime.
+    Returns:
+        pd.DataFrame: DataFrame containing Frost observations.
     """
     endpoint = "https://frost.met.no/observations/v0.jsonld"
 
@@ -178,44 +93,52 @@ def fetch_frost_observations_daily():
         "qualities": "0,1,2,3",
     }
 
-    print("\n🔍 Frost observations")
-    print("Params:", params)
+    logging.info("\n🔍 Fetching Frost observations")
+    logging.info(f"Params: {params}")
 
-    r = http_get(endpoint, headers=FROST_HEADERS, params=params, auth=HTTPBasicAuth(FROST_CLIENT_ID, ""))
-    print("Status:", r.status_code)
+    try:
+        r = http_get(endpoint, headers=FROST_HEADERS, params=params, auth=HTTPBasicAuth(FROST_CLIENT_ID, ""))
+        r.raise_for_status()
+        
+        out_rows = []
+        for item in r.json().get("data", []):
+            sid = item.get("sourceId")
+            t   = item.get("referenceTime")
+            for obs in item.get("observations", []):
+                out_rows.append({
+                    "station_id": sid,
+                    "time": t,
+                    "variable": obs.get("elementId"),
+                    "value": obs.get("value"),
+                    "unit": obs.get("unit"),
+                    "source": "FROST"
+                })
+        
+        df_frost = pd.DataFrame(out_rows)
+        logging.info(f"✅ Frost rows fetched: {len(df_frost)}")
+        return df_frost
 
-    if r.status_code != 200:
-        print("❌ Frost error:", r.text[:500])
-        return []
-
-    out_rows = []
-    for item in r.json().get("data", []):
-        sid = item.get("sourceId")
-        t   = item.get("referenceTime")
-        for obs in item.get("observations", []):
-            out_rows.append((
-                sid,
-                t,
-                obs.get("elementId"),
-                obs.get("value"),
-                obs.get("unit"),
-                "FROST"
-            ))
-
-    print(f"✅ Frost rows: {len(out_rows)}")
-    return out_rows
+    except requests.exceptions.RequestException as e:
+        logging.error(f"❌ Frost API error: {e}")
+        return pd.DataFrame()
+    except Exception as e:
+        logging.error(f"❌ An unexpected error occurred while fetching Frost data: {e}")
+        return pd.DataFrame()
 
 
 # =============================
 # HYDAPI: discovery + fetch
 # =============================
-def hydapi_fetch_all_stations_active():
+def hydapi_fetch_all_stations_active() -> pd.DataFrame:
     url = "https://hydapi.nve.no/api/v1/Stations"
-    r = http_get(url, headers=HYD_HEADERS, params={"Active": 1})
-    if r.status_code != 200:
-        print("❌ HydAPI /Stations error:", r.text[:500])
+    try:
+        r = http_get(url, headers=HYD_HEADERS, params={"Active": 1})
+        r.raise_for_status()
+        return pd.DataFrame(r.json().get("data", []))
+    except requests.exceptions.RequestException as e:
+        logging.error(f"❌ HydAPI /Stations error: {e}")
         return pd.DataFrame()
-    return pd.DataFrame(r.json().get("data", []))
+
 
 
 def best_match_station_id(stations_df: pd.DataFrame, target_name: str):
@@ -260,10 +183,13 @@ def hydapi_get_parameters_map():
 
 def hydapi_get_series_for_station(station_id: str):
     url = "https://hydapi.nve.no/api/v1/Series"
-    r = http_get(url, headers=HYD_HEADERS, params={"StationId": station_id})
-    if r.status_code != 200:
-        return [], r.status_code
-    return r.json().get("data", []), 200
+    try:
+        r = http_get(url, headers=HYD_HEADERS, params={"StationId": station_id})
+        r.raise_for_status()
+        return r.json().get("data", []), 200
+    except requests.exceptions.RequestException as e:
+        logging.error(f"❌ HydAPI /Series error for station {station_id}: {e}")
+        return [], 500
 
 
 def choose_parameter_for_station(series_list, param_map, role: str):
@@ -299,9 +225,11 @@ def choose_parameter_for_station(series_list, param_map, role: str):
     return avail[0]
 
 
-def fetch_hydapi_observations_daily(conn: sqlite3.Connection):
+def fetch_hydapi_observations_daily() -> pd.DataFrame:
     """
-    HydAPI Observations endpoint supports StationId, Parameter, ResolutionTime, ReferenceTime. [3](https://outlook.live.com/owa/?ItemID=AQMkADAwATExAGE2Ny00YzgxLTY3NTItMDACLTAwCgBGAAAD6ahiN8dkrkugORq4V%2bJQ8QcAtMNB9oN5zkiZV%2bbykqadjAAAAgEJAAAAtMNB9oN5zkiZV%2bbykqadjAAI808VxQAAAA%3d%3d&exvsurl=1&viewmodel=ReadMessageItem)[2](https://outlook.live.com/owa/?ItemID=AQMkADAwATExAGE2Ny00YzgxLTY3NTItMDACLTAwCgBGAAAD6ahiN8dkrkugORq4V%2bJQ8QcAtMNB9oN5zkiZV%2bbykqadjAAAAgEJAAAAtMNB9oN5zkiZV%2bbykqadjAAI91fj8AAAAA%3d%3d&exvsurl=1&viewmodel=ReadMessageItem)
+    HydAPI Observations endpoint supports StationId, Parameter, ResolutionTime, ReferenceTime.
+    Returns:
+        pd.DataFrame: DataFrame containing HydAPI observations.
     """
     obs_url = "https://hydapi.nve.no/api/v1/Observations"
 
@@ -309,28 +237,27 @@ def fetch_hydapi_observations_daily(conn: sqlite3.Connection):
     param_map = hydapi_get_parameters_map()
 
     out_rows = []
-    resolved_rows = []
+    # Resolved rows are not persisted to CSV for now, as per the decision in previous step.
+    # If needed, this could be stored in a separate static CSV.
+
+    logging.info("\n🔍 Fetching HydAPI observations")
 
     for t in HYDAPI_TARGETS:
         sid, matched_name, score = best_match_station_id(stations_df, t["name"])
         if not sid:
-            print(f"⚠️ Could not resolve station for {t['name']}")
+            logging.warning(f"⚠️ Could not resolve station for {t['name']}")
             continue
 
-        print(f"✅ Resolved {t['name']} → {sid} (match='{matched_name}', score={score:.2f})")
-
-        resolved_rows.append((
-            t["name"], sid, matched_name, float(score), t["catchment"], t["role"], datetime.utcnow().isoformat()
-        ))
+        logging.info(f"✅ Resolved {t['name']} → {sid} (match='{matched_name}', score={score:.2f})")
 
         series_list, code = hydapi_get_series_for_station(sid)
         if code != 200:
-            print(f"⚠️ No series for {sid}")
+            logging.warning(f"⚠️ No series for {sid}")
             continue
 
         pid = choose_parameter_for_station(series_list, param_map, t["role"])
         if not pid:
-            print(f"⚠️ No parameter chosen for {sid}")
+            logging.warning(f"⚠️ No parameter chosen for {sid}")
             continue
 
         pname = param_map.get(pid, {}).get("name", "")
@@ -343,73 +270,66 @@ def fetch_hydapi_observations_daily(conn: sqlite3.Connection):
             "ReferenceTime": f"{START_DATE}/{END_DATE}"
         }
 
-        r = http_get(obs_url, headers=HYD_HEADERS, params=params)
-        if r.status_code != 200:
-            print(f"❌ HydAPI observations error for {sid}: {r.text[:200]}")
+        try:
+            r = http_get(obs_url, headers=HYD_HEADERS, params=params)
+            r.raise_for_status()
+
+            for series in r.json().get("data", []):
+                for o in series.get("observations", []):
+                    out_rows.append({
+                        "station_id": sid,
+                        "time": o.get("time"),
+                        "parameter_id": pid,
+                        "value": o.get("value"),
+                        "unit": unit,
+                        "parameter_name": pname,
+                        "target_name": t["name"],
+                        "catchment": t["catchment"],
+                        "source": "HYDAPI"
+                    })
+        except requests.exceptions.RequestException as e:
+            logging.error(f"❌ HydAPI observations error for {sid}: {e}")
+            continue
+        except Exception as e:
+            logging.error(f"❌ An unexpected error occurred while fetching HydAPI data for {sid}: {e}")
             continue
 
-        for series in r.json().get("data", []):
-            for o in series.get("observations", []):
-                out_rows.append((
-                    sid,
-                    o.get("time"),
-                    pid,
-                    o.get("value"),
-                    unit,
-                    pname,
-                    t["name"],
-                    t["catchment"],
-                    "HYDAPI"
-                ))
-
-    # Store resolved station mapping (append/upsert)
-    if resolved_rows:
-        upsert_many(
-            conn,
-            table="stations_hydapi_resolved",
-            cols=["target_name","station_id","matched_name","match_score","catchment","role","updated_at"],
-            rows=resolved_rows,
-            pk_cols=["target_name"],
-            update_cols=["station_id","matched_name","match_score","catchment","role","updated_at"]
-        )
-
-    print(f"✅ HydAPI rows: {len(out_rows)}")
-    return out_rows
+    df_hydapi = pd.DataFrame(out_rows)
+    logging.info(f"✅ HydAPI rows fetched: {len(df_hydapi)}")
+    return df_hydapi
 
 
 # =============================
 # MAIN
 # =============================
 def main():
-    print("🚀 Starting NO2 daily ingest (fast SQL append)")
+    logging.info("🚀 Starting NO2 daily exogenous data ingest (to CSV)")
 
-    conn = sqlite3.connect(DB_NAME)
-    init_db(conn)
+    # --- Frost: fetch and save to CSV ---
+    frost_df = fetch_frost_observations_daily()
+    if not frost_df.empty:
+        output_file = os.path.join(FROST_OUTPUT_DIR, f"{START_DATE}_frost_observations.csv")
+        try:
+            frost_df.to_csv(output_file, index=False)
+            logging.info(f"✅ Frost observations saved to {output_file}")
+        except Exception as e:
+            logging.error(f"❌ Error saving Frost observations to CSV: {e}")
+    else:
+        logging.warning("⚠️ No Frost observations to save.")
 
-    # --- Frost: fetch + UPSERT ---
-    frost_rows = fetch_frost_observations_daily()
-    upsert_many(
-        conn,
-        table="obs_frost_daily",
-        cols=["station_id","time","variable","value","unit","source"],
-        rows=frost_rows,
-        pk_cols=["station_id","time","variable"],
-        update_cols=["value","unit","source"]
-    )
+    # --- HydAPI: fetch and save to CSV ---
+    hydapi_df = fetch_hydapi_observations_daily()
+    if not hydapi_df.empty:
+        output_file = os.path.join(HYDAPI_OUTPUT_DIR, f"{START_DATE}_hydapi_observations.csv")
+        try:
+            hydapi_df.to_csv(output_file, index=False)
+            logging.info(f"✅ HydAPI observations saved to {output_file}")
+        except Exception as e:
+            logging.error(f"❌ Error saving HydAPI observations to CSV: {e}")
+    else:
+        logging.warning("⚠️ No HydAPI observations to save.")
 
-    # --- HydAPI: fetch + UPSERT ---
-    hyd_rows = fetch_hydapi_observations_daily(conn)
-    upsert_many(
-        conn,
-        table="obs_hydapi_daily",
-        cols=["station_id","time","parameter_id","value","unit","parameter_name","target_name","catchment","source"],
-        rows=hyd_rows,
-        pk_cols=["station_id","time","parameter_id"],
-        update_cols=["value","unit","parameter_name","target_name","catchment","source"]
-    )
-
-    conn.close()
-    print("✅ Done (no overwrites, append/upsert only).")
+    logging.info("✨ Done.")
 
 if __name__ == "__main__":
     main()
