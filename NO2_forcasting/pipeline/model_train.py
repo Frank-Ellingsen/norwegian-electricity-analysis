@@ -299,12 +299,16 @@ if __name__ == "__main__":
             origin_ts = pd.Timestamp.now(tz='UTC')
             predictions_for_db_insert['origin_timestamp'] = origin_ts
             # Calculate lead hours based on forecast timestamps and origin_ts
-            predictions_for_db_insert['lead_hours'] = (predictions_for_db_insert.index - origin_ts).dt.total_seconds() / 3600.0
+            predictions_for_db_insert['lead_hours'] = (predictions_for_db_insert.index - origin_ts).total_seconds() / 3600.0
             predictions_for_db_insert['zone'] = zone_to_forecast
 
             # Ensure all columns expected by DB are present and correctly named
             # Reset index to make timestamp a column for insertion
             predictions_for_db_insert = predictions_for_db_insert.reset_index()
+            # Ensure the index column is named 'timestamp' before selection
+            if 'timestamp' not in predictions_for_db_insert.columns and 'index' in predictions_for_db_insert.columns:
+                predictions_for_db_insert = predictions_for_db_insert.rename(columns={'index': 'timestamp'})
+            # Now select the columns, assuming 'timestamp' is correctly named
             predictions_for_db_insert = predictions_for_db_insert[['timestamp', 'zone', 'predicted_price', 'origin_timestamp', 'lead_hours']]
             
             # Insert predictions
