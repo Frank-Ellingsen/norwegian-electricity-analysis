@@ -14,21 +14,17 @@ import logging
 from datetime import date, timedelta
 from collections import defaultdict
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
 # -------------------------------------------------
-# CONFIG
+# CONFIG (Global constants accessible to main)
 # -------------------------------------------------
 ZONES = ["NO1", "NO2", "NO3", "NO4", "NO5"]
 
 # Define the output directory for CSV files
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "data", "ingested_prices")
+# Ensure OUTPUT_DIR exists (can be done once globally)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# ✅ Always process YESTERDAY
-TARGET_DATE = date.today() - timedelta(days=1)
 
 # -------------------------------------------------
 # HELPER: hourly-only filter
@@ -39,70 +35,81 @@ def is_full_hour(timestamp: str) -> bool:
     """
     return ":00:" in timestamp
 
-# -------------------------------------------------
-# FETCH, FILTER, GROUP BY ZONE
-# -------------------------------------------------
-rows_by_zone = defaultdict(list)
 
-logging.info(f"🚀 Starting daily ingestion for {TARGET_DATE}...")
+def main(target_date: date = None):
+    # Configure logging here to ensure it's set up when main is called
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-for zone in ZONES:
-    url = (
-        f"https://spot.utilitarian.io/electricity/"
-        f"{zone}/{TARGET_DATE.year}/"
-        f"{TARGET_DATE.month:02d}/"
-        f"{TARGET_DATE.day:02d}/"
-    )
+    if target_date is None:
+        target_date = date.today() - timedelta(days=1)
+    
+    logging.info(f"🚀 Starting daily ingestion for {target_date}...")
 
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-        data = response.json()
+    # -------------------------------------------------
+    # FETCH, FILTER, GROUP BY ZONE
+    # -------------------------------------------------
+    rows_by_zone = defaultdict(list)
 
-        for entry in data:
-            ts = entry["timestamp"]
+    for zone in ZONES:
+        url = (
+            f"https://spot.utilitarian.io/electricity/"
+            f"{zone}/{target_date.year}/"
+            f"{target_date.month:02d}/"
+            f"{target_date.day:02d}/"
+        )
 
-            if not is_full_hour(ts):
-                continue
+        try:
+            response = requests.get(url)
+            response.raise_for_status()
+            data = response.json()
 
-            rows_by_zone[zone].append(
-                (zone, ts, float(entry["value"]))
-            )
-    except requests.exceptions.RequestException as e:
-        logging.error(f"❌ Error fetching data for zone {zone} from {url}: {e}")
-        continue
+            for entry in data:
+                ts = entry["timestamp"]
 
-# -------------------------------------------------
-# VALIDATE COMPLETE DAYS (24 HOURS)
-# -------------------------------------------------
-rows_to_insert = []
+                if not is_full_hour(ts):
+                    continue
 
-logging.info(f"\nDaily import for {TARGET_DATE}:\n")
+                rows_by_zone[zone].append(
+                    (zone, ts, float(entry["value"]))
+                )
+        except requests.exceptions.RequestException as e:
+            logging.error(f"❌ Error fetching data for zone {zone} from {url}: {e}")
+            continue
 
-for zone, rows in rows_by_zone.items():
-    if len(rows) == 24:
-        rows_to_insert.extend(rows)
-        logging.info(f"✅ {zone}: 24 hourly rows — OK")
+    # -------------------------------------------------
+    # VALIDATE COMPLETE DAYS (24 HOURS)
+    # -------------------------------------------------
+    rows_to_insert = []
+
+    logging.info(f"\nDaily import for {target_date}:")
+
+    for zone, rows in rows_by_zone.items():
+        if len(rows) == 24:
+            rows_to_insert.extend(rows)
+            logging.info(f"✅ {zone}: 24 hourly rows — OK")
+        else:
+            logging.warning(f"❌ {zone}: {len(rows)} rows — SKIPPED (incomplete day)")
+
+    logging.info(f"\nTotal rows prepared for CSV: {len(rows_to_insert)}")
+
+    # -------------------------------------------------
+    # WRITE TO CSV (IDEMPOTENT - OVERWRITES FOR THE DAY)
+    # -------------------------------------------------
+    if rows_to_insert:
+        df = pd.DataFrame(rows_to_insert, columns=['zone', 'timestamp', 'price_eur_per_mwh'])
+        
+        # Define the CSV file path
+        output_file = os.path.join(OUTPUT_DIR, f"{target_date.strftime('%Y-%m-%d')}_electricity_prices.csv")
+        
+        try:
+            df.to_csv(output_file, index=False)
+            logging.info(f"✅ Successfully wrote {len(rows_to_insert)} rows to {output_file}")
+        except Exception as e:
+            logging.error(f"❌ Error writing data to CSV file {output_file}: {e}")
     else:
-        logging.warning(f"❌ {zone}: {len(rows)} rows — SKIPPED (incomplete day)")
+        logging.warning(f"⚠️ No data to write for {target_date}.")
 
-logging.info(f"\nTotal rows prepared for CSV: {len(rows_to_insert)}")
+    logging.info("✨ Done.")
 
-# -------------------------------------------------
-# WRITE TO CSV (IDEMPOTENT - OVERWRITES FOR THE DAY)
-# -------------------------------------------------
-if rows_to_insert:
-    df = pd.DataFrame(rows_to_insert, columns=['zone', 'timestamp', 'price_eur_per_mwh'])
-    
-    # Define the CSV file path
-    output_file = os.path.join(OUTPUT_DIR, f"{TARGET_DATE.strftime('%Y-%m-%d')}_electricity_prices.csv")
-    
-    try:
-        df.to_csv(output_file, index=False)
-        logging.info(f"✅ Successfully wrote {len(rows_to_insert)} rows to {output_file}")
-    except Exception as e:
-        logging.error(f"❌ Error writing data to CSV file {output_file}: {e}")
-else:
-    logging.warning(f"⚠️ No data to write for {TARGET_DATE}.")
-
-logging.info("✨ Done.")
+if __name__ == "__main__":
+    main()

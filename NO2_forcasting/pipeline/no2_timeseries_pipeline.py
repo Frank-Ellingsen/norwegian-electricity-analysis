@@ -7,28 +7,13 @@ from difflib import SequenceMatcher
 from requests.auth import HTTPBasicAuth
 from dotenv import load_dotenv
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
 # Load environment variables from .env file
 load_dotenv()
 
 # =============================
-# AUTO DATE (YESTERDAY)
+# GLOBAL CONFIG / HELPERS
 # =============================
-yesterday = datetime.now().date() - timedelta(days=1)
-
-START_DATE = os.getenv("NO2_START_DATE", yesterday.strftime("%Y-%m-%d"))
-END_DATE   = os.getenv("NO2_END_DATE",   yesterday.strftime("%Y-%m-%d"))
-
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-FROST_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "data", "ingested_frost")
-HYDAPI_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "data", "ingested_hydapi")
-os.makedirs(FROST_OUTPUT_DIR, exist_ok=True)
-os.makedirs(HYDAPI_OUTPUT_DIR, exist_ok=True)
-
-
-logging.info(f"📅 Using dates: {START_DATE} → {END_DATE}")
 
 # =============================
 # AUTH
@@ -36,11 +21,11 @@ logging.info(f"📅 Using dates: {START_DATE} → {END_DATE}")
 FROST_CLIENT_ID = os.getenv("FROST_CLIENT_ID")
 NVE_API_KEY     = os.getenv("NVE_API_KEY")
 
+# These checks should be done once when the module is imported or when main is called
+# For now, keeping them global as they were, but better to move into main or a setup function.
 if not FROST_CLIENT_ID:
-    logging.error("Missing env var FROST_CLIENT_ID")
     raise RuntimeError("Missing env var FROST_CLIENT_ID")
 if not NVE_API_KEY:
-    logging.error("Missing env var NVE_API_KEY")
     raise RuntimeError("Missing env var NVE_API_KEY")
 
 FROST_HEADERS = {"User-Agent": "no2-model/1.0 (contact: frankellingsen@hotmail.com)"}
@@ -75,7 +60,7 @@ def http_get(url, headers=None, params=None, auth=None, timeout=60):
 # =============================
 # FROST: DAILY OBSERVATIONS
 # =============================
-def fetch_frost_observations_daily() -> pd.DataFrame:
+def fetch_frost_observations_daily(start_date_str: str, end_date_str: str) -> pd.DataFrame:
     """
     Fetches Frost observations, processes them into temperature and precipitation,
     and returns a DataFrame ready for CSV export.
@@ -86,12 +71,11 @@ def fetch_frost_observations_daily() -> pd.DataFrame:
     params = {
         "sources": sources,
         "elements": "mean(air_temperature P1D),sum(precipitation_amount P1D)",
-        "referencetime": f"{START_DATE}/{END_DATE}",
+        "referencetime": f"{start_date_str}/{end_date_str}",
         "timeoffsets": "default",
         "levels": "default",
         "qualities": "0,1,2,3",
     }
-
     logging.info("\n🔍 Fetching Frost observations")
     logging.info(f"Params: {params}")
 
@@ -118,11 +102,10 @@ def fetch_frost_observations_daily() -> pd.DataFrame:
                 elif variable == "sum(precipitation_amount P1D)":
                     precipitation_val = value
             
-            # Append processed row only if we have relevant data
             if temperature_val is not None or precipitation_val is not None:
                 processed_rows.append({
                     "station_id": station_id,
-                    "time": observation_time, # Keep 'time' for now, will be handled by data_loader
+                    "time": observation_time,
                     "temperature": temperature_val,
                     "precipitation": precipitation_val,
                     "source": "FROST"
@@ -141,52 +124,8 @@ def fetch_frost_observations_daily() -> pd.DataFrame:
 
 
 # =============================
-# HYDAPI: discovery + fetch
+# HYDAPI: discovery + fetch helpers
 # =============================
-# ... (rest of the file remains the same, except for the OUTPUT directory change below)
-
-# =============================
-# MAIN
-# =============================
-def main():
-    logging.info("🚀 Starting NO2 daily exogenous data ingest (to CSV)")
-
-    # --- Frost: fetch and save to CSV ---
-    frost_df = fetch_frost_observations_daily()
-    if not frost_df.empty:
-        # Ensure the output directory is 'ingested_weather'
-        os.makedirs(os.path.join(SCRIPT_DIR, "..", "data", "ingested_weather"), exist_ok=True)
-        output_file = os.path.join(SCRIPT_DIR, "..", "data", "ingested_weather", f"{START_DATE}_frost_weather.csv")
-        logging.info(f"Attempting to save Frost weather data to: {output_file}") # Added debug logging
-        try:
-            frost_df.to_csv(output_file, index=False)
-            logging.info(f"✅ Frost weather data saved to {output_file}")
-        except Exception as e:
-            logging.error(f"❌ Error saving Frost weather data to CSV: {e}")
-    else:
-        logging.warning("⚠️ No Frost weather data to save.")
-
-    # --- HydAPI: fetch and save to CSV ---
-    # The HydAPI data processing logic remains similar, but output should also go to 'ingested_weather'
-    hydapi_df = fetch_hydapi_observations_daily()
-    if not hydapi_df.empty:
-        os.makedirs(os.path.join(SCRIPT_DIR, "..", "data", "ingested_weather"), exist_ok=True)
-        output_file = os.path.join(SCRIPT_DIR, "..", "data", "ingested_weather", f"{START_DATE}_hydapi_weather.csv")
-        try:
-            hydapi_df.to_csv(output_file, index=False)
-            logging.info(f"✅ HydAPI data saved to {output_file}")
-        except Exception as e:
-            logging.error(f"❌ Error saving HydAPI data to CSV: {e}")
-    else:
-        logging.warning("⚠️ No HydAPI data to save.")
-
-    logging.info("✨ Done.")
-
-if __name__ == "__main__":
-    main()
-
-
-
 def best_match_station_id(stations_df: pd.DataFrame, target_name: str):
     if stations_df.empty or "stationName" not in stations_df.columns:
         return None, None, 0.0
@@ -208,13 +147,10 @@ def best_match_station_id(stations_df: pd.DataFrame, target_name: str):
 
 
 def hydapi_get_parameters_map():
-    """
-    HydAPI /Parameters exists and returns parameter metadata. [2](https://outlook.live.com/owa/?ItemID=AQMkADAwATExAGE2Ny00YzgxLTY3NTItMDACLTAwCgBGAAAD6ahiN8dkrkugORq4V%2bJQ8QcAtMNB9oN5zkiZV%2bbykqadjAAAAgEJAAAAtMNB9oN5zkiZV%2bbykqadjAAI91fj8AAAAA%3d%3d&exvsurl=1&viewmodel=ReadMessageItem)[3](https://outlook.live.com/owa/?ItemID=AQMkADAwATExAGE2Ny00YzgxLTY3NTItMDACLTAwCgBGAAAD6ahiN8dkrkugORq4V%2bJQ8QcAtMNB9oN5zkiZV%2bbykqadjAAAAgEJAAAAtMNB9oN5zkiZV%2bbykqadjAAI808VxQAAAA%3d%3d&exvsurl=1&viewmodel=ReadMessageItem)
-    """
     url = "https://hydapi.nve.no/api/v1/Parameters"
     r = http_get(url, headers=HYD_HEADERS)
     if r.status_code != 200:
-        print("❌ HydAPI /Parameters error:", r.text[:500])
+        logging.error(f"❌ HydAPI /Parameters error: {r.text[:500]}") # Changed print to logging.error
         return {}
 
     param_map = {}
@@ -271,7 +207,18 @@ def choose_parameter_for_station(series_list, param_map, role: str):
     return avail[0]
 
 
-def fetch_hydapi_observations_daily() -> pd.DataFrame:
+def hydapi_fetch_all_stations_active():
+    url = "https://hydapi.nve.no/api/v1/Stations"
+    params = {"Active": True}
+    try:
+        r = http_get(url, headers=HYD_HEADERS, params=params)
+        r.raise_for_status()
+        return pd.DataFrame(r.json().get("data", []))
+    except requests.exceptions.RequestException as e:
+        logging.error(f"❌ HydAPI /Stations error: {e}")
+        return pd.DataFrame()
+
+def fetch_hydapi_observations_daily(start_date_str: str, end_date_str: str) -> pd.DataFrame:
     """
     HydAPI Observations endpoint supports StationId, Parameter, ResolutionTime, ReferenceTime.
     Returns:
@@ -283,11 +230,7 @@ def fetch_hydapi_observations_daily() -> pd.DataFrame:
     param_map = hydapi_get_parameters_map()
 
     out_rows = []
-    # Resolved rows are not persisted to CSV for now, as per the decision in previous step.
-    # If needed, this could be stored in a separate static CSV.
-
     logging.info("\n🔍 Fetching HydAPI observations")
-
     for t in HYDAPI_TARGETS:
         sid, matched_name, score = best_match_station_id(stations_df, t["name"])
         if not sid:
@@ -313,7 +256,7 @@ def fetch_hydapi_observations_daily() -> pd.DataFrame:
             "StationId": sid,
             "Parameter": pid,
             "ResolutionTime": "1440",
-            "ReferenceTime": f"{START_DATE}/{END_DATE}"
+            "ReferenceTime": f"{start_date_str}/{end_date_str}"
         }
 
         try:
@@ -345,35 +288,47 @@ def fetch_hydapi_observations_daily() -> pd.DataFrame:
     return df_hydapi
 
 
-# =============================
-# MAIN
-# =============================
-def main():
-    logging.info("🚀 Starting NO2 daily exogenous data ingest (to CSV)")
+def main(start_date: str = None, end_date: str = None):
+    # Configure logging here to ensure it's set up when main is called
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    
+    yesterday = datetime.now().date() - timedelta(days=1)
+    
+    if start_date is None:
+        start_date = os.getenv("NO2_START_DATE", yesterday.strftime("%Y-%m-%d"))
+    if end_date is None:
+        end_date = os.getenv("NO2_END_DATE", yesterday.strftime("%Y-%m-%d"))
+
+    logging.info(f"📅 Using dates: {start_date} → {end_date}")
+
+    FROST_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "data", "ingested_weather")
+    HYDAPI_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "data", "ingested_weather")
+    os.makedirs(FROST_OUTPUT_DIR, exist_ok=True)
+    # os.makedirs(HYDAPI_OUTPUT_DIR, exist_ok=True) # This is redundant as FROST_OUTPUT_DIR is the same
 
     # --- Frost: fetch and save to CSV ---
-    frost_df = fetch_frost_observations_daily()
+    frost_df = fetch_frost_observations_daily(start_date, end_date)
     if not frost_df.empty:
-        output_file = os.path.join(FROST_OUTPUT_DIR, f"{START_DATE}_frost_observations.csv")
+        output_file = os.path.join(FROST_OUTPUT_DIR, f"{start_date}_frost_weather.csv") # Renamed for clarity
         try:
             frost_df.to_csv(output_file, index=False)
-            logging.info(f"✅ Frost observations saved to {output_file}")
+            logging.info(f"✅ Frost weather data saved to {output_file}")
         except Exception as e:
-            logging.error(f"❌ Error saving Frost observations to CSV: {e}")
+            logging.error(f"❌ Error saving Frost weather data to CSV: {e}")
     else:
-        logging.warning("⚠️ No Frost observations to save.")
+        logging.warning("⚠️ No Frost weather data to save.")
 
     # --- HydAPI: fetch and save to CSV ---
-    hydapi_df = fetch_hydapi_observations_daily()
+    hydapi_df = fetch_hydapi_observations_daily(start_date, end_date)
     if not hydapi_df.empty:
-        output_file = os.path.join(HYDAPI_OUTPUT_DIR, f"{START_DATE}_hydapi_observations.csv")
+        output_file = os.path.join(HYDAPI_OUTPUT_DIR, f"{start_date}_hydapi_weather.csv") # Renamed for clarity
         try:
             hydapi_df.to_csv(output_file, index=False)
-            logging.info(f"✅ HydAPI observations saved to {output_file}")
+            logging.info(f"✅ HydAPI data saved to {output_file}")
         except Exception as e:
-            logging.error(f"❌ Error saving HydAPI observations to CSV: {e}")
+            logging.error(f"❌ Error saving HydAPI data to CSV: {e}")
     else:
-        logging.warning("⚠️ No HydAPI observations to save.")
+        logging.warning("⚠️ No HydAPI data to save.")
 
     logging.info("✨ Done.")
 

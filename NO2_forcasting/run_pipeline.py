@@ -1,20 +1,22 @@
 import logging
 import sqlite3
 from datetime import date, timedelta
-from api.nordpool_api import fetch_nordpool_prices, save_nordpool_data
-from api.met_api import fetch_met_observations, save_met_data
-from api.nve_api import fetch_hydapi_data, save_hydapi_data
-from pipeline.data_loader import load_and_merge_data
-from pipeline.feature_engineering import create_features
 import os
 import pandas as pd
+
+# Import main functions from pipeline scripts
+from pipeline.daily_hourly_no_prices_to_db import main as daily_prices_main
+from pipeline.no2_timeseries_pipeline import main as timeseries_pipeline_main
+from pipeline.model_train import train_model
+from pipeline.evaluate import evaluate_forecast
+from pipeline.forecast import generate_forecast
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Define the path to the SQLite database
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-SQLITE_DB_PATH = os.path.join(BASE_DIR, "..", "data", "sqlite", "forecast_tracking.db")
+SQLITE_DB_PATH = os.path.join(BASE_DIR, "data", "sqlite", "forecast_tracking.db")
 
 def initialize_sqlite_tables(db_path: str):
     """
@@ -22,7 +24,7 @@ def initialize_sqlite_tables(db_path: str):
     """
     conn = None
     try:
-        logging.info(f"Attempting to connect to DB: {db_path}") # Diagnostic log
+        logging.info(f"Attempting to connect to DB: {db_path}")
         conn = sqlite3.connect(db_path)
         cursor = conn.cursor()
 
@@ -70,7 +72,7 @@ def initialize_sqlite_tables(db_path: str):
         """)
         conn.commit()
         logging.info(f"✅ SQLite tables initialized at {db_path}")
-        if os.path.exists(db_path): # Check file size after commit
+        if os.path.exists(db_path):
             logging.info(f"DB file size after table commit: {os.path.getsize(db_path)} bytes")
         else:
             logging.info("DB file does not exist after table commit.")
@@ -80,92 +82,67 @@ def initialize_sqlite_tables(db_path: str):
         if conn:
             conn.close()
 
-def run_ingestion(start_date: date, end_date: date):
+def run_ingestion_pipeline(ingestion_start_date: date, ingestion_end_date: date):
     """
-    Runs all API ingestion modules for the specified date range.
+    Runs the daily prices and exogenous data ingestion pipelines for the specified date range.
     """
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    data_path = os.path.join(base_path, "..", "data")
-    os.makedirs(data_path, exist_ok=True)
+    logging.info(f"Starting ingestion for range: {ingestion_start_date} to {ingestion_end_date}")
 
-    # Define and create ingestion subdirectories
-    ingested_prices_dir = os.path.join(data_path, "ingested_prices")
-    ingested_weather_dir = os.path.join(data_path, "ingested_weather")
-    ingested_hydapi_dir = os.path.join(data_path, "ingested_hydapi") # Assuming this will be used for NVE
-
-    os.makedirs(ingested_prices_dir, exist_ok=True)
-    os.makedirs(ingested_weather_dir, exist_ok=True)
-    os.makedirs(ingested_hydapi_dir, exist_ok=True)
-
-    # 1. Nord Pool
-    prices_df = fetch_nordpool_prices(start_date, end_date)
-    save_nordpool_data(prices_df, os.path.join(ingested_prices_dir, "prices_no2.csv"))
-
-    # 2. MET (Weather)
-    weather_df = fetch_met_observations(start_date.strftime("%Y-%m-%d"), end_date.strftime("%Y-%m-%d"))
-    save_met_data(weather_df, os.path.join(ingested_weather_dir, "weather_no2.csv"))
-
-    # 3. NVE (Hydrology)
-    hyd_df = fetch_hydapi_data(start_date.strftime("%Y-%m-%d"), end_date.strftime("%Y-%m-%d"))
-    save_hydapi_data(hyd_df, os.path.join(ingested_hydapi_dir, "hydrology_no2.csv"))
-
-from pipeline.model_train import train_model
-from pipeline.evaluate import evaluate_forecast
-from pipeline.forecast import generate_forecast
+    # Call daily_hourly_no_prices_to_db.main for each day in range
+    current_date = ingestion_start_date
+    while current_date <= ingestion_end_date:
+        logging.info(f"Calling daily_prices_main for {current_date}")
+        daily_prices_main(target_date=current_date)
+        current_date += timedelta(days=1)
+    
+    # Call no2_timeseries_pipeline.main for the range
+    # Note: no2_timeseries_pipeline is designed for a start/end date range
+    logging.info(f"Calling timeseries_pipeline_main for range: {ingestion_start_date} to {ingestion_end_date}")
+    timeseries_pipeline_main(start_date=ingestion_start_date.strftime("%Y-%m-%d"), 
+                             end_date=ingestion_end_date.strftime("%Y-%m-%d"))
 
 def main():
     logging.info("🚀 Starting full NO2 Forecasting Pipeline")
-    os.makedirs(os.path.dirname(SQLITE_DB_PATH), exist_ok=True) # Ensure DB directory exists
-    initialize_sqlite_tables(SQLITE_DB_PATH) # Initialize tables
+    os.makedirs(os.path.dirname(SQLITE_DB_PATH), exist_ok=True)
+    initialize_sqlite_tables(SQLITE_DB_PATH)
 
-    # Define forecast parameters
-    forecast_origin_date = date(2026, 5, 1) # Renamed for clarity
-    forecast_horizon_hours = 7 * 24 # 7 days horizon in hours
+    # --- Dynamic Date Setup ---
+    today = date.today()
+    # history_end_date will be yesterday for daily run
+    history_end_date = today - timedelta(days=1)
+    # Fetch at least 168 hours (7 days) for lags, ideally more for model training stability
+    # Using 90 days for example, adjust as needed
+    history_start_date = history_end_date - timedelta(days=90)
     
-    # Define historical data range for training
-    history_end_date = forecast_origin_date - timedelta(days=1)
-    # Fetch at least a year of data to generate all features (especially lag_168)
-    history_start_date = history_end_date - timedelta(days=90) # Reduced history to 90 days
+    # forecast_origin_date is the day AFTER the last historical data
+    forecast_origin_date = history_end_date + timedelta(days=1)
+    forecast_horizon_hours = 7 * 24 # 7 days horizon in hours (adjust as needed, e.g., 30*24)
 
-    logging.info(f"Ingesting data from {history_start_date} to {history_end_date}")
+    logging.info(f"Data ingestion range: {history_start_date} to {history_end_date}")
+    logging.info(f"Forecast origin date: {forecast_origin_date}")
+    logging.info(f"Forecast horizon: {forecast_horizon_hours} hours")
     
-    # Step 1: Ingest data
-    run_ingestion(history_start_date, history_end_date)
-    
-    # --- DEBUG START ---
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    data_path = os.path.join(base_path, "..", "data")
-    prices_file = os.path.join(data_path, "prices_no2.csv")
-    
-    logging.info(f"DEBUG: Inspecting prices_no2.csv at: {prices_file}")
-    try:
-        debug_prices_df = pd.read_csv(prices_file)
-        debug_prices_df['timestamp'] = pd.to_datetime(debug_prices_df['timestamp'], utc=True)
-        logging.info("DEBUG: prices_no2.csv head:") # Fixed f-string syntax
-        logging.info(debug_prices_df.head().to_string()) # Fixed f-string syntax
-        logging.info("DEBUG: prices_no2.csv tail:") # Fixed f-string syntax
-        logging.info(debug_prices_df.tail().to_string()) # Fixed f-string syntax
-    except Exception as e:
-        logging.error(f"DEBUG: Error reading prices_no2.csv: {e}")
-    # --- DEBUG END ---
+    # Step 1: Ingest data using the refactored pipeline scripts
+    run_ingestion_pipeline(history_start_date, history_end_date)
     
     # Step 2: Load & Merge ingested data
-    df = load_and_merge_data(data_path) # Pass data_path here
+    # Pass project root for data_loader
+    data_path = os.path.join(BASE_DIR, "data")
+    df = load_and_merge_data(data_path)
     
     if not df.empty:
         # Step 3: Feature Engineering
         df_features = create_features(df)
         
         # Save processed features
-        base_path = os.path.dirname(os.path.abspath(__file__))
-        features_path = os.path.join(base_path, "..", "data", "features_no2.csv") # Adjusted path
+        features_path = os.path.join(BASE_DIR, "data", "features_no2.csv")
         df_features.to_csv(features_path)
         logging.info(f"✅ Features saved to {features_path}")
 
         # Step 4: Training 
         logging.info("🧠 Training model...")
         # Use data up to history_end_date for training
-        train_df = df_features[df_features.index.date <= history_end_date]
+        train_df = df_features[df_features.index.date <= history_end_date].copy()
         if train_df.empty:
             logging.error("❌ Training DataFrame is empty. Cannot train model.")
             return
@@ -176,16 +153,16 @@ def main():
         logging.info(f"🔮 Generating {forecast_horizon_hours / 24}-day forecast from {forecast_origin_date}...")
         
         # Pass the last part of the training data to the forecast function
-        # This will be used to generate lags for the first forecast steps
         forecast_input_df = df_features[df_features.index.date <= history_end_date].copy()
         
         forecast_output_df = generate_forecast(
             forecast_input_df, 
-            zone_to_forecast='NO2', # Pass the required argument
-            horizon_hours=forecast_horizon_hours
+            zone_to_forecast='NO2',
+            horizon_hours=forecast_horizon_hours,
+            model=model # Pass the trained model
         )
 
-        conn = None # Initialize conn to None
+        conn = None
         try:
             if not forecast_output_df.empty:
                 conn = sqlite3.connect(SQLITE_DB_PATH)
@@ -210,7 +187,12 @@ def main():
 
                 origin_ts_utc = pd.to_datetime(forecast_origin_date).tz_localize('UTC')
 
+                # Rename 'price' column to 'predicted_price' for DB insertion consistency
+                if 'price' in forecast_output_df.columns:
+                    forecast_output_df = forecast_output_df.rename(columns={'price': 'predicted_price'})
+
                 for index, row in forecast_output_df.iterrows():
+                    # Calculate lead_hours based on forecast_origin_date, not actual_date for consistency
                     lead_hours = round((index - origin_ts_utc).total_seconds() / 3600)
                     predictions_to_insert.append((
                         run_id,
@@ -218,7 +200,7 @@ def main():
                         forecast_origin_date.isoformat(),
                         index.isoformat(),
                         lead_hours,
-                        row['predicted_price'], # Changed from row['price']
+                        row['predicted_price'],
                         current_datetime_utc
                     ))
                 cursor.executemany("""
@@ -232,11 +214,10 @@ def main():
                 actuals_for_forecast_period = df_features[
                     (df_features.index.date >= forecast_origin_date) & 
                     (df_features.index.date < forecast_origin_date + timedelta(days=forecast_horizon_hours // 24))
-                ][['price']]
+                ][['price']].copy() # Added .copy() to avoid SettingWithCopyWarning
                 actuals_for_forecast_period = actuals_for_forecast_period.rename(columns={'price': 'actual_price'})
 
-                combined_forecast_output = forecast_output_df[['predicted_price']]
-                combined_forecast_output = combined_forecast_output.merge(
+                combined_forecast_output = forecast_output_df[['predicted_price']].merge(
                     actuals_for_forecast_period, 
                     left_index=True, 
                     right_index=True, 
@@ -244,8 +225,8 @@ def main():
                 )
                 combined_forecast_output.index.name = 'timestamp'
                 
-                forecast_output_path = os.path.join(base_path, "..", "output", "forecast_vs_actuals_no2.csv")
-                os.makedirs(os.path.dirname(forecast_output_path), exist_ok=True) # Ensure output directory exists
+                forecast_output_path = os.path.join(BASE_DIR, "output", "forecast_vs_actuals_no2.csv")
+                os.makedirs(os.path.dirname(forecast_output_path), exist_ok=True)
                 combined_forecast_output.to_csv(forecast_output_path)
                 logging.info(f"✨ Forecast (with actuals) saved to {forecast_output_path}")
 
@@ -255,7 +236,6 @@ def main():
                     eval_df = combined_forecast_output.dropna(subset=['actual_price', 'predicted_price']).copy()
                     
                     if not eval_df.empty:
-                        # Call evaluate_forecast instead of evaluate_predictions
                         metrics = evaluate_forecast(eval_df['actual_price'], eval_df['predicted_price'])
                         logging.info(f"Evaluation Metrics: MAE={metrics['MAE']:.2f}, RMSE={metrics['RMSE']:.2f}, MAPE={metrics['MAPE']:.2f}")
 
@@ -269,6 +249,7 @@ def main():
                         for index, row in eval_df.iterrows():
                             error = row['predicted_price'] - row['actual_price']
                             abs_error = abs(error)
+                            # Ensure lead_hours calculation is consistent
                             lead_hours = round((index - origin_ts_utc).total_seconds() / 3600)
                             evaluation_to_insert.append((
                                 'NO2',
@@ -306,4 +287,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

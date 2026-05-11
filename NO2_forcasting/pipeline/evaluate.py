@@ -67,45 +67,36 @@ def evaluate_forecasts(test_dfs: dict, forecast_dfs: dict, target_col: str = 'pr
             continue
             
         forecast_df = forecast_dfs[zone]
-        
-            # Add debugging print statements for timestamp alignment
-            logging.info(f"--- Timestamp Debug for Zone: {zone} ---")
-            logging.info(f"Test Data Range: {test_df.index.min()} to {test_df.index.max()}")
-            if zone in forecast_dfs:
-                forecast_df = forecast_dfs[zone]
-                logging.info(f"Forecast Data Range: {forecast_df.index.min()} to {forecast_df.index.max()}")
-            else:
-                logging.warning(f"No forecast generated for zone {zone}, cannot print forecast range.")
-            logging.info(f"--- End Debug ---")
 
-            common_timestamps = test_df.index.intersection(forecast_df.index)
-            
-            y_true = test_df.loc[common_timestamps, target_col]
-            y_pred = forecast_df.loc[common_timestamps, target_col]
-            
-            if y_true.empty or y_pred.empty:
-                logging.info(f"--- Timestamp Debug for Zone: {zone} ---")
-                logging.info(f"Test Data Range: {test_df.index.min()} to {test_df.index.max()}")
-                if zone in forecast_dfs:
-                    forecast_df = forecast_dfs[zone]
-                    logging.info(f"Forecast Data Range: {forecast_df.index.min()} to {forecast_df.index.max()}")
-                else:
-                    logging.warning(f"No forecast generated for zone {zone}, cannot print forecast range.")
-                logging.info(f"--- End Debug ---")
-                logging.warning(f"No common timestamps for evaluation in zone {zone}. Skipping.")
-                continue                
-                all_metrics.append({
-                    "zone": zone,
-                    "RMSE": metrics["RMSE"],
-                    "MAE": metrics["MAE"],
-                    "MAPE": metrics["MAPE"]
-                })
-                logging.info(f"Evaluation Metrics for zone {zone}: {metrics}")
-            except Exception as e:
-                logging.error(f"Error calculating metrics for zone {zone}: {e}")
-                import traceback
-                traceback.print_exc()
-                continue
+        # Add debugging print statements for timestamp alignment
+        logging.info(f"--- Timestamp Debug for Zone: {zone} ---")
+        logging.info(f"Test Data Range: {test_df.index.min()} to {test_df.index.max()}")
+        logging.info(f"Forecast Data Range: {forecast_df.index.min()} to {forecast_df.index.max()}")
+        logging.info(f"--- End Debug ---")
+
+        common_timestamps = test_df.index.intersection(forecast_df.index)
+
+        y_true = test_df.loc[common_timestamps, target_col]
+        y_pred = forecast_df.loc[common_timestamps, target_col]
+
+        if y_true.empty or y_pred.empty:
+            logging.warning(f"No common timestamps for evaluation in zone {zone}. Skipping.")
+            continue
+
+        try:
+            metrics = evaluate_forecast(y_true, y_pred)
+            all_metrics.append({
+                "zone": zone,
+                "RMSE": metrics["RMSE"],
+                "MAE": metrics["MAE"],
+                "MAPE": metrics["MAPE"]
+            })
+            logging.info(f"Evaluation Metrics for zone {zone}: {metrics}")
+        except Exception as e:
+            logging.error(f"Error calculating metrics for zone {zone}: {e}")
+            import traceback
+            traceback.print_exc()
+            continue
 
     if not all_metrics:
         logging.warning("No evaluation metrics could be computed for any zone.")
