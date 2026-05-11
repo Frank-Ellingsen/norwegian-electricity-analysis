@@ -7,6 +7,8 @@ import pandas as pd
 # Import main functions from pipeline scripts
 from pipeline.daily_hourly_no_prices_to_db import main as daily_prices_main
 from pipeline.no2_timeseries_pipeline import main as timeseries_pipeline_main
+from pipeline.data_loader import load_and_merge_data
+from pipeline.feature_engineering import create_features
 from pipeline.model_train import train_model
 from pipeline.evaluate import evaluate_forecast
 from pipeline.forecast import generate_forecast
