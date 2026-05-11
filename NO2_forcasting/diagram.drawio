@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="cSwg0_RF1uVXhF2rL05V" name="NO2 Forecasting Pipeline">
-        <mxGraphModel dx="3173" dy="2213" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="2711" dy="2213" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -35,7 +35,7 @@
                     <mxGeometry x="640" y="140" width="280" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="modeling_swimlane" value="MODELING" style="swimlane;horizontal=1;startSize=40;fillColor=#ffffff;fontSize=18;fontStyle=1;" vertex="1" parent="1">
-                    <mxGeometry x="-220" y="230" width="1720" height="280" as="geometry"/>
+                    <mxGeometry x="-400" y="210" width="1720" height="280" as="geometry"/>
                 </mxCell>
                 <mxCell id="feature_engineering" value="Feature Engineering&lt;br&gt;(feature_engineering.py)&lt;br&gt;(lags, rolling, calendar, weather)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;fontSize=16;fontStyle=1" vertex="1" parent="modeling_swimlane">
                     <mxGeometry x="20" y="90" width="300" height="90" as="geometry"/>
@@ -53,7 +53,7 @@
                     <mxGeometry x="1340" y="90" width="280" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="output_swimlane" value="OUTPUT" style="swimlane;horizontal=1;startSize=40;fillColor=#f5f5f5;fontSize=18;fontStyle=1;" vertex="1" parent="1">
-                    <mxGeometry x="-20" y="590" width="1720" height="220" as="geometry"/>
+                    <mxGeometry x="-400" y="520" width="1720" height="220" as="geometry"/>
                 </mxCell>
                 <mxCell id="final_outputs" value="Final Outputs&lt;br&gt;predictions_no2.csv&lt;br&gt;feature_importance.csv&lt;br&gt;evaluation_metrics.csv" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;fontSize=16;fontStyle=1" vertex="1" parent="output_swimlane">
                     <mxGeometry x="1340" y="90" width="320" height="100" as="geometry"/>
