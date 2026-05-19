@@ -1,0 +1,47 @@
+<mxfile host="app.diagrams.net" modified="2026-05-19T09:53:00.000Z" agent="5.0" version="20.8.10">
+  <diagram id="AI-Agent-Architecture" name="AI Agent Architecture">
+    <mxGraphModel dx="1420" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Agent Core -->
+        <mxCell id="agentCore" value="Agent Core&#xa;• agent.py&#xa;• Routing&#xa;• Task handling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="420" y="260" width="260" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Policy Layer -->
+        <mxCell id="policy" value="Policy Layer&#xa;skill.md&#xa;• Rules&#xa;• Constraints&#xa;• Behavior" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="260" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Context Layer -->
+        <mxCell id="context" value="Project Context&#xa;GEMINI.md&#xa;• Goals&#xa;• Frameworks&#xa;• Domain Knowledge" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="420" y="80" width="260" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- LLM -->
+        <mxCell id="llm" value="LLM Backend&#xa;Gemini API&#xa;• Reasoning&#xa;• Code generation&#xa;• Insight generation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="760" y="80" width="260" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Tools Layer -->
+        <mxCell id="tools" value="Tools Layer&#xa;• CSV I/O&#xa;• SQLite&#xa;• ETL modules&#xa;• Modeling modules&#xa;• Plotting" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="760" y="260" width="260" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- CLI -->
+        <mxCell id="cli" value="CLI / API Interface&#xa;• agent_cli.py&#xa;• Commands&#xa;• User tasks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="420" y="440" width="260" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="arrow1" edge="1" parent="1" source="policy" target="agentCore" style="endArrow=block;strokeColor=#000000;"/>
+        <mxCell id="arrow2" edge="1" parent="1" source="context" target="agentCore" style="endArrow=block;strokeColor=#000000;"/>
+        <mxCell id="arrow3" edge="1" parent="1" source="agentCore" target="llm" style="endArrow=block;strokeColor=#000000;"/>
+        <mxCell id="arrow4" edge="1" parent="1" source="agentCore" target="tools" style="endArrow=block;strokeColor=#000000;"/>
+        <mxCell id="arrow5" edge="1" parent="1" source="cli" target="agentCore" style="endArrow=block;strokeColor=#000000;"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
