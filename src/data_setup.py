@@ -2,8 +2,8 @@ import sqlite3
 import os
 from datetime import datetime
 
-DATABASE_DIR = "data/sqlite"
-DATABASE_NAME = os.path.join(DATABASE_DIR, "norway_electricity.db")
+DATABASE_DIR = "data/NO_EL_PRICES"
+DATABASE_NAME = os.path.join(DATABASE_DIR, "NO_EL_PRICES.db")
 
 def setup_database():
     """

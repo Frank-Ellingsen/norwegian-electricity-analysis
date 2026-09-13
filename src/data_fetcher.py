@@ -2,13 +2,14 @@ import requests
 import sqlite3
 import os
 from datetime import datetime, timedelta
+import time
 import logging
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-DATABASE_DIR = "data/sqlite"
-DATABASE_NAME = os.path.join(DATABASE_DIR, "norway_electricity.db")
+DATABASE_DIR = "data/NO_EL_PRICES"
+DATABASE_NAME = os.path.join(DATABASE_DIR, "NO_EL_PRICES.db")
 
 PRICE_AREAS = ["NO1", "NO2", "NO3", "NO4", "NO5"]
 
@@ -247,15 +248,14 @@ if __name__ == "__main__":
     setup_database()
     
     # Define date range for historical fetch
-    _start_date_historical = datetime(2025, 1, 1)
-    _end_date_historical = datetime.now() - timedelta(days=1) # Yesterday
+    _start_date_historical = datetime(2020, 1, 1)
+    _end_date_historical = datetime(2026, 1, 1)
 
     # Fetch and store historical electricity prices
-    # fetch_and_store_electricity_prices(start_date=_start_date_historical, end_date=_end_date_historical)
+    fetch_and_store_electricity_prices(start_date=_start_date_historical, end_date=_end_date_historical)
 
-    # Fetch and store current weather forecast (up to 10 days)
+    # Fetch and store weather data (default coordinates)
     fetch_and_store_weather_data()
 
     # Fetch and store historical reservoir data
-    # fetch_and_store_reservoir_data(start_date=_start_date_historical, end_date=_end_date_historical)
-ata()
+    fetch_and_store_reservoir_data(start_date=_start_date_historical, end_date=_end_date_historical)
