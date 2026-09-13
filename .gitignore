@@ -38,8 +38,19 @@ data/*.csv
 # Keep the PDF as it's the report
 # !Powerbi-Norwegian Electricity Spot Price Analysis.pdf
 
-# Logs
+# Logs & OS artifacts
 *.log
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Caches & Stubs
+.stubs/
+.vfscache/
+.vfsmeta/
+agent/
 
 # Temp files
 inspect_db.py
+*.tmp
+
